@@ -30,6 +30,10 @@ Este curso es 100% práctico. La nota final dependerá de la resolución por par
 
 - vjudge permite enviar soluciones en **modo post-competencia**. Si lo deseas puedes seguir resolviendo problemas en este modo luego del fin de un contest, aunque todos los puntos de los problemas que resuelvas así van directo a tu excedente de puntaje, y por ende serán multiplicados por 0.3 (en otras palabras, rinde más resolver problemas dentro de plazo que fuera de plazo)
 
+## 2) Asistencia
+
+Para fomentar la participación y asistencia a clases de los estudiantes el curso tiene nota por asistencia, la cual corresponde al 20% de la nota del curso. Para quedar presente eso sí sólo basta con que vengas a uno de los 3 módulos (no es necesario que vengas a todos, aunque si pudieras quedarte los 3 módulos sería estupendo!)
+
 ## 2) Bonuses
 
 Además de las competencias semanales, existen varias formas de obtener décimas de bonus, las que se ponderarán y sumarán directamente a tu nota final:
