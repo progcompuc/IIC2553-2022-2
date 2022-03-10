@@ -32,7 +32,11 @@ Este curso es 100% práctico. La nota final dependerá de la resolución por par
 
 ## 2) Asistencia
 
-Para fomentar la participación y asistencia a clases de los estudiantes el curso tiene nota por asistencia, la cual corresponde al 20% de la nota del curso. Para quedar presente eso sí sólo basta con que vengas a uno de los 3 módulos (no es necesario que vengas a todos, aunque si pudieras quedarte los 3 módulos sería estupendo!)
+Para fomentar la participación y asistencia a clases de los estudiantes el curso tiene nota por asistencia, la cual corresponde al 25% de la nota del curso. Para quedar presente eso sí sólo basta con que vengas a uno de los 3 módulos (no es necesario que vengas a todos, aunque si pudieras quedarte los 3 módulos sería estupendo!).
+
+En caso de faltar a una clase, existe la posibilidad de recuperar (parcial o totalmente) la asistencia de ese día haciendo más problemas del contest respectivo. Para este efecto, vamos a considerar que una asistencia vale 3 puntos. Si faltas a una clase pero en el contest respectivo tu excedente de puntaje es mayor o igual a 3, se considerará como si hubieras asistido (obviamente, esos 3 puntos no se contabilizarán en tu excedente de puntaje total). Y si tu excedente de puntaje es menor a 3, la asistencia se recuperará sólo "parcialmente". En otras palabras, los que lo deseen pueden hacer el curso entero desde la casa, pero tendrán que programar más :)
+
+Además, se perdonarán 2 inasistencias. Es decir, puedes faltar a dos clases sin necesidad de recuperar la asistencia y tu nota no será afectada.
 
 ## 2) Bonuses
 
