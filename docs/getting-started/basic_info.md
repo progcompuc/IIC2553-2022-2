@@ -8,7 +8,7 @@ title: "Información Básica"
 
 ### Clases:
 Horario: 14:00-18:30
-<s>Sala Javier Pinto, DCC</s>
+Sala B25? (o Sala Javier Pinto, DCC?, esperando que Yessenia me diga)
 
 ### Profesor:
 Pablo Messina (<pamessina@uc.cl>)
