@@ -1,1 +1,1 @@
-https://programacioncompetitivapuc.github.io/IIC2553-2021-2/
+https://programacioncompetitivapuc.github.io/IIC2552-2022-1/
