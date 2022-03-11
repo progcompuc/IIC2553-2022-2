@@ -15,8 +15,8 @@ Ejemplo de Template:
 
 ## Instalando C++:
 - Windows:
-	- [Instalar MinGW](http://www.mingw.org/Welcome_to_MinGW_org)
-	- [Compilar en Windows](https://www.quora.com/How-do-I-compile-a-C++-program-on-a-Windows-PC-in-CMD)
+	- [Using GCC with MinGW](https://code.visualstudio.com/docs/cpp/config-mingw)
+	- [MSYS2](https://www.msys2.org/)
 - Ubuntu:
 	- Instalar ```sudo apt-get install g++```
 	- [Compilar en Ubuntu](http://askubuntu.com/questions/61408/what-is-a-command-to-compile-and-run-c-programs)
