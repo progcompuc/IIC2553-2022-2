@@ -18,4 +18,12 @@ Marzo 18, 14 días, [link a **contest**](https://vjudge.net/contest/485379)\\
 **Puntaje Mínimo Esperado**: ?\\
 **Hints** y **códigos de ejemplo**: _pendiente_
 
+## Contest 3
+Marzo 25, 14 días, [link a **contest**](https://vjudge.net/contest/486492)\\
+**Tópicos**: [Búsqueda binaria](resources/search)\\
+**Puntos**: ?, ?, ?, ?, ?, ?, ?, ?, ?\\
+**Puntaje Mínimo Esperado**: ?\\
+**Hints** y **códigos de ejemplo**: _pendiente_
+
+
 [Index](index) > ```{{page.title}}```
