@@ -28,8 +28,8 @@ Marzo 25, 14 días, [link a **contest**](https://vjudge.net/contest/486492)\\
 ## Contest 4
 Abril 08, 14 días, [link a **contest**](https://vjudge.net/contest/488521)\\
 **Tópicos**: [Búsqueda ternaria](resources/search)\\
-**Puntos**: ?, ?, ?, ?, ?, ?, ?, ?, ?, ?\\
-**Puntaje Mínimo Esperado**: ?\\
-**Hints** y **códigos de ejemplo**: _pendiente_
+**Puntos**: 2, 2, 3, 4, 2, 5, 4, 3, 2, 3\\
+**Puntaje Mínimo Esperado**: 5\\
+**Hints** y **códigos de ejemplo**: [link](hints/contest4)
 
 [Index](index) > ```{{page.title}}```
