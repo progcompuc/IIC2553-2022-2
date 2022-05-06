@@ -39,4 +39,11 @@ Abril 22, 14 días, [link a **contest**](https://vjudge.net/contest/490396)\\
 **Puntaje Mínimo Esperado**: ?\\
 **Hints** y **códigos de ejemplo**: _pending_
 
+## Contest 6
+Mayo 06, 14 días, [link a **contest**](https://vjudge.net/contest/492348)\\
+**Tópicos**: [DP](resources/dp)\\
+**Puntos**: ?, ?, ?, ?, ?, ?, ?, ?, ?\\
+**Puntaje Mínimo Esperado**: ?\\
+**Hints** y **códigos de ejemplo**: _pending_
+
 [Index](index) > ```{{page.title}}```
