@@ -22,6 +22,6 @@ Benjamín Rubio (<berubio@uc.cl>)
  \*\* Telegram tiene aplicación de escritorio por si acaso: <https://desktop.telegram.org/>
 
 ### Spreadsheet de notas y asistencia:
-Link a google spreadsheet: _TODO: AGREGAR_
+[Link a google spreadsheet](https://docs.google.com/spreadsheets/d/1RoKoTvP-SEaD9Ggh2z5NfvFF1Dxu0w_nGjd3F92xW00/edit?usp=sharing)
 
 [Index](../index) > ```{{page.title}}```
