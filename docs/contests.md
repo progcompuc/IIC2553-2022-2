@@ -35,9 +35,9 @@ Abril 08, 14 días, [link a **contest**](https://vjudge.net/contest/488521)\\
 ## Contest 5
 Abril 22, 14 días, [link a **contest**](https://vjudge.net/contest/490396)\\
 **Tópicos**: [Backtracking](resources/backtracking)\\
-**Puntos**: ?, ?, ?, ?, ?, ?, ?, ?, ?\\
-**Puntaje Mínimo Esperado**: ?\\
-**Hints** y **códigos de ejemplo**: _pending_
+**Puntos**: 3, 2, 3, 3, 3, 4, 2, 6, 7\\
+**Puntaje Mínimo Esperado**: 5\\
+**Hints** y **códigos de ejemplo**: [link](hints/contest5)
 
 ## Contest 6
 Mayo 06, 14 días, [link a **contest**](https://vjudge.net/contest/492348)\\
