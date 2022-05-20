@@ -53,4 +53,11 @@ Mayo 13, 14 días, [link a **contest**](https://vjudge.net/contest/495507)\\
 **Puntaje Mínimo Esperado**: ?\\
 **Hints** y **códigos de ejemplo**: _pending_
 
+## Contest 8
+Mayo 20, 14 días, [link a **contest**](https://vjudge.net/contest/496567)\\
+**Tópicos**: [Greedy](resources/greedy)\\
+**Puntos**: ?, ?, ?, ?, ?, ?, ?, ?, ?\\
+**Puntaje Mínimo Esperado**: ?\\
+**Hints** y **códigos de ejemplo**: _pending_
+
 [Index](index) > ```{{page.title}}```
