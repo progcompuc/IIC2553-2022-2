@@ -60,4 +60,12 @@ Mayo 20, 14 días, [link a **contest**](https://vjudge.net/contest/496567)\\
 **Puntaje Mínimo Esperado**: ?\\
 **Hints** y **códigos de ejemplo**: _pending_
 
+## Contest 9
+Mayo 27, 14 días, [link a **contest**](https://vjudge.net/contest/497365)\\
+**Tópicos**: [Divide & Conquer](resources/divconq)\\
+**Puntos**: ?, ?, ?, ?, ?, ?, ?, ?\\
+**Puntaje Mínimo Esperado**: ?\\
+**Hints** y **códigos de ejemplo**: _pending_
+
+
 [Index](index) > ```{{page.title}}```
