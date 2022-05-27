@@ -4,114 +4,122 @@ title: contest 8 - hints y códigos de ejemplo
 
 [Index](../index) > [Contests](../contests) > [Contest 8](../contests#contest-8) > ```{{page.title}}```
 
-### A - Dividing the names
+### A - Black and White Stones
 <details> 
   <summary>Hint 1</summary>
-  Notar que la respuesta es igual a la suma de los largos abreviados x N. Por lo tanto, basta resolver el problema de separar los nombres de tal manera que la suma de los largos abreviados sea la mínima posible, y luego multiplicamos el resultado por N.
+  Si hay K letras B, podemos visualizar una línea vertical divisoria entre los índices K-1 y K. Todas las letras B que están a la derecha de la línea divisoria hay que trasladarlas o teletransportarlas a las posiciones con W que están a la izquierda de la línea divisoria.
 </details>
 <details> 
   <summary>Hint 2</summary>
-  La información de todos los nombres se puede comprimir en un trie. Piensa en cómo aprovchar el trie para encontrar la repartición óptima de los nombres entre calles y avenidas. Un hint clave: si tenemos varias palabras que pasan por el mismo nodo del trie, sólo podemos abreviar si es que mandamos una palabra a las calles y el resto a las avenidas o viceversa. Si mandamos dos o más a cada grupo, no podemos abreviar.
+  Notar que trasladar uno a uno es mejor que teletransportar hasta que la distancia se vuelve muy grande, en cuyo caso teletransportar comienza a ser mejor.
 </details>
 <details> 
   <summary>Solución + código</summary>
-  La solución es hacer un backtracking + memoization sobre un trie (o en otras palabras, un DP sobre el trie). Los nodos de nuesro trie van a tener un contador count[nodo] que nos dice cuántas palabras pasaron por ese nodo cuando armamos el trie. Entonces nuestra función será DP(nodo, n) = la mínima suma de largos de los sufijos que parten desde este nodo, sujeto a que debemos mandar n sufijos a las calles y (count[nodo] - n) sufijos a las avenidas. La respuesta al problema original entonces está dada por DP(0, N), ya que 0 es la raíz, los sufijos que parten en la raíz son las palabras originales y debemos mandar N a las calles y el resto a las avenidas. La gran dificultad del problema queda entonces en la recurrencia. Si estamos resolviendo DP(nodo, n), supongamos que nodo tiene k hijos. Entonces el n lo tenemos que repartir entre los k hijos, es decir, tenemos que escoger n1, n2, ..., nk tales ques n1 + n2 + ... + nk = n, y resolver recursivamente DP(hijo_i, n_i). La forma de probar todos los posibles n1, n2, ..., nk se puede hacer con una función recursiva que por cada nodo hijo prueba todos los valores válidos con un for y luego llama recursivamente a la misma función para el siguiente hijo, y así sucesivamente. Ahora, con respecto a la respuesta misma, si estamos resolviendo DP(nodo, n), hay count[nodo] palabras que pasaron por nodo. Es decir, nodo contribuye con count[nodo] caracteres a la respuesta final, EXCEPTO si es que podemos aplicar abreviaciones. ¿Cuándo podemos abreviar? Si n == 1, podemos restar 1 a la respuesta ya que esta palabra está sola y se puede abreviar. Si el resto (count[nodo] - n) == 1, también se puede restar 1 a la respuesta ya que esta palabra está sola y se puede abreviar. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/LiveArchive/6824_DividingTheNames.cpp">Código de ejemplo</a>
+  Hacemos una solución greedy en la que buscamos llenar cada posición W a la izquierda de la línea divisoria (hint 1) con los B a la derecha de la línea divisoria. Usamos dos punteros, un puntero de derecha a izquierda para los W y otro puntero de izquierda a derecha para los B. El primero parte en el índice K-1 y el segundo en el índice K (donde K es la cantidad de letras B que hay en total). Para cada par de W y B que encontramos, usamos la opción más barata entre teletransportar y trasladar uno a uno. Sumamos todo eso y esa es la respuesta. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/LiveArchive/6822_BlackAndWhiteStones.cpp">Código de ejemplo</a>
 </details>
 
-### B - Queries for Number of Palindromes
+### B - TheQueue
 <details> 
   <summary>Hint 1</summary>
-  Dado el tamaño del string podemos preprocesar todos los substrings cuadráticamente para saber cuáles conforman palíndromos, esto puede ser chequeado con Rolling Hashing hacia ambos lados por ejemplo. Piensen en cómo usar este preprocesamiento para obtener la solución.
+  Si destacamos en una recta de tiempo los intervalos en que la recepcionista está ocupada, para esperar 0 tendríamos que llegar en un instante pertenciente a un gap entre 'ts' y el primer intervalo, un gap entre 2 intervalos, o un gap entre el último intervalo y 'tf'. Es decir, para todos los gaps excepto el último siempre hay alguien que llega después, así que podemos cubrir todos esos casos preguntándonos qué pasa si llegamos en t_i-1 para cada persona i. Para el gap entre el último intervalo y 'tf', nos basta con probar en (tf - tiempo_atención).
 </details>
 <details> 
   <summary>Hint 2</summary>
-  Dados l y r, la cantidad de substrings en [l, r] es la cantidad en [l, r - 1] más la en [l + 1, r] menos la en [l + 1, r - 1] más 1 si el mismo substring [l, r] era un palíndromo.
+  Si no podemos ser primeros en la cola al llegar (i.e. esperar 0), entonces estamos obligados a llegar y que haya gente en la cola antes que nosotros. Entonces tenemos que decidir en qué posición de la cola quedaremos cuando llegemos. Esto es equivalente a decidir justo antes de quién voy a quedar parado. Si quiero quedar justo antes que la persona i-ésima en la cola, lo greedy es llegar justo en el instante t_i - 1.
 </details>
 <details> 
   <summary>Solución + código</summary>
-  Usando los hints anteriores se puede armar un algoritmo de programación dinámica que cuente los substrings que son palíndromos para cada l y r usando la recursión del hint 2.
-  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Codeforces/QueriesForNumberOfPalindromes.cpp">Código de ejemplo</a>
+  El problema se puede resolver simulando la evolución de la cola en el tiempo e inyectando en la simulación consultas del tipo "cuánto tendría que esperar para que me antiendan si justo llego en el instante t". La simulación la podemos hacer con eventos con timestamps. Un evento puede ser del tipo "recepcionista llega", "recepcionista se va", "llega persona", "se va persona" y "consulta". Por cada persona i-ésima agregamos un evento tipo "consulta" con tiempo (t_i - 1) (siempre que t_i - 1 >= 0), y agregamos también un evento consulta con tiempo (t_f - tiempo_atención). Simulamos eventos y cuando nos toque un evento consulta, la espera será (tiempo_atención * personas_en_cola + tiempo que le falta a la recepcionista para desocuparse). Si la recepcionista me alcanza a atender dada esa espera, actualizo mi respuesta, e imprimo la mejor respuesta luego de simular todo. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/767B_TheQueue.cpp">Código de ejemplo</a>
 </details>
 
-### C - Efficient managing
+### C - DZY Loves Modification
 <details> 
   <summary>Hint 1</summary>
-  Primero notemos que el grafo descrito corresponde a un árbol. En ese caso podemos precalcular el precio de viajar desde un nodo raíz a cualquiera de los otros nodos en tiempo lineal con un dfs. Basta hacer un dfs que acumule el xor de las aristas usadas, pues el xor de los valores sólo tiene aquellas potencias de 2 con apariciones impares.
+  Si el problema fuera sólo tomar columnas o sólo tomar filas, podemos tomar un approach greedy tomando siempre la que me genere mayor ganancia (tomando en cuenta la disminución de la elegida luego de cada elección). En este caso sin embargo la combinación puede afectar el resultado.
 </details>
 <details> 
   <summary>Hint 2</summary>
-  Notemos que si estamos analizando el nodo i, cualquier camino desde i se puede ver como parte del subárbol de i en el arbol con la raíz original o puede ser un camino que sube y luego baja por el árbol, en ambos casos, cualquier camino que salga de i tendrá un costo igual al xor del camino precalculado desde la raíz hasta i xor con el precalculado de la raíz al nodo final del camino tomado desde i. Luego el problema puede ser reformulado a precalcular como el hint 1 y para cada i encontrar cual de los valores precalculados genera un mayor xor al ser combinados con el precalculado para i.
+  Supongamos que queremos tomar i filas y (k - i) columnas, podemos elegir las filas y columnas que tomaremos usando el Hint 1, para calcular la ganancia general que esto nos genera hay que considerar además la disminución que genera sobre las columnas el elegir una fila y viceversa.
 </details>
 <details> 
   <summary>Hint 3</summary>
-  Finalmente noten que cada uno de los valores precalculados puede ser cisto como un string binario, para encontrar el que genera el mayor xor con otro de estos strings, digamos x, se puede tomar un approach greedy que va condicionando tomar aquellos números con bits más grandes que difieran a los de x. Para esto piensen en qué estructura les deja ordenar los strings por los valores separando cada vez que difieren.
+  Siguiendo con el hint anterior notemos que esta ganancia de elegir i filas y (k - i) columnas, no depende del orden en que sean elegidas (respecto a elegir primero filas o columnas o combinadas). La ganancia siempre será R(i) + C(k - i) - i * (k - i) * P. Donde R(i) es la ganancia de elegir i filas de forma consecutiva y C(i) lo mismo sobre columnas.
 </details>
 <details> 
   <summary>Solución + código</summary>
-  La solución corresponde a usar la reducción de los hints 1 y 2 y hacer un Trie de los strings binarios descritos en el hint 3. El Trie recibirá los valores precalculados en forma binaria pero los ingresará al Trie con los bits más grandes al principio. Esto pues podemos encontrar el mayor xor posible con los números guardados con respecto a un número x usando un approach greedy que elija bits distintos siempre que se pueda en el trie (analizando desde bits más grandes a menos igual que como fueron ingresados).
-  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/SPOJ/EfficientManaging.cpp">Código de ejemplo</a>
+  Podemos precalcular los valores de R(i) y C(i) descritos en el Hint 2 para i de 0 a k y luego la respuesta será el máximo de R(i) + C(k - i) entre todos los i de 1 a k.
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Codeforces/DZYLovesModification.cpp">Código de ejemplo</a>
 </details>
 
-
-### D - Death Stars (medium)
+### D - Bridge Crossing
 <details> 
   <summary>Hint</summary>
-  Piensa en una forma de acelerar la comparación entre strings.
+  Pensar en una solución por rondas, donde cada ronda comienza con el bote a la izquierda y el objetivo de la ronda es enviar a las 2 personas más lentas a la orilla derecha de la forma más eficiente posible.
 </details>
 <details> 
   <summary>Solución + código</summary>
-  Usamos rolling hashing. Creamos una instancia de la clase hash por cada fila de la matriz vertical y por cada fila de la matriz horizontal. Luego hacemos un doble for y en cada caso con un tercer for hacemos M comparaciones aprovechando los hashes para ver si las submatrices de MxM coinciden. Para hacer el código más rápido, hacemos break del tercer for apenas algo no coincida. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/958A2_DeathStars(medium).cpp">Código de ejemplo</a>
+  Hacer una solución por rondas como lo indica el hint. Hay dos formas de enviar a las dos personas más lentas: 1) enviamos cada persona más lenta acompañada por la persona más rápida y nos devolvemos con la persona más rápida; 2) enviamos las dos personas más rápidas, nos devolvemos con la más rápida, luego enviamos las personas más lentas juntas y finalmente nos devolvemos con la segunda más rápida que dejamos al otro lado. De esas dos opciones escogemos la que sea mejor. Tener cuidado con que en la última ronda no hay que volver a la orilla izquierda (o si no no sería la última ronda). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codechef/GEEK04_BridgeCrossing_v2.cpp">Código de ejemplo</a>
 </details>
 
-### E - Diccionário Portuñol
+### E - Letters Cyclic Shift
+<details> 
+  <summary>Hint</summary>
+  Siempre conviene achicar las letras más a la izquierda posible (esto es lo greedy).
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Encontramos la primera letra que no es 'a' de izquierda a derecha, luego desde ahí encontramos la última letra que no es 'a', entonces todo ese segmento lo cyclic-shifteamos. Si no logramos encontrar ningún segmento así, quiere decir que el string tiene puras a's, pero como estamos obligados a cyclic-shiftear por lo menos un caracter, entonces la última 'a' la convertimos en 'z'. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/709C_LetterCyclicShift.cpp">Código de ejemplo</a>
+</details>
+
+### F - Nested Dolls
 <details> 
   <summary>Hint 1</summary>
-  Podemos pensar el problema como descontar de la cantidad de combinaciones totales todos los que se repitan.
+  Busque una forma de ordenar las muñecas tal que el problema sea más fácil.
 </details>
 <details> 
   <summary>Hint 2</summary>
-  Para contar las totales podemos contar cada prefijo en portugués posible usando un Trie de las palabras en portugúes, y para la cantidad de sufijos en español podemos usar un Trie de las palabras en español reversas (así no repetimos sufijos). Luego la cantidad de nodos usados en cada trie multiplicados es la cantidad total de combinaciones prefijo sufijo posibles. Sólo queda descontar las que se repitan.
-</details>
-<details> 
-  <summary>Hint 3</summary>
-  La única forma de que estemos contando combinaciones repetidas es que haya un prefijo en portugúes que termine con la misma letra que empieza un sufijo en español, así se podría tomar esa letra indistíntamente de ambos lados. Podemos precaluclar cuantos prefijos portugueses terminan en cada letra fácilmente usando un dfs sobre los nodos del trie. Lo mismo para las primeras letras de los sufijos en español.
+  Ordene de mayor a menor (>) en ancho y desempate de menor a mayor (<) en altura. Vuelva a pensar el problema considerando este orden.
 </details>
 <details> 
   <summary>Solución + código</summary>
-  La solución consiste en descontar de lo contado según hint 1 las repeticiones como mencionadas en el hint 2. Para contarlas hacemos 2 dfs, uno que cuente prefijos en portugués terminados en cada letra (prefijos de largo mayor a 1 pues no puede ser vacío según enunciado y estamos contando repeticiones donde tomamos o no la última letra). En el otro dfs cada vez que encontramos un sufijo que empieze en una letra, descontamos de la respuesta la cantidad de prefijos que terminaban en ella.
-  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/UVA/DiccionarioPortunol.cpp">Código de ejemplo</a>
+  Si consideramos el orden descrito en los hints, podemos ir recorriendo las muñecas una por una (en el orden descrito) y elegir cual de las muñecas que ya hemos visto podemos juntar a esta (encerrar con la que estamos viendo). Como las muñecas están ordenadas crecientemente en ancho, todas las muñecas que ya hemos visto tienen ancho no mayor a la actual. Luego para poder ser elegida sólo importa la altura. Si mantenemos las muñecas que ya vimos ordenadas por altura, por ejemplo en un multiset, podemos encontrar rápidamente la con la altura más alta que puedo encerrar, si junto la actual con esta muñeca encontrada (sacando la encontrada del multiset e ingresando la nueva) siempre tendré en el multiset a las muñecas más comprimidas posibles. La respuesta final será el tamaño final del multiset.
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/SPOJ/NestedDolls.cpp">Código de ejemplo</a>
 </details>
 
-
-### F - Cellphone Typing
+### G - Criss-Cross Cables
 <details> 
   <summary>Hint</summary>
-  Si comprimimos todo en un trie, ¿se te ocurre una forma fácil de resolver el problema?
+  Si ordenamos los cables de menor a mayor y las distancias entre pares de puertos de menor a mayor, entonces es fácil hacer una solución con dos punteros. El problema es que la cantidad de pares de puertos es cuadrática y por ende demasiado grande (TLE). Piensa en una forma de ir recorriéndolos en orden sin tener que generarlos todos.
 </details>
 <details> 
   <summary>Solución + código</summary>
-  Metemos todas las palabras en un trie, y en cada nodo contamos la frecuencia de palabras que pasaron por ese nodo. Luego, simulamos el proceso de tipear cada palabra navegando el trie desde la raíz y usando los caracteres de la palabra como las instrucciones de navegación. Partimos sumando 1 porque el primer caracter siempre se tipea. Luego, los siguientes caracteres se autocompletan si y sólo si la transición en el trie es obligada (si el nodo anterior solo tiene un puro hijo), esto se puede chequear comparando los contadores, si son iguales no hay bifurcaciones. Al final dividimos la suma total por la cantidad de palabras. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/LiveArchive/6133_CellphoneTyping.cpp">Código de ejemplo</a>
+  Usamos una priority_queue para ordenar pares de puertos. Inicialmente la llenamos con los pares consecutivos (i, i+1). Cuando sacamos el par (i, j), metemos el par (i, j+1). Al mismo tiempo tenemos un puntero en nuestros cables. Si en algún punto un cable no se la puede con el par (i, j) actual, menos se la va a poder con los pares futuros, así que inmediatamente no se puede. Si se nos acaban los cables y siempre pudimos, sí se puede. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/kattis/crisscrosscables.cpp">Código de ejemplo</a>
 </details>
-
-### G - Dr. Evil Underscores
+  
+### H - Crazy Driver
 <details> 
   <summary>Hint</summary>
-  Piensa que los números son strings de largo 30 en binario y con padding de 0's por la derecha de ser necesario. Piensa ahora que los metes en un trie. ¿Se te ocurre cómo resolver el problema?
+  Notemos que vamos a tener que ir y volver entre algunos pares de puertas mientras esperamos a que la siguiente sea abierta. Una forma de hacer este problema de forma greedy elegir este par de puertas en las que daré vueltas como las que tengan el camino asociado más barato.
 </details>
 <details> 
   <summary>Solución + código</summary>
-  Armamos un trie con los números como lo sugiere el hint. Luego podemos encontrar el mínimo xor con un DFS sobre el trie desde la raíz. El DFS va a calcular el mínimo xor posible desde el nodo u. Si u tiene un puro hijo, entonces siempre podemos escoger el mismo bit para que en el xor nos de 0. Si u tienes dos hijos, entonces independiente de cuál bit escogamos, en el máximo siempre va a convenir escoger la rama con el bit opuesto, entonces siempre va a haber un bit prendido en la i-ésima posición (donde i es la profundidad del nodo u) y luego escogemos el mínimo entre los dos DFS's de los hijos. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/1285D_Dr.EvilUnderscores.cpp">Código de ejemplo</a>
+  Podemos pensar el problema como elecciones consecutivas, vamos puerta por puerta viendo si es que el tiempo que llevamos es suficiente, si no lo es vamos agregando de a 2 al tiempo y sumando al costo 2 veces el costo menor visto hasta que nuestro tiempo sea suficiente. La respuesta será el costo acumulado total.
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Kattis/CrazyDriver.cpp">Código de ejemplo</a>
 </details>
 
-### H - Isomorphic Inversion
+### I - Change-free
 <details> 
-  <summary>Hint</summary>
-  Piensen en una forma greedy de seleccionar los segmentos.
+  <summary>Hint 1</summary>   
+  Notemos que nos podemos olvidar de los billetes a pagar y sólo pensar en las monedas disponibles. Sólo hay 2 formas de pagar que podrían llegar a ser óptimas cada día, pagar C[i]/100 billetes y C[i]%100 monedas (change free) o pagar (C[i]/100 + 1) billetes y 0 monedas. Ninguna otra forma de pagar nos da beneficios o es óptima.
+</details>
+<details>
+  <summary>Hint 2</summary>
+  Notemos que la ganancia en monedas que nos genera el pagar de la segunda forma respecto a pagar de la primera siempre es de exactamente 100 monedas (pues no pagamos C[i]%100 y recibimos 100 - C[i]%100).
 </details>
 <details> 
   <summary>Solución + código</summary>
-  Podemos armar los segmentos de forma greedy chequenando con k de 1 creciente separando los primeros y últimos k cada vez que el sustring de los primeros k que quedan sea igual al de los últimos k. Para chequear esto se puede usar hashing preprocesado de todo el string. la respuesta será cuantas veces se pudo separar * 2 más uno si sobraron cosas al medio.
-  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Kattis/IsomorphicInversion.cpp">Código de ejemplo</a>
+  Notemos que para poder pagar justo un día necesitamos tener la cantidad de monedas necesarias, si las tenemos lo óptimo es pagarlas, de otro modo podemos elejir de forma greedy si parar de la segunda forma o elegir un día de los anteriores donde hayamos pagado justo y pasarlo a la segunda forma para pagar justo ahora. Para hacer esta elección basta con hacer uso de alguna estructura que nos ordene lo que hayamos visto, por ejemplo una priority_queue en c++.
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Codeforces/ChangeFree.cpp">Código de ejemplo</a>
 </details>
 
 <!-- <details> 
