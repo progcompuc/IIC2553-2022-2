@@ -49,9 +49,9 @@ Mayo 06, 14 días, [link a **contest**](https://vjudge.net/contest/492348)\\
 ## Contest 7
 Mayo 13, 14 días, [link a **contest**](https://vjudge.net/contest/495507)\\
 **Tópicos**: [DP](resources/dp)\\
-**Puntos**: ?, ?, ?, ?, ?, ?, ?, ?\\
-**Puntaje Mínimo Esperado**: ?\\
-**Hints** y **códigos de ejemplo**: _pending_
+**Puntos**: 4, 4, 4, 4, 3, 3, 4, 4\\
+**Puntaje Mínimo Esperado**: 5\\
+**Hints** y **códigos de ejemplo**: [link](hints/contest7)
 
 ## Contest 8
 Mayo 20, 14 días, [link a **contest**](https://vjudge.net/contest/496567)\\
