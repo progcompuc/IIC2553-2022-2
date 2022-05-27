@@ -4,88 +4,98 @@ title: contest 7 - hints y códigos de ejemplo
 
 [Index](../index) > [Contests](../contests) > [Contest 7](../contests#contest-7) > ```{{page.title}}```
 
-### A - In Case of an Invasion, Please...
+### A - Fabricating Sculptures
 <details> 
   <summary>Hint 1</summary>
-  Intenten una búsqueda binaria sobre la respuesta.
-</details>
-<details> 
-  <summary>Hint 2</summary> 
-  En la búsqueda binaria, dado un tiempo tratamos de ver si la respuesta es posible con un problema de flujo máximo, para eso podemos intentar unir lugares a refugios si es posible llegar a ellos en el tiempo, es posible saber si es posible ir a cada refugio en el tiempo sin empeorar la complejidad preprocesando las distancias a los refugios con un Dijkstra.
-</details>
-<details> 
-  <summary>Solución + código</summary>
-  Usando los hints anteriores la solución consiste en hacer búsqueda binaria sobre la respuesta y para checkear generamos un grafo para flujo máximo tirando aristas de la fuente a los nodos con su capacidad entregada in aristas de capacidad infinita de los nodos a los refugios que se alcancen en el tiempo de la búsqueda según el dijkstra preprocesado. Si el flujo es igual a la cantidad de personas totales se aprueba la condición. Sin embargo para que pase en tiempo se necesita una optimización extra uniendo aquellas posiciones que pueden llegar a los mismos refugios.
-  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Kattis/InCaseOfInvasion.cpp">Código de ejemplo</a>
-</details>
-
-### B - Surely You Congest
-<details> 
-  <summary>Hint 1</summary>
-  Se puede observar que si dos lugares tienen distancias mínimas al destino distintas entonces no hay forma de que choquen en el camino si van sólo por caminos óptimos.
+  Notar que una base válida se puede pensar como una secuencia de segmentos horizontales apilados, donde el primer segmento es de ancho S y cada siguiente segmento es de ancho menor o igual al anterior y está contenido dentro de los límites del segmento anterior, y la cantidad total de bloques usados es B. Entonces una forma fácil de modelar esto sería con un DP(s, b) = todas las bases válidas que se pueden armar, dado que el primer segmento es de ancho 's' y la cantidad de bloques total a usar es 'b'. La solución al problema original sería DP(S, B).
 </details>
 <details> 
   <summary>Hint 2</summary>
-  Dado que tengamos las distancias al destino precalculadas (con un algoritmo como dijkstra), podemos asegurarnos de usar sólo aristas que sean óptimas usando aquellas que mantengan distancias óptimas del dijkstra a traves de ellas. A esta técnica se le conoce como usar el DAG de caminos óptimos.
+  El problema del DP(s, b) del hint 1 es que si lo implementamos ingenuamente, la recurrencia sería hacer una sumatoria sobre todos los posibles casos del siguiente segmento horizontal, es decir, DP(s, b) = sum k=1..min(s, b-s) {  (s-k+1) * DP(k, b-s) }. Esta solución es correcta, pero nos da TLE. ¿Por qué? Porque la tabla memo sería de 5000 x 5000 y llenar cada celda requiere hacer una sumatoria (un for loop de hasta 5000 pasos), o sea, 5000^3 = 1.25 x 10^11 (mega TLE). Hint: piensa en una forma de jugar algebráicamente con la sumatoria y luego aplica "DP dentro del DP" (inception) para que el costo de la sumatoria sea prácticamente constante y no lineal.
 </details>
 <details> 
   <summary>Solución + código</summary>
-  Por el hint 1, podemos procesar las posiciones por distancia al destino pero procesando los que esten a distancias iguales al mismo tiempo, para saber cuantas personas pueden llegar a destino de las que se procesan en algún momento podemos plantear un problema de flujo máximo, podemos tirar aristas de flujo 1 a todas las posiciones que tengan misma distancia (1 por cada persona en ellas) además usamos aristas de capacidad 1 en los caminos óptimos del hint 2. A la respuesta se le suma el flujo máximo en cada procesamiento.
-  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Kattis/SurelyYouCongest.cpp">Código de ejemplo</a>
+  Hacemos el DP propuesto en los hints 1 y 2. La sumatoria la podemos descomponer en dos términos: DP(s, b) = (s+1) * (sum k=1..min(s, b-s) { DP(k, b-s) }) -  (sum k=1..min(s, b-s) { k * DP(k, b-s) }). Cada una de esas sumatorias las podemos encapsular en una función que recibe como argumentos el techo del k y el índice de la columna sobre la que se suma, y las podemos memoizar. Al final es como tener 3 tablas memo de 5000 x 5000 (peor caso) y el costo total es llenar las 3 tablas, es decir O(B x S x 3). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Matcomgrader/FabricatingSculptures.cpp">Código de ejemplo</a>
 </details>
 
-### E - Domino Art
+### B - Cleaning Robot
+<details> 
+  <summary>Hint</summary> 
+  Supongamos que calculamos la distancia más corta (menor número de movidas) para llegar desde el robot hacia cada celda, y desde cada celda sucia a cada otra celda. Luego podemos olvidarnos del poblema original y verlo como el problema del vendedor viajero (TSP): el robot es un viajero que quiere visitar cada celda sucia en el menor tiempo posible. TSP es un problema clásico de DP. Revisen los apuntes de DP, ahí hay material sobre TSP.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Básicamente calculamos las distancias desde el robot a cada otra celda, y desde cada celda sucia a cada otra celda. Esto no es difícil de hacer, la intuición es que partimos desde una celda origen y cada celda adyacente tiene distancia 1, luego las adyacentes de las adyacentes (no visitadas) tienen 2 distancia, y así. Es decir, vamos visitando las celdas por capas, donde las celdas de la siguiente capa tienen distancia 1 más que las celdas de la capa anterior. Esto se puede hacer con Breadth First Search (BFS). Una vez que tenemos estas distancias calculadas, el problema se reduce a TSP (travelling salesman problem), un DP muy estándar con bitmask. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/CLEANRBT_CleaningRobot.cpp">Código de ejemplo</a>
+</details>
+
+### C - Enigma
 <details> 
   <summary>Hint</summary>
-  Notemos que si coloreamos las celdas del tablero como ajedrez, una pieza de dominó siempre une celdas de colores opuestos, luego si existe una forma de cubrir con dominos entonces todas las celdas de color negro debe poder conectarse a una blanca sin traslapar.
+  Notemos que podemos pensar el problema en cuanto al resto en módulo N. El problema se reduce a intentar que el resto total sea 0 dado lós dígitos predefinidos y los dígitos por definir. Para saber que resto aporta un dígito en la posición x desde la derecha basta multiplicar el dígito por el resto de la potencia de 10 correspondiente y sacar módulo. Podemos tener estos restos de potencias de 10 precalculados para evitar mayor complejidad.
 </details>
 <details> 
   <summary>Solución + código</summary>
-  Usando el hint podemos chequear la existencia de un cubrimiento con un problema de flujo donde unimos a la fuente las celdas de color negro con capacidad 1, luego unimos las celdas negras que nos importan a las blancas que nos importan adyacentes, luego unimos las blancas que nos importan al destino con capacidad uno, si el flujo es igual a la mitad de las celdas que nos importan entonces es posible cubrir la figura.
-  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Otros/DominoArt.cpp">Código de ejemplo</a>
+  Podemos construir un DP que dependa de un índice (i) y un resto (r) y responda a la pregunta de si es posible hacer que el número tomando desde el índice i en adelante genere resto r. Para esto basta iterar por los posibles valores en el dígito i y preguntar por el estado (i + 1, r') donde r' está modificado para considerar el resto aportado en el dígito recién definido. Si probamos los dígitos en orden del 0 al 9 nos aseguramos que la primera vez que se responda true estamos en la menor solución, guardamos el dígito probado y devolvemos true sin probar el resto de los dígitos. Finalmente la respuesta depende únicamente del estado (0, 0).
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Codeforces/Enigma.cpp">Código de ejemplo</a>
 </details>
 
-### F - Kill the Werewolf
+### D - Gates of uncertainty
 <details> 
-  <summary>Hint 1</summary>
-  Piensen en como contar los que no tienen oportunidad de ganar en vez de los que si la tengan
-</details>
-<details> 
-  <summary>Hint 2</summary>
-  Supongamos que analizamos las posibilidades de la i-ésima persona, suponinendo que todos los que la eligieron en primera fase votan por ella en 2a fase, la única forma de ganar es que con los otros votos mas el de la i-ésima persona haya alguien que acumule al menos tantos votos como la i-ésima. Luego para que no tenga oportunidad debe haber una forma de repartir los votos en que nadie llegue al límite de la cantidad de votos que recibe la i-ésima persona.
+  <summary>Hint</summary> 
+  Notar que el output de correcto o equivocado de la salida en uno de los nodos depende únicamente del output y correctitud del mismo en los nodos de input. De esta forma podemos separar el problema en nodos. Por ejemplo si ambos nodos input tienen salidas correctas y el nodo en cuestión funciona bien, el output será correcto. Por otro lado si uno de los nodos inputs tiene un cero correcto yo soy capaz de generar un uno correcto (a menos de que el nodo esté fijo en 0).
 </details>
 <details> 
   <summary>Solución + código</summary>
-  Usando los hints se analiza la posibilidad de cada persona 1 a 1, para chequear generamos un grafo bipartito con 2 nodos por persona para flujo máximo, unimos las personas que no eligieron a la i-ésima en primera fase con sus posibles votos. le damos capacidad 1 a todas las aristas de la fuente y de los posibles votos pero ajustamos las capacidades al destino para impedir que se pueda tener más o igual votos que los que tendrá la i-ésima persona. Si el flujo máximo es igual a la gente considerada en el grafo es porque pueden impedir que la i-ésima persona gane.
-  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/URI/KillTheWerewolf.cpp">Código de ejemplo</a>
+  Podemos construir un DP que dependa de 3 cosas, nodo, output generado (a) y output correcto (b) y que nos cuente cuantas combinaciones del input (la parte que afecta a este nodo) generan a en el nodo cuando deberían generar b. Para esto podemos ocupar el hint y hacer un dp que sólo dependa de las combinaciones de output y output correcto de los nodos input del nodo. Hay 4 combinaciones para cada nodo de input por lo que el dp en un nodo depende de 16 combinaciones de sus nodos input, las que se separan en aportar a las distintas posibilidades de a y b (y si el nodo esta defectuoso). Traten de ver qué combinaciones de los inputs aportan a cada combinación de a y b en el nodo, y armar el DP a base de esa dependencia. La complejidad total de esta solucion es O(100000 * 2 * 2 * 16) donde 100000 * 2 * 2 sale de la cantidad de estados y 16 de la  máxima cantidad de subestados de los que depende un estado.
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Codeforces/GatesOfUncertainty.cpp">Código de ejemplo</a>
 </details>
 
-### G - Hooligan
-
-<details>    
-  <summary>Hint 1</summary>
-  Obviamente, de partida nos conviene ponernos en el caso optimista de que el equipo 0 gana todos sus partidos pendientes.
-</details>
-<details>     
-  <summary>Hint 2</summary>
-  Pensar que cada par de equipos (i, j) involucra una candidad K_(i,j) de partidos pendientes entre ellos y por ende 2 x K_(i,j) puntos a repartir. Es decir, podemos verlo como que el par (i,j) debe "bombear" 2 x K_(i, j) puntos a i y j. Por otro lado, como queremos que el equipo 0 gane, si el equipo 0 tiene P_0 puntos y el equipo i tienes P_i puntos, entonces el equipo i a lo más puede recibir P_i - P_0 - 1 puntos.
-</details>
+### E - Wooden Fence
 <details> 
-  <summary>Solución + código</summary>
-  Primero asumimos que el equipo 0 gana todos su partidos pendientes (hint 1). Luego armamos un grafo para maxflow según el hint 2: un source, una capa de nodos (i,j) correspondientes a pares de equipos ((N-2)x(N-1)/2 nodos), una capa de N-1 nodos (equipos) y un target. Las capacidades desde el source son los puntos pendientes a repartir por cada par de equipos, las capacidades hacia el target son las cotas P_i - P_0 - 1 de puntaje extra por equipo. Si el flujo máximo de la red es igual al total de puntaje pendiente, quiere decir que es posible jugar todos los partidos de tal manera que el equipo 0 gane. De lo contrario, no se puede. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/UVA/12193_Hooligan.cpp">Código de ejemplo</a>
-</details>
-
-### H - Attacking Rooks
-
-<details>    
   <summary>Hint</summary>
-  Podemos ver poner una torre como el equivalente de emparejar una subfila con una subcolumna. Luego maximizar las torres es equivalente a maximizar parejas (maximum bipartite matching).
+  Una forma de modelar el problema: tengo que contruir una cerca de largo horizontal L, poniendo tablas de izquierda a derecha, partiendo con una tabla de tipo i (1 <= i <= N) y orientación o (o = 0 (normal), o = 1 (rotado)). Luego de hacer eso, nos va a quedar como subproblema completar una cerca de largo L - W[i] (si o == 0) o bien L - H[i] (si o == 1), y donde la siguiente tabla a poner tiene que cumplir que la parte de abajo tiene que calzar con W[i] (si o == 0) o bien con H[i] (si o == 1). Entonces nos podemos poner en todos los casos de las posibles siguientes tablas y orientaciones de las mismas para seguir resolviendo el subproblema que nos queda, y es fácil darse cuenta que podemos explorar todo el universo de posibilidades con backtracking y contar. Pero eso daría TLE, así que lo memoizamos y nos queda un DP.
 </details>
 <details> 
   <summary>Solución + código</summary>
- Armamos un grafo bipartito donde un grupo son las subfilas y otro las subcolumnas, con aristas conectando subfilas con subcolumnas que tienen una celda en común. Luego resolvemos maximum bipartite matching con maxflow. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/LiveArchive/6525_AttackingRooks.cpp">Código de ejemplo</a>
+  Siguiendo la idea del hint, hacemos un DP(i, o, len) = la cantidad de formas distintas que podemos completar una cerca de largo 'len' (horizontal) poniendo tablas de izquierda a derecha, sujeto a que estamos obligados a partir poniendo primero una tabla de tipo 'i' con orientación 'o'. La recursión no es muy complicada, es básicamente iterar sobre todos los tipos de tablas (excluyendo 'i' ya que no podemos repetir el tipo consecutivamente), considerados las dos posibles rotaciones (mientras no sea cuadrada) y llamamos el DP recursivamente. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/182E_WoodenFence.cpp">Código de ejemplo</a>
 </details>
 
+### F - Long Jumps
+<details> 
+  <summary>Hint</summary>  
+  Piensen en usar DP.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Podemos hacer un dp con estado el índice en que estamos y que responda la máxima suma partiendo de este índice, luego la suma será A[i] + dp(i + A[i]), basta luego tomar el máximo de dp(i) para todo i.
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Codeforces/LongJumps.cpp">Código de ejemplo</a>
+</details>
+
+### G - Lucky Number Representation
+<details> 
+  <summary>Hint 1</summary> 
+  Notemos que el problema es mucho más facil si el número es divisible por cuatro. En este caso se puede solucionar el problema dividiendo por cuatro y avanzando dígito por dígito. Si el dígito es menor o igual a seis, agregamos a esa cantidad de números un cuatro en el dígito correspondiente. Si es mayor a seis basta notar que siete cuatros es equivalente a agregar cuatro sietes por lo que agregando esto alcanzamos a rellenar lo equivalente a maximo nueve cuatros con cuatro sietes y dos cuatros, ocupando los seis espacios que tenemos. Se cumplirá que la suma de los números es igual al número original antes de ser dividido. Pero nuestro número no necesariamente es divisible por cuatro.
+</details>
+<details> 
+  <summary>Hint 2</summary>
+  Notemos además que podemos hacer un DP "naive" (ingenuo) que trate de elegir seis lucky numbers que sumen al número pedido, para esto podemos separar en estados que dependan del número a separar (N)  y en cuántos números separarlo (C), probar con todos los lucky numbers menores o iguales al número y cuando probamos el lucky number L el resultado depende del estado (N - L, C - 1). La respuesta estará dada por DP(N, 6), con N el número incial. El problema de este approach es que La complejidad es muy alta, sólo es viable para números hasta 10.000 por el tiempo pedido.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Podemos usar ambos Hints y obtener una solución. Primero descomponemos el número original N en dos partes, N1 = (N % 4000) y N2 = N - N1, evidentemente podemos resolver la solución de N1 por el DP descrito en el Hint 2. Mientras que N1 es divisible por 4 por lo que se puede obtener su solución usando el Hint 1. Luego la respuesta será los números de ambas soluciones sumados correspondientemente. Sólo hay un caso borde en que N1 no tiene solución al ser muy pequeño, acá basta con tomar N1 = (N % 4000) + 4000 y N2 = N - N1.
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Codeforces/LuckyNumberRepresentation.cpp">Código de ejemplo</a>
+</details>
+
+### H - Garland
+<details> 
+  <summary>Hint</summary>
+  Como las transiciones dependen sólo de la paridad de los números podemos contar cuantos pares e impares faltan por poner y ver cómo ponerlos de manera inteligente.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Podemos costruir un DP que calcule la mínima cantidad de transiciones para el garland desde el índice i en adelante cuando quedan X impares, Y impares y el ultimo número tenía paridad p. Luego la respuesta será el mínimo entre o poner un número impar en la posición i mas el estado (i + 1, X - 1, Y, 1) o poner un número par más el estado (i + 1, X, Y - 1, 0), tomando en cuenta las transiciones cuando la paridad que decidamos sea distinta a la del número anterior. La respuesta será la del estado (0, Xi, Yi, -1) donde Xi es la cantidad de impares restantes al inicio, Yi la de pares y -1 una paridad que no corresponde a impar ni a par (para no tener transiciones al principio).
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Codeforces/Garland.cpp">Código de ejemplo</a>
+</details>
 
 <!-- <details> 
   <summary>Hint</summary>   
