@@ -67,5 +67,12 @@ Mayo 27, 14 días, [link a **contest**](https://vjudge.net/contest/497365)\\
 **Puntaje Mínimo Esperado**: ?\\
 **Hints** y **códigos de ejemplo**: _pending_
 
+## Contest 10
+Junio 03, 14 días, [link a **contest**](https://vjudge.net/contest/498280)\\
+**Tópicos**: [Grafos: BFS & DFS](resources/graphs)\\
+**Puntos**: ?, ?, ?, ?, ?, ?, ?, ?, ?\\
+**Puntaje Mínimo Esperado**: ?\\
+**Hints** y **códigos de ejemplo**: _pending_
+
 
 [Index](index) > ```{{page.title}}```
