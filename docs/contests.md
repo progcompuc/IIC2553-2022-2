@@ -63,8 +63,8 @@ Mayo 20, 14 días, [link a **contest**](https://vjudge.net/contest/496567)\\
 ## Contest 9
 Mayo 27, 14 días, [link a **contest**](https://vjudge.net/contest/497365)\\
 **Tópicos**: [Divide & Conquer](resources/divconq)\\
-**Puntos**: ?, ?, ?, ?, ?, ?, ?, ?\\
-**Puntaje Mínimo Esperado**: ?\\
+**Puntos**: 3, 2, 7, 2, 4, 5, 6, 5\\
+**Puntaje Mínimo Esperado**: 4\\
 **Hints** y **códigos de ejemplo**: _pending_
 
 ## Contest 10
