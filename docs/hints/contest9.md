@@ -4,118 +4,86 @@ title: contest 9 - hints y códigos de ejemplo
 
 [Index](../index) > [Contests](../contests) > [Contest 9](../contests#contest-9) > ```{{page.title}}```
 
-### A - String Similarity
+### A - Merge Sort
+
 <details> 
   <summary>Hint</summary>
-  Noten que si calulamos el suffix array con arreglo lcp del string original ya se tiene calculado el tamaño de los longuest common preffix de sufijos continuos en el suffix array. Piensen en cómo ocupar esto para obtener la respuesta.
+  Necesitamos un arreglo que al llamar mergesort sobre él, se hagan un total de K llamadas. Pensar en una forma de simular la ejecución de mergesort distribuyendo hacia abajo las K llamadas totales que hay que hacer, y en vez de ordenar vamos poniendo valores desordenados (cosa de que al llamar el mergesort original se ejecuten esas mismas K llamadas que simulamos).
 </details>
 <details> 
   <summary>Solución + código</summary>
-  Podemos buscar el lugar donde está el string completo en el suffix array (buscar la posición del 0). Luego la respuesta será la suma de acumular mínimos hacia derecha e izquierda del arreglo lcp, esto pues el largo común de un segmento continuo del suffix array corresponde al mínimo de los lcp del rango.
-  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/HackerRank/StringSimilarity.cpp">Código de ejemplo</a>
+  Hacemos la misma recursión divide and conquer de mergesort(l, r, k), donde le agregamos un argumento extra k que nos dice cuantas llamadas tenemos que hacer. Si k == 1, entonces esta llamada en particular debe ser una llamada final (no más recursión hacia abajo), así que el subarreglo correspondiente debe estar ordenado (llenamos con valores crecientes). Si k > 1, entonces hay que decidir cómo repartir (k-1) llamadas entre las dos llamadas hijas. Pueden haber varias opciones. Una opción posible es tirar la mayor cantidad de llamadas a la izquierda y lo que sobre a la derecha. Como sea que distribuyamos, nos van a quedar los dos subarreglos hijos con valores asignados. Para garantizar que la unión de los dos subarreglos quede desordenada, le podemos sumar un offset a los valores del subarreglo hijo izquierdo para garantizar que todos esos valores sean mayores estrictos a los valores del subarreglo derecho (con eso queda sí o sí desordenado). Los casos bordes en que se retorna -1 son cuando el k supera el máximo de llamadas posibles o bien cuando k es par. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/873D_MergeSort.cpp">Código de ejemplo</a>
 </details>
 
-### B - Match & Catch
-<details> 
-  <summary>Hint</summary>  
-  Piensen en cómo se puede responder lo pedido usando el precálculo de un suffix array y lcp. Noten que todo substring es un prefijo de un sufijo, y para que sea único en el string original basta con que sea de largo mayor al lcp anterior y posterior (pues no habrá otro prefijo de sufijo igual de ese largo).
-</details>
-<details> 
-  <summary>Solución + código</summary>
-  Podemos usar el hint 1 pero precalculando sobre el string S1#S2, así podemos filtrar los substrings comunes y unicos de ambos mirando el lcp, de forma que serán continuos en el suffix array pero los lcp inmediatamente posterior y anterior serán menores. Es decir, si estamos en la posición i del suffix array, donde sa[i] es parte de S1 y sa[i + 1] es parte de S2. luego el menor substring común asociado a esa posición debe ser de largo menor o igual a lcp[i], pero sólo será unico en ambos strings si lcp[i] >= largo > max(lcp[i - 1], lcp[i + 1]). Luego si es posible tomamos largo = max(lcp[i - 1], lcp[i + 1]) + 1, y nos quedamos con el menor de estos largos.
-  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Codeforces/MatchAndCatch.cpp">Código de ejemplo</a>
-</details>
+### B - Painting Fence
 
-### C - Gluing Pictures
-<details> 
-  <summary>Hint 1</summary>
-  Noten que basta usar un approach greedy donde vamos completando la palabra buscado usar substrings lo más grandes posibles del string grande. Esto siempre será óptimo, sólo queda saber cómo buscar el mayor substring que podemos tomar de forma eficiente.
-</details>
-<details> 
-  <summary>Hint 2</summary>
-  Podemos buscar lo descrito en el hint 1 letra por letra. Dado que hayamos precalculado el suffix array del string original, en este tendremos ordenados los sufijos. Todo substring debe ser el prefijo de un sufijo, luego basta buscar el sufijo que tenga un prefijo común más grande. Piensen cómo hacerlo letra por letra usando búsqueda binaria.
-</details>
-<details> 
-  <summary>Solución + código</summary>
-  Podemos buscar letra por letra con búsqueda binaria, inicialmente l = 0, r = N y tenemos todos los sufijos, hacemos búsqueda binaria por una letra y podemos reducir el rango a l', r' donde todos los sufijos en [l', r') comparten la primera letra con el string buscado, luego acotamos este nuevo rango según la segunda letra y así sucesivamente. En el momento donde no podamos encontrar una letra habremos encontrado el substring más largo posible, agregamos uno a la respuesta y empezamos de nuevo del rango [0, N) con la letra que quedamos.
-  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Matcomgrader/GluingPictures.cpp">Código de ejemplo</a>
-</details>
-
-### D - Marblecoin
-<details> 
-  <summary>Hint 1</summary>
-  Notar que el impuesto a pagar se puede pensar como un número en base 365. Por lo tanto, nos conviene que los dígitos más significativos sean lo más chicos posibles. Esto implica que nos conviene escoger el tope de stack más chico. ¿Pero qué pasa si hay empate?
-</details>
-<details> 
-  <summary>Hint 2</summary>
-  Si hay empates, entonces nos convendría desempatar escogiendo el tope de stack que deja debajo suyo el número más chico. Si hay empate de nuevo, el que debajo el número más chico, y así sucesivamente. ¿Qué pasa si 2 stacks empatan en todo pero uno se acaba antes que el otro (en otras palabras, qué pasa si un stack es prefijo de otro)?
-</details>
-<details> 
-  <summary>Hint 3</summary>
-  Si un stack es prefijo de otro, nos conviene priorizar el stack más largo, ya que ese stack a largo plazo nos da más opciones para escoger (en ningún caso es peor escoger el más largo, o da lo mismo o nos conviene).
-</details>
-<details> 
-  <summary>Hint 4</summary>
-  Piensa en alguna estructura de datos para hacer comparaciones lexicográficas eficientes entre stacks.
-</details>
-<details> 
-  <summary>Solución + código</summary>
-  Concatenamos todos los stacks en un puro string, poniendo como caracter separador y al final el 301 (o cualquier otro valor que sea mayor estricto a todos los caracteres). Luego construimos un suffix array sobre dicho string. De esta manera, el arreglo rank del suffix array nos permite comparar en O(1) los sufijos de dos stacks desempatando de la forma en que nos interesa segúns los hints (notar que el 301 es clave para priorizar stacks más largos). Luego, el problema se reducen simular el proceso de ir sacando topes de stacks, lo cual podemos hacerlo con una priority_queue donde priorizamos los topes de stacks con rank más bajos, y al sacar un tope de stack metemos el tope que queda debajo. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/LiveArchive/8200_Marblecoin.cpp">Código de ejemplo</a>
-</details>
-
-### E - Prefixes and Suffixes
-<details> 
-  <summary>Hint 1</summary>
-  En este problema sirve usar suffix array y el arreglo LCP (longest common prefix). En particular, piensa en un prefijo que también es sufijo y además aparece varias veces más como substring. Los respectivos sufijos aparecen todos juntitos en el suffix array. Además, si miramos los valores del arreglo LCP se pueden ver como las columnas de un histograma, notaremos que el largo del substring corresponde a la altura de la columna más baja en el rango, y que las columnas a las izquierda y a la derecha del rango son altura estrictamente menor.
-</details>
-<details> 
-  <summary>Hint 2</summary>
-  Del hint 1, podemos inferir una estrategia: vemos al arreglo LCP como histograma y buscamos rangos de columnas donde una columan en particular es la altura mínima (el largo del substring), todas las demás son >= a ese rango, y las columnas antes y después del rango son de altura menor estricta. Luego bastaría verificar que entre los sufijos del rango se encuentren el sufijo 0 (prefijo) y un sufijo de largo igual a la columna más baja del rango.
-</details>
-<details> 
-  <summary>Solución + código</summary>
-  Generamos un suffix array + LCP a partir del string de input. Luego encontramos los rangos maximales de columnas en el arreglo LCP que se mencionó en los hints. Para ello, la idea es fijar la columna i-ésima como la más baja, y luego encontrar los extremos L[i] y R[i] del correspondiente rango de columnas. Este se puede hacer en O(N) con dos pasadas lineales + un stack (descubrir/googlear como resolver linealmente este problema: <https://www.spoj.com/problems/HISTOGRA>). Luego, necesitamos saber el primer y último sufijo en cada rango. Esto se puede hacer en O(1) usando dos sparse tables para obtener el mínimo y máximo por rango. Luego basta verificar si el mínimo es 0 y el máximo + LCP[i] es N. Para evitar duplicados, recolectamos los pares en un set de pares (que de paso nos ordena los pares gratis), y además agregamos el par que siempre va: (N, 1). Finalmente, imprimimos los pares. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/432D_PrefixesAndSuffixes.cpp">Código de ejemplo</a>
-</details>
-
-### F - Lucky Common Subsequence
 <details> 
   <summary>Hint</summary>
-  Noten que si no existiera el virus, el problema de encontrar la mayor subsecuencia común se puede resolver usando un dp cuadrático con estados i, j, correspondientes a las posiciones que estamos revisando de cada string, luego la recursión es en (i, j) considerar dp(i + 1, j), dp(i, j + 1) y si S1[i] == S[j] considerar 1 + dp(i + 1, j + 1) (retornando el máximo). La respuesta es dp(0, 0). Piensen en cómo adaptar esta recursión para detectar cuando se complete un virus y evitarlo.
+  Si tienes una cerca de ancho N, piensa en las formas de pintar el rectángulo de ancho N y altura 1 ubicado en el piso (la base de la cerca). Lo puedes pintar con un brochazo horizontal (costo 1), pero luego te faltaría pintar todo lo de arriba (la misma cerca pero restándole 1 a todas las alturas), o bien puedes pintar el rectángulo con N brochazos verticales (costo N, pero con eso pintas la cerca completa). Mezclar brochazos horizontales y verticales para el rectángulo basal no tiene sentido ya que en ese caso aprovechas de pintar el rectángulo entero con un puro brochazo horizontal y te ahorras todos los brochazos verticales. Ahora, no es dificil generalizar el razonamiento a todo el rectángulo basal de altura hmin, donde hmin es la altura mínima de la cerca.
 </details>
 <details> 
   <summary>Solución + código</summary>
-  Podemos usar un approach como KMP, en este algoritmo se recorre un string linealmente y se puede detectar cuando aparece otro string dentro, podemos usar este mismo método para detectar si con las letras que se han usado (cuando se pasó a (i + 1, j + 1) en la recursión) se arma el virus. Basta agregar un estado extra al dp que haga referencia al índice del arreglo lps actual.
-  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Codeforces/LuckyCommonSubsequence.cpp">Código de ejemplo</a>
+  Hacemos una función recursiva para pintar paint(l, r, h) que calcula el costo óptmo de pintar la subcerca entre los índices l y r y considerando todo lo que está arriba de la altura h. El problema original se resuelve con paint(0, N, 0). Entonces en cada llamada tenemos dos opciones, pintar el rectángulo que va desde h hasta hmin(l, r) con brochazos horizontales (con lo cual nos quedarían subsubcercas aisladas por pintar recursivamente) o bien pintamos todo vertical de un viaje. Retornamos el mínimo entre ambas opciones. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/448C_PaintingFence_v2.cpp">Código de ejemplo</a>
 </details>
 
-### G - String Tale
+### D - Practice
+
 <details> 
   <summary>Hint</summary>
-  Hay una solución trivial con KMP.
+  Notar que si tenemos un grupo de n personas y queremos repartirlos en dos grupos que maximicen la cantidad de pares, lo óptimo es repartidos en dos grupos de n/2 (si n es par) o lo más cercano a eso (floor(n/2) y n-floor(n/2)).
 </details>
 <details> 
   <summary>Solución + código</summary>
-  Concatena el primer string dos veces, busca la primera aparición del segundo string en el primer string usando KMP. Luego calcular el shift es trivial. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/acm.timus.ru/1423_StringTale.cpp">Código de ejemplo</a>
+  Hacemos una función search(l, r, i) que reparte los jugadores l, l+1, l+2, ..., r-1 entre dos equipos desde la sesión de práctica i en adelante (la profundida de la recursión corresponde al índice de la sesión de práctica). En cada llamada, calculamos m = (l+r)/2, entonces los jugadores desde l hasta m-1 se van al equipo 1 en la sesión de práctica i. Luego se llama a search(l, m, i+1) y search(m, r, i+1). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/234G_Practice.cpp">Código de ejemplo</a>
 </details>
 
-### H - File Retrieval
+### E - Code For 1
+
+<details> 
+  <summary>Hint</summary>
+  Pensar que tenemos un árbol binario donde la raíz es n, las dos nodos hijos inmediatos son floor(n/2) y floor(n/2), luego en el tercer nivel hay 4 nodos floor(floor(n/2)/2), etc. Cada nodo está a cargo de un subrango de índices del arreglo final. Por ej. la raíz n genera la lista completa, así que su rango es todo el arreglo, o sea [0, size(n)-1], donde size(n) es el tamaño del arreglo final generado por n. Pensar en una forma de responder la consulta [l, r] como si estuvieramos navegando este árbol binario implícito, y descartamos nodos que no aportan a la consulta (por ej. si un nodo está a cargo del rango [i, j] y dicho rango tiene intersección vacía con [l, r], podemos descartar ese nodo y todo su subárbol para abajo).
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Hacemos un divide and conquer navegando recursivamente sobre el árbol binario implícito explicado en el hint, donde en cada llamada recursiva vamos pasando hacia abajo el rango de índices correspondiente a cada nodo, y descartamos nodos que no aportan a la query [l,r]. Si un nodo está completamente contenido en la query, podemos retornar altiro la cantidad de 1s que hay en ese nodo (no es necesario seguir haciendo recursión). <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/768B_CodeFor1.cpp">Código de ejemplo</a>
+</details>
+
+### F - Tricky Function
+<details> 
+  <summary>Hint</summary>
+  Notemos que si precalculamos las sumas parciales en un arreglo s, donde s[i] representa la suma de a[1] hasta a[i] entonces podemos reescribir f(i, j) = (j - i)^2 + (s[j] - s[i])^2. Notemos que minimizar esto es lo mismo que encontrar la distancia mínima entre puntos del estilo (i, s[i]) en el plano 2D. Luego el problema se reduce a encontrar el par de puntos más cercanos en un set.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Una forma naive para encontrar el par de puntos más cercanos es checkear cada par, lo que es O(n^2) que no pasa en tiempo.
+  Hay un approach clásico divide and conquer para solucionar el problema de par de puntos más cercanos en O(n*log(n)). Para aprender más al respecto pueden revisar los siguientes links: <a href="https://www.geeksforgeeks.org/closest-pair-of-points-using-divide-and-conquer-algorithm/">link1</a>, <a href="https://www.geeksforgeeks.org/closest-pair-of-points-onlogn-implementation/?ref=rp">link2</a>.
+  
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Codeforces/TrickyFunction.cpp">Código de ejemplo</a>
+</details>
+
+### G - Money for Nothing
 <details> 
   <summary>Hint 1</summary>
-  <p>Supongamos que tenemos varios archivos y tipeamos una query Q = "blabla", y nos aparece una lista de todos los matches de "blabla" en todos los archivos en la forma de pares (File ID, Match Index). Todos esos matches son posiciones donde "blabla" es un substring de un archivo, o en otras palabras, "blabla" es prefijo de un sufijo de algún archivo. Ahora, supongamos que juntamos todos los sufijos de todos los archivos, los metemos a una lista y los ordenamos lexicográficamente: ¿Cómo se ven los matches ahora?</p>
-  <p>**SPOILER: todos los sufijos donde "blabla" es prefijo aparecen juntos en la lista (un segmento contiguo de la lista) </p>
-</details>
-<details>
-  <summary>Hint 2</summary>
-  Concatenemos todos los archivos en un string largo usando caracteres separadores especiales, y construyamos un <strong>Suffix Array</strong> sobre el string. Construyamos el arreglo <strong>LCP (longest common prefix)</strong> también. Ahora volvamos al ejemplo de la query "blabla". El rango contiguo donde "blabla" hace match es un intervalo maximal de sufijos consecutivos donde todos tienen como prefijo "blabla". Supongamos que este intervalo es [L, R]. Esto implica que LCP[i] >= len("blabla") para i = L, L+1, ..., R-1, y además LCP[L-1] < len("blabla") y LCP[R] < len("blabla"). Notar que el intervalo [L,R] generado por la query Q = "blabla" es equivalente al intervalo generado por query Q' = ("blabla" + algun_extra) que se obtiene alargando Q por la derecha tal que len(Q') = min { LCP[i] para i = L, ..., R-1 }. Si visualizamos el arreglo LCP como un histograma, Q hace match con un rectángulo horizontalmente maximal, y Q' es básicamente aumentar la altura de dicho rectángulo hasta chocar con la columna más chica del histograma.
+  Notemos que podemos reducir el problema a ver los pares de (fecha, precio) como puntos en el plano y se busca un par de puntos en el plano tal que el rectángulo con esquina inferior en el set de puntos de venta y esquina superior en el set de puntos de compra sea el de mayor área.
 </details>
 <details> 
-  <summary>Hint 3</summary>
-  <p>El resumen del Hint 2 es que toda query tiene una query equivalente que corresponde a un rectángulo maximal en el "histograma" del arreglo LCP (un rectángulo que no podemos hacer más alto ni más ancho sin salirnos del histograma). Por lo tanto, todos los "searchable subsets" son los archivos distintos que aparecen en el rango de algún rectángulo maximal del arreglo LCP.</p>
-  <p>** Hay un caso borde: lo dicho anteriormente es verdad de las querys que hacen match en 2 o más sufijos, ¿pero qué pasa con las queries que hacen match con exactamente un solo sufijo?</p>
+  <summary>Hint 2</summary>
+  Siguendo lo anterior podemos notar que hay algunos puntos que podemos descartar, pues nunca serán parte del óptimo, por ejemplo cualquier punto (x, y) en el grupo de venta tal que existe (x', y') en el mismo grupo con x'<=x, y y'<= y. O cualquier punto (x, y) en el grupo de compra tal que existe (x', y') en el mismo grupo con x<=x' y y<=y'. Luego de haber descartado esta clase de puntos tendremos que si ordenamos los puntos de cada grupo respecto a su eje x, obtendremos puntos que aumentan en x y disminuyen en y.
 </details>
-<details>
+<details> 
   <summary>Solución + código</summary>
-  En breve: concatenamos todos los files en un puro string. Construimos un suffix array y el arreglo LCP. Vemos el arreglo LCP como histograma y encontramos rectángulos maximales usando un approach de stacks similar al que se usa para resolver <a href="https://www.spoj.com/problems/HISTOGRA/">este problema</a>: basícamente por cada columna i-ésima suponemos que es el techo de un rectángulo maximal, y encontramos los extremos L[i] y R[i] donde comienza y termina el rectángulo. Para obtener los archivos distintos que aparecen en ese rango, podemos usar bitmasks y un sparse table para computar el OR en el rango en O(1), aprovechando el hecho de que son a lo más 60 archivos lo que nos cabe en un long long int (64 bits). Para las queries que hacen match con un solo sufijo, iteramos por todos los sufijos y vemos si LCP[i-1] < len(sufijo[i]) y LCP[i] < len(sufijo[i]). Todos los searchable subsets que encontremos los metemos a un set y finalmente retornamos el tamaño. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/LiveArchive/5794_FileRetrieval.cpp">Código de ejemplo</a>
+  Finalmente usando todo lo anterior podemos hacer un análisis similar al realizado para el problema E, donde si el óptimo punto en el grupo de compra para un punto específico en el grupo de venta es en el índice i, entonces para un punto mayor en el grupo de venta el óptimo se debe alcanzar de i a la derecha. Usando una recurrencia similar a E pero maximizando en vez de minimizar, se obtiene la solución.
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Kattis/MoneyForNothing.cpp">Código de ejemplo</a>
+</details>
+
+### H - Boat Burglary
+<details> 
+  <summary>Hint</summary>
+  Son 30 objetos a lo más, poquitos. Es tentador usar fuerza bruta. El problema es que iterar sobre todos los subconjuntos tomaría 2^30 = 1024^3 > 10^9, y eso daría el medio TLE. Pero recordemos que este contest es de divide and conquer. ¿Qué pasa si repartimos los 30 objetos en dos grupos de 15 y 15, y calculamos todos los subconjuntos para cada mitad? Esto tomaría 2 x 2^15 = 65536, lo cual es poquísimo. Piensa en una forma de resolver el problema original combinando de alguna forma estas dos mitades.
+</details>
+<details> 
+  <summary>Solución + código</summary>
+  Separamos los N objetos en dos mitades iguales (o casi iguales si N es impar). Por cada mitad iteramos sobre todos los posibles subconjuntos de elementos y guardamos en una lista/arreglo la suma de los pesos y la cantidad de objetos (una lista de pares). Ordenamos la segunda lista de menor a mayor lexicográficamente e iteramos sobre la primera lista. Para cada par de la primera lista, hacemos dos binary searches para encontrar todos los pares de la segunda lista cuya suma de pesos completa lo que nos falta para llegar a un peso total de D (el primer binary search es un lowerbound y el segundo un upperbound). Si el primero y el último par de ese rango tienen cantidades de objetos distintas, estamos en un caso ambiguo. Otro caso ambiguo es que encontremos respuestas válidas más de una vez y la cantidad de objetos sea distinta. Si nunca encontramos un caso válido, es imposible. Si logramos encontrar al menos un caso válido y todos los casos válidos siempre dieron la misma cantidad de objetos, esa es la respuesta. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/SPOJ/BURGLARY_BoatBurglary.cpp">Código de ejemplo</a>
 </details>
 
 <!-- <details> 
