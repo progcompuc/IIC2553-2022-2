@@ -70,8 +70,8 @@ Mayo 27, 14 días, [link a **contest**](https://vjudge.net/contest/497365)\\
 ## Contest 10
 Junio 03, 14 días, [link a **contest**](https://vjudge.net/contest/498280)\\
 **Tópicos**: [Grafos: BFS & DFS](resources/graphs)\\
-**Puntos**: ?, ?, ?, ?, ?, ?, ?, ?, ?\\
-**Puntaje Mínimo Esperado**: ?\\
+**Puntos**: 3, 3, 4, 3, 4, 4, 5, 3, 4\\
+**Puntaje Mínimo Esperado**: 4\\
 **Hints** y **códigos de ejemplo**: _pending_
 
 ## Contest 11
