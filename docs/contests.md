@@ -77,9 +77,9 @@ Junio 03, 14 días, [link a **contest**](https://vjudge.net/contest/498280)\\
 ## Contest 11
 Junio 10, 14 días, [link a **contest**](https://vjudge.net/contest/499286)\\
 **Tópicos**: [Grafos: Shortest Path](resources/graphs)\\
-**Puntos**: ?, ?, ?, ?, ?, ?, ?, ?, ?\\
-**Puntaje Mínimo Esperado**: ?\\
-**Hints** y **códigos de ejemplo**: _pending_
+**Puntos**: 4, 5, 3, 5, 2, 5, 6, 4, 5\\
+**Puntaje Mínimo Esperado**: 4\\
+**Hints** y **códigos de ejemplo**: [link](hints/contest11)
 
 ## Contest 12
 Junio 17, 14 días, [link a **contest**](https://vjudge.net/contest/500016)\\
