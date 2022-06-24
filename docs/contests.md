@@ -88,5 +88,12 @@ Junio 17, 14 días, [link a **contest**](https://vjudge.net/contest/500016)\\
 **Puntaje Mínimo Esperado**: ?\\
 **Hints** y **códigos de ejemplo**: _pending_
 
+## Contest 13 (opcional)
+Junio 24, hasta el cierre de notas, [link a **contest**](https://vjudge.net/contest/501094)\\
+**Tópicos**: tuttifrutti\\
+**Puntos**: ?, ?, ?, ?, ?, ?, ?, ?\\
+**Coeficiente de ponderación**: Por definir (entre 0.3 y 1)\\
+**Hints** y **códigos de ejemplo**: _pending_
+
 
 [Index](index) > ```{{page.title}}```
