@@ -84,8 +84,8 @@ Junio 10, 14 días, [link a **contest**](https://vjudge.net/contest/499286)\\
 ## Contest 12
 Junio 17, 14 días, [link a **contest**](https://vjudge.net/contest/500016)\\
 **Tópicos**: [Math](resources/math) + tuttifrutti\\
-**Puntos**: ?, ?, ?, ?, ?, ?, ?, ?\\
-**Puntaje Mínimo Esperado**: ?\\
+**Puntos**: 2, 4, 3, 4, 4, 5, 3, 3\\
+**Puntaje Mínimo Esperado**: 5\\
 **Hints** y **códigos de ejemplo**: _pending_
 
 ## Contest 13 (opcional)
