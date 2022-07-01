@@ -91,7 +91,7 @@ Junio 17, 14 días, [link a **contest**](https://vjudge.net/contest/500016)\\
 ## Contest 13 (opcional)
 Junio 24, hasta el cierre de notas, [link a **contest**](https://vjudge.net/contest/501094)\\
 **Tópicos**: tuttifrutti\\
-**Puntos**: ?, ?, ?, ?, ?, ?, ?, ?\\
+**Puntos**: 4, 4, 6, 4, 6, 5, 5, 4\\
 **Coeficiente de ponderación**: Por definir (entre 0.3 y 1)\\
 **Hints** y **códigos de ejemplo**: _pending_
 
