@@ -15,7 +15,7 @@ Sala Javier Pinto, DCC (4to piso Edificio San Agustín, el primero a mano derech
 Pablo Messina (<pamessina@uc.cl>)
 
 ### Ayudante:
-Matías Fernandez (<matias.fernandez@uc.cl >)
+Matías Fernandez (<matias.fernandez@uc.cl>)
 
 ### Telegram del curso:
 [Link para unirse a grupo de telegram](https://t.me/joinchat/BnXT11P6uLrfCpUIZWk25Q) (medio oficial de comunicación)\\
