@@ -1,1 +1,2 @@
-https://programacioncompetitivapuc.github.io/IIC2553-2022-2/
+# Taller CP
+Página para el taller de programación competitiva.

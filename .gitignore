@@ -39,3 +39,5 @@
 *.sublime-workspace
 nbproject
 Thumbs.db
+
+/site

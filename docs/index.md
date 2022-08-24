@@ -1,16 +1,23 @@
 ---
-title: Index
+title: "Información Básica"
 ---
 
-# {{page.title}}
 
-- [Introducción](getting-started/introduction)
-- [Información Básica](getting-started/basic_info)
-- [Temario](temario)
-- [Cómo funciona el curso](getting-started/how-course-works)
-- [Cálculo de la Nota Final](getting-started/grading)
-- [Ética e Integridad Académica](ethics) **\<\<\<\<\<\< IMPORTANTE, LEER TODOS**
-- [Tips para alumn@s nuev@s](tips) **\<\<\<\<\<\< NOVAT@S, PLEASE LEER**
-- [Afligid@ o frustrad@ con un problema y necesitas ayuda? Lee esto](help)
-- [Recursos y Material de Estudio](resources/resources)
-- [Contests](contests)
+# Información Básica
+
+### Clases
+Horario: 14:00-18:30
+
+Sala Javier Pinto, DCC (4to piso Edificio San Agustín, el primero a mano derecha desde el metro)
+
+### Profesor
+Pablo Messina (<pamessina@uc.cl>)
+
+### Ayudante
+Matías Fernandez (<matias.fernandez@uc.cl>)
+
+### Telegram del curso (medio oficial de comunicación)
+[Unirse :fontawesome-brands-telegram:](https://t.me/joinchat/BnXT11P6uLrfCpUIZWk25Q){ .md-button .md-button--primary } 
+
+### Spreadsheet de notas y asistencia:
+[Ver spreadsheet :material-google-spreadsheet:](https://docs.google.com/spreadsheets/d/1RoKoTvP-SEaD9Ggh2z5NfvFF1Dxu0w_nGjd3F92xW00/edit?usp=sharing){ .md-button .md-button--primary } 
