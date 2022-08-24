@@ -2,9 +2,8 @@
 title: Ética e Integridad Académica
 ---
 
-[Index](index) > ```{{page.title}}```
 
-# {{page.title}}
+# Ética e Integridad Académica
 
 ## TL;DR
 1. You shall not copy-paste código ajeno (hay penas del infierno por hacer esto).
@@ -25,8 +24,8 @@ Puedes hacer uso de recursos en línea al resolver problemas. Esto incluye docum
 
 6. Finalmente, ten presente que vjudge.net le otorga al autor de un contest acceso a las soluciones de los participantes ... **Sí, tanto el profesor como el ayudante tenemos acceso a sus códigos**. Si alguien [misteriosamente](https://youtu.be/HQoRXhS7vlU) resuelve un problema difícil, tenga la seguridad de que con probabilidad muy alta su código será examinado por nosotros :)
 
-Si llegamos a descubrir una copia, el  **castigo consistirá en lo siguiente**:\\
-1) Primera copia: nota_final = max(min(nota_v3, 7) - 3, 1)\\
-2) Segunda copia: nota_final = 1 + causal de eliminación
+Si llegamos a descubrir una copia, el  **castigo consistirá en lo siguiente**:
 
-[Index](index) > ```{{page.title}}```
+1) Primera copia: nota_final $= \max(\min(\operatorname{Nota}_{V3}, 7) - 3, 1)$
+
+2) Segunda copia: nota_final $= 1 +$ causal de eliminación

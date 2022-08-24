@@ -1,9 +1,8 @@
 ---
 title: "Divide and Conquer"
 ---
-[Index](../index) > [Recursos](resources) > ```{{page.title}}```
 
-# {{page.title}}
+# Divide and Conquer
 
 - [(Youtube) 2 Divide And Conquer](https://youtu.be/2Rr2tW9zvRg)
 - [(Youtube) Divide and Conquer Generic Method](https://youtu.be/xdMiryFrUOg)
@@ -14,5 +13,3 @@ title: "Divide and Conquer"
   - [(Youtube) 2.8.1 QuickSort Algorithm](https://youtu.be/7h1s2SojIRw)
   - [(Youtube) Closest pair of points](https://youtu.be/6UBDkbVhJck)
   - [(Youtube) Finding the Closest Pair of Points on the Plane: Divide and Conquer](https://youtu.be/xi-WF07rAQw)     
-
-[Index](../index) > [Recursos](resources) > ```{{page.title}}```

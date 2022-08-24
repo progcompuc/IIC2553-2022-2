@@ -2,9 +2,8 @@
 title: "Grafos"
 ---
 
-[Index](../index) > [Recursos](resources) > ```{{page.title}}```
 
-# {{page.title}}
+# Grafos
 
 ## Introducción a Grafos
 
@@ -166,5 +165,3 @@ Biconnected components](http://web.iitd.ac.in/~bspanda/biconnectedMTL776.pdf)
 - <https://blog.anudeep2011.com/heavy-light-decomposition/>
 - <https://www.geeksforgeeks.org/heavy-light-decomposition-set-1-introduction/>
 - <http://codeforces.com/blog/entry/22072>
-
-[Index](../index) > [Recursos](resources) > ```{{page.title}}```

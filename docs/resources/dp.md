@@ -1,9 +1,9 @@
 ---
 title: "Programación Dinámica (DP)"
 ---
-[Index](../index) > [Recursos](resources) > ```{{page.title}}```
 
-# {{page.title}}
+
+# Programación Dinámica (DP)
 
 ## ¿Qué es DP?
 - [What Is Dynamic Programming and How To Use It](https://www.youtube.com/watch?v=vYquumk4nWw) **\<\<\<\<\< MUY BUEN VIDEO, VÉANLO!**
@@ -37,5 +37,3 @@ title: "Programación Dinámica (DP)"
     - <https://jeffreyxiao.me/blog/convex-hull-trick>
 - Knuth's Optimization:
     - <https://jeffreyxiao.me/blog/knuths-optimization>
-
-[Index](../index) > [Recursos](resources) > ```{{page.title}}```

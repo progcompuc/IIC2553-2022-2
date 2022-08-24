@@ -2,9 +2,8 @@
 title: "Estructuras de Datos"
 ---
 
-[Index](../index) > [Recursos](resources) > ```{{page.title}}```
 
-# {{page.title}}
+# Estructuras de Datos
 
 ## C++ STL Data Structures (para llegar y usar):
 
@@ -100,6 +99,4 @@ title: "Estructuras de Datos"
 
 - <https://www.dcc.uchile.cl/~jperez/papers/ioiconf16.pdf>
 - [Código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/WaveletTree.cpp)
-
-[Index](../index) > [Recursos](resources) > ```{{page.title}}```
 

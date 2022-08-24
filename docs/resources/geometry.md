@@ -1,9 +1,9 @@
 ---
 title: "Geometría"
 ---
-[Index](../index) > [Recursos](resources) > ```{{page.title}}```
 
-# {{page.title}}
+
+# Geometría
 
 ## Apuntes genéricos de geometría:
 - <https://vlecomte.github.io/cp-geo.pdf> (buenísimo y muy completo)
@@ -77,5 +77,3 @@ title: "Geometría"
 - Buenas slides explicando dualidad: <https://algo.kaust.edu.sa/Documents/cs372l13.pdf>
 - Excelente pdf con demostraciones: <https://pdfs.semanticscholar.org/810c/e0c19283481567c6545bf8c0cc8a4dcb8a1f.pdf>
 - Aplicación interactiva: <http://students.cec.wustl.edu/~tdeck/duality/>
-
-[Index](../index) > [Recursos](resources) > ```{{page.title}}```

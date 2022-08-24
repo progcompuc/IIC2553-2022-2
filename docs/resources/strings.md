@@ -1,9 +1,9 @@
 ---
 title: "Strings"
 ---
-[Index](../index) > [Recursos](resources) > ```{{page.title}}```
 
-# {{page.title}}
+
+# Strings
 
 ## Suffix Automaton:
 - [codeforces - A short guide to suffix automata](https://codeforces.com/blog/entry/20861)
@@ -49,5 +49,3 @@ title: "Strings"
 - <https://progcomp.cl/rollinghashing>
 - [cp-algorithms: String Hashing](https://cp-algorithms.com/string/string-hashing.html)
 - [código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Strings/RollingHashing.cpp)
-
-[Index](../index) > [Recursos](resources) > ```{{page.title}}```
