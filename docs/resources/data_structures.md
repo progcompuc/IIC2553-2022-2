@@ -43,8 +43,8 @@ title: "Estructuras de Datos"
 
 ## Repos con implementaciones de estructuras de datos
 
-- <https://github.com/BenjaminRubio/CompetitiveProgramming/tree/master/Material/Structures>
-- <https://github.com/PabloMessina/Competitive-Programming-Material/tree/master/Data_Structures>
+- [Apuntes de Benja](https://github.com/BenjaminRubio/CompetitiveProgramming/tree/master/Material/Structures)
+- [Apuntes de Pablo](https://github.com/PabloMessina/Competitive-Programming-Material/tree/master/Data_Structures)
 
 ## Sparse Table:
 
