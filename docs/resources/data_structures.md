@@ -46,7 +46,7 @@ title: "Estructuras de Datos"
 - (youtube)[Sparse Table Algorithm Range Minimum Query](https://www.youtube.com/watch?v=c5O7E_PDO4U)
 - (youtube)[Sparse Table Tutorial / RMQ](https://www.youtube.com/watch?v=9FLPwDn6L08)
 - [cp-algorithms: sparse table](https://cp-algorithms.com/data_structures/sparse-table.html)
-- [Código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/sparse-table.cpp)
+- [Código 1](https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Material/Structures/SparseTable.cpp), [Código 2](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/sparse-table.cpp)
 
 ## Segment Tree:
 
@@ -55,14 +55,14 @@ title: "Estructuras de Datos"
 - (youtube) [Segment Tree Range Minimum Query](https://www.youtube.com/watch?v=ZBHKZF5w4YU)
 - (youtube) [Segment Tree [ICPCCL 2016]](https://youtu.be/AcebT9OvynI)
 - (codeforces) [Efficient and easy segment trees (cómo hacer segment trees **iterativos**)](https://codeforces.com/blog/entry/18051)
-- [Códigos de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/segment-tree.cpp)
+- [Código 1](https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Material/Structures/SegmentTree.cpp), [Código 2](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/segment-tree.cpp)
 
 ## Segment Tree Lazy:
 
 - [cp-algorithms: segment tree lazy](https://cp-algorithms.com/data_structures/segment_tree.html#toc-tgt-9)
 - [youtube: Lazy Propagation Segment Tree](https://www.youtube.com/watch?v=xuoQdt5pHj0)
 - [youtube: Segment Tree - Range Queries with Lazy Updates](https://www.youtube.com/watch?v=CN0N1ddJ9hA)
-- [Código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/segment-tree-lazy.cpp)
+- [Código 1](https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Material/Structures/SegmentTreeLazy.cpp), [Código 2](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/segment-tree-lazy.cpp)
 
 ## Fenwick Tree (a.k.a. BIT o Binary Indexed Tree):
 - (youtube) [Tutorial: Binary Indexed Tree (Fenwick Tree)](https://youtu.be/v_wj_mOAlig)
@@ -79,8 +79,8 @@ title: "Estructuras de Datos"
   - [youtube: explicación de Jorge Pérez](https://youtu.be/0PzR0IoqkkU?t=4207)
   - [Topcoder: BIT 2D](https://www.topcoder.com/community/data-science/data-science-tutorials/binary-indexed-trees/#2d)
 - Códigos de ejemplo:
-    - [Fenwick tree 1D](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/fenwicktree.cpp)
-    - [Fenwick tree 2D](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/fenwicktree2D.cpp)
+    - Fenwick tree 1D: [Código 1](https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Material/Structures/FenwickTree.cpp), [Código 2](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/fenwicktree.cpp)
+    - Fenwick tree 2D: [Código 1](https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Material/Structures/FenwickTree2D.cpp), [Código 2](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/fenwicktree2D.cpp)
 
 ## Union Find (a.k.a. DSU o Disjoint Set Union):
 
