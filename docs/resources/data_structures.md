@@ -41,7 +41,7 @@ title: "Estructuras de Datos"
     - [geeksforgeeks: Policy based data structures in g++](https://www.geeksforgeeks.org/policy-based-data-structures-g/)
     - orderered_set: [geeksforgeeks](https://www.geeksforgeeks.org/ordered-set-gnu-c-pbds/), [código](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Data_Structures/C%2B%2B%20STL/ordered_set.cpp)
 
-## Repos con implementaciones de varia estructuras de datos
+## Repos con implementaciones de estructuras de datos
 
 - <https://github.com/BenjaminRubio/CompetitiveProgramming/tree/master/Material/Structures>
 - <https://github.com/PabloMessina/Competitive-Programming-Material/tree/master/Data_Structures>
