@@ -20,7 +20,7 @@ title: contest 1 - hints y códigos de ejemplo
 <details> 
   <summary>Solución + código</summary>
   Podemos mantener un MaxHeap con la mitad inferior de los datos y un MinHeap con la mitad superior de los datos, tal que podemos acceder a la mediana como el tope del MaxHeap inferior en O(1). Cada vez que agregamos un dato lo agregamos al MaxHeap, si el mayor del MaxHeap es mayor que el menor del MinHeap hacemos un swap de estos datos, y si se desequilibran en tamaño pasamos el mayor del MaxHeap al MinHeap.
-  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/SPOJ/WeirdFunction.cpp">Código de ejemplo</a>
+  <a href="https://github.com/Wh4rp/Competitive-Programming/blob/main/Problems/SPOJ/Weird%20Function.cpp">Código de ejemplo</a>
 </details>
 
 
