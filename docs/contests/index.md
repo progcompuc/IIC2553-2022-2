@@ -16,7 +16,6 @@ Agosto 11, 15 días, [link a **contest**](https://vjudge.net/contest/510018)
 | Puntaje   |  4  |  3  |  3  |  4  |  4  |  3  |  3  |  3  |  4  |  4  |  6  | 
 
 
-
 **Puntaje Mínimo Esperado**: 5
 
 **Hints** y **códigos de ejemplo**: [link](hints/contest1)
@@ -30,9 +29,11 @@ Agosto 19, 14 días, [link a **contest**](https://vjudge.net/contest/511393)
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+| Puntaje   |  2  |  4  |  4  |  3  |  4  |  4  |  3  |  6  |
 
-**Puntaje Mínimo Esperado**: ?
+**Puntaje Mínimo Esperado**: 5
+
+**Hints** y **códigos de ejemplo**: [link](hints/contest2)
 
 ## Contest 3
 Agosto 26, 14 días, [link a **contest**](https://vjudge.net/contest/512330)
