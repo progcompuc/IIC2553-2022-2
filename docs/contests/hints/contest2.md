@@ -2,6 +2,8 @@
 title: contest 2 - hints y códigos de ejemplo
 ---
 
+# Contest 2 - hints y códigos de ejemplo
+
 ### A - Four Segments
 <details> 
   <summary>Hint</summary>   

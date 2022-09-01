@@ -2,6 +2,8 @@
 title: contest 1 - hints y códigos de ejemplo
 ---
 
+# Contest 1 - hints y códigos de ejemplo
+
 ### A - Largest Rectangle in a Histogram
 <details> 
   <summary>Hint</summary>   
