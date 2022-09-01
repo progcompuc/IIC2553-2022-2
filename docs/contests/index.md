@@ -44,8 +44,8 @@ Agosto 26, 14 días, [link a **contest**](https://vjudge.net/contest/512330)
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+| Puntaje   |  4  |  3  |  2  |  3  |  3  |  4  |  5  |  7  |
 
-**Puntaje Mínimo Esperado**: ?
+**Puntaje Mínimo Esperado**: 5
 
-**Hints** y **códigos de ejemplo**: _pendiente_
+**Hints** y **códigos de ejemplo**: [link](hints/contest3)

@@ -12,6 +12,7 @@ nav:
     - contests/index.md
     - Contest 1: contests/hints/contest1.md
     - Contest 2: contests/hints/contest2.md
+    - Contest 3: contests/hints/contest3.md
   - Recursos: 
     - resources/index.md
     - C++:
