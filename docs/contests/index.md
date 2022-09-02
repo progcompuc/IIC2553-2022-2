@@ -48,6 +48,8 @@ Agosto 26, 14 días, [link a **contest**](https://vjudge.net/contest/512330)
 
 **Puntaje Mínimo Esperado**: 5
 
+**Hints** y **códigos de ejemplo**: [link](hints/contest3)
+
 ## Contest 4
 Septiembre 02, 14 días, [link a **contest**](https://vjudge.net/contest/513289)
 
