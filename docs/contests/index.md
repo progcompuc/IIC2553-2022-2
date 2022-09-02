@@ -48,4 +48,17 @@ Agosto 26, 14 días, [link a **contest**](https://vjudge.net/contest/512330)
 
 **Puntaje Mínimo Esperado**: 5
 
-**Hints** y **códigos de ejemplo**: [link](hints/contest3)
+## Contest 4
+Septiembre 02, 14 días, [link a **contest**](https://vjudge.net/contest/513289)
+
+**Tópicos**: [Lazy Segment Tree, Fenwick Tree 2D, Union Find](../resources/data_structures)
+
+**Puntos**: 
+
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
+| --------- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  ? |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+
+**Puntaje Mínimo Esperado**: ?
+
+**Hints** y **códigos de ejemplo**: _pendiente_
