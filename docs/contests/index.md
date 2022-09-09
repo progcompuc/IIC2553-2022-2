@@ -59,8 +59,9 @@ Septiembre 02, 14 días, [link a **contest**](https://vjudge.net/contest/513289)
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  ? |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+| Puntaje   | 4   |  4  |  4  |  3  |  3  |  4  |  2  |  8  |
 
-**Puntaje Mínimo Esperado**: ?
 
-**Hints** y **códigos de ejemplo**: _pendiente_
+**Puntaje Mínimo Esperado**: 5
+
+**Hints** y **códigos de ejemplo**: [link](hints/contest4)
