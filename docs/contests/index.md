@@ -71,13 +71,13 @@ Septiembre 09, 14 días, [link a **contest**](https://vjudge.net/contest/514595)
 
 **Tópicos**: [Grafos: MST & LCA](../resources/graphs)
 
-**Puntos**: 
+**Puntos**:
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   | ?   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+| Puntaje   |  3  |  6  |  4  |  5  |  2  |  4  |  4  |  4  |
 
 
-**Puntaje Mínimo Esperado**: ?
+**Puntaje Mínimo Esperado**: 5
 
-**Hints** y **códigos de ejemplo**: _pendiente_
+**Hints** y **códigos de ejemplo**: [link](hints/contest5)
