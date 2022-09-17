@@ -6,7 +6,7 @@ nav:
   - Información del Curso:
     - Introducción: about/introduction.md
     - Cómo funciona el curso: about/how_course_works.md
-    - Temario: about/temario.md
+    - Temario: about/syllabus.md
     - Cálculo de la Nota Final: about/grading.md
   - Contests: 
     - contests/index.md
