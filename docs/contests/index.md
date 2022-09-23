@@ -81,3 +81,19 @@ Septiembre 09, 14 días, [link a **contest**](https://vjudge.net/contest/514595)
 **Puntaje Mínimo Esperado**: 5
 
 **Hints** y **códigos de ejemplo**: [link](hints/contest5)
+
+
+## Contest 6
+Septiembre 23, 14 días, [link a **contest**](https://vjudge.net/contest/517129)
+
+**Tópicos**: [Grafos: SCC, Aristas de Corte y Puntos de Articulación](../resources/graphs)
+
+**Puntos**:
+
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` |
+| --------- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+
+**Puntaje Mínimo Esperado**: ?
+
+**Hints** y **códigos de ejemplo**: _pendiente_
