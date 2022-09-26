@@ -75,7 +75,7 @@ Septiembre 09, 14 días, [link a **contest**](https://vjudge.net/contest/514595)
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  3  |  6  |  4  |  5  |  2  |  4  |  4  |  4  |
+| Puntaje   |  3  |  2  |  6  |  4  |  5  |  4  |  4  |  4  |
 
 
 **Puntaje Mínimo Esperado**: 5
