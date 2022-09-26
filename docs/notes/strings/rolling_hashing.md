@@ -1,5 +1,6 @@
 ---
 title: Rolling Hashing
+og_title: Qué es rolling hashing más implementación.
 ---
 
 # Rolling Hashing

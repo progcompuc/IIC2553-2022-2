@@ -39,6 +39,7 @@ nav:
   - Ética e Integridad Académica: ethics.md
 
 markdown_extensions:
+  - markdown.extensions.meta
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -60,6 +61,7 @@ extra_javascript:
 theme:
   name: material
   language: es
+  custom_dir: 'theme'
   features:
     - navigation.indexes
   palette:

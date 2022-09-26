@@ -1,5 +1,6 @@
 ---
 title: "Información Básica"
+og_title: "Información Básica sobre el ramo Taller de Programación Competitiva II IIC2553-2022-2 "
 ---
 
 
