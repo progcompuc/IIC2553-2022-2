@@ -24,9 +24,13 @@ Cada caracter se multiplica por una potencia de $A$ para minizar la probabilidad
 
 Supongamos que queremos calcular el hash de la cadena `"PABLO"`. El valor ASCII de cada caracter es:
 
+<center>
+
 | P | A | B | L | O |
 |---|---|---|---|---|
 | 80 | 65 | 66 | 76 | 79 |
+
+</center>
 
 Ocupando los primos $A=31$ y $B=10^9 + 7$:
 
@@ -66,11 +70,13 @@ h[i] - h[j + 1] \cdot p[j - i + 1] \mod B \\
 \end{aligned}
 $$
 
-### Implementación
+## Implementación
 
-#### Código
+### Código
 
-El siguiente código es la función `preprocess` que calcula los hashes de cada posición del string $S$:
+Pueden encontrar la implementación de rolling hashing en el siguiente [link](https://github.com/Wh4rp/Competitive-Programming/blob/main/Notes/Strings/Rolling%20Hashing.h){:target="_blank"}.
+
+La función `preprocess` que calcula los hashes de cada posición del string $S$. Y la función `hash` que calcula el hash de un substring $S[i \dots j]$:
 
 ```cpp  
 const int MAXN = 1e5 + 5;
@@ -97,9 +103,9 @@ int get_hash(int i, int j) {
 }
 ```
 
-#### Uso
+### Uso
 
-Supongamos que queremos encontrar el primer substring de $S$ que es igual a `"PABLO"`. Para esto ocuparemos la función `get_hash`:
+Supongamos que queremos encontrar el primer substring de $S$ que es igual a `"PABLO"`. Usando la función `get_hash` podemos calcular el hash de `"PABLO"` y luego comparar con los hashes de cada posición de $S$:
 
 ```cpp
 int main() {
@@ -111,9 +117,18 @@ int main() {
     int h = get_hash(0, m - 1);
     for (int i = 0; i + m - 1 < n; i++) {
         if (get_hash(i, i + m - 1) == h) {
-            cout << i << endl;
+            cout << i << '\n';
             break;
         }
     }
 }
 ```
+
+## Recomendaciones
+
+- Los jueces pueden tener casos de prueba que haga que se caigan las soluciones con constantes conocidas (a.k.a. $10^9 + 7$). En ese caso, se recomienda ocupar números primos aleatorios, pero que estén en el rango de $10^9$. 
+
+## Material consultado
+
+- [Competitive Programmer’s Handbook - String Hashing](https://usaco.guide/CPH.pdf#page=255){:target="_blank"}
+- [ProgompCL - Rolling Hashing](https://progcomp.cl/rollinghashing){:target="_blank"}

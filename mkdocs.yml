@@ -8,6 +8,9 @@ nav:
     - Cómo funciona el curso: about/how_course_works.md
     - Temario: about/syllabus.md
     - Cálculo de la Nota Final: about/grading.md
+  - Apuntes (nueva sección):
+    - Strings:
+      - Rolling Hasing: notes/strings/rolling_hashing.md
   - Contests: 
     - contests/index.md
     - Contest 1: contests/hints/contest1.md
@@ -15,9 +18,6 @@ nav:
     - Contest 3: contests/hints/contest3.md
     - Contest 4: contests/hints/contest4.md
     - Contest 5: contests/hints/contest5.md
-  - Notas:
-    - Strings:
-      - Rolling Hasing: notes/strings/rolling_hashing.md
   - Recursos: 
     - resources/index.md
     - C++:
