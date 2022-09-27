@@ -41,6 +41,19 @@ $$
 \end{aligned}
 $$
 
+En código sería:
+
+```cpp
+int pol_hash(string s) {
+    int A = 31, B = 1e9 + 7;
+    int ans = 0;
+    for(char c : s){
+        ans = (ans * A + c) % B;
+    }
+    return ans;
+}
+```
+
 ## Preprocesamiento
 
 Recordemos que queremos ocupar rolling hashing para resolver problemas de búsqueda de substring. En cuyo caso no nos conviene estar calculando el hash de cada substring a comparar en cada consulta. En vez de eso, ocuparemos un arreglo de hashes, donde cada posición $i$ del arreglo contiene el hash de la cadena desde la posición $i$ hasta el final. De esta manera, si queremos comparar dos substrings, sólo tenemos que manipular los hashes de las posiciones $i$ y $j$.
@@ -71,6 +84,8 @@ h[i] - h[j + 1] \cdot p[j - i + 1] \mod B \\
 \end{aligned}
 $$
 
+y en el caso de que $i = 0$ se reduce a $h[j]$.
+
 ## Implementación
 
 ### Código
@@ -93,14 +108,14 @@ void preprocess() {
     for (int i = 1; i <= n; i++) {
         p[i] = (p[i - 1] * A) % B;
     }
-    h[n] = s[n - 1];
-    for (int i = n - 1; i >= 0; i--) {
-        h[i] = (h[i + 1] * A + s[i]) % B;
+    h[0] = s[0];
+    for (int i = 1; i < n; i++) {
+        h[i] = (h[i - 1] * A + s[i]) % B;
     }
 }
 
 int get_hash(int i, int j) {
-    return (h[i] - h[j + 1] * p[j - i + 1] + B) % B;
+    return i != 0 ? (h[j]-h[i-1]*p[j-i+1] + B*B) % B : h[j];
 }
 ```
 
@@ -113,15 +128,16 @@ int main() {
     cin >> s;
     n = s.size();
     preprocess();
-    string t = "PABLO";
+    string r = "PABLO";
     int m = t.size();
-    int h = get_hash(0, m - 1);
+    int l = pol_hash(r);
     for (int i = 0; i + m - 1 < n; i++) {
-        if (get_hash(i, i + m - 1) == h) {
+        if (get_hash(i, i + m - 1) == l) {
             cout << i << '\n';
             break;
         }
     }
+    return 0;
 }
 ```
 
