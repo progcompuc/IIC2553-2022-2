@@ -1,6 +1,6 @@
 ---
 title: "Información Básica"
-og_title: "Información Básica sobre el ramo Taller de Programación Competitiva II IIC2553-2022-2 "
+description: "Información Básica sobre el ramo Taller de Programación Competitiva II IIC2553-2022-2"
 og_image: "https://stackexchange.com/users/flair/3688.png"
 ---
 
