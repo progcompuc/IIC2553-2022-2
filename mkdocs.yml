@@ -1,6 +1,6 @@
 site_name: Taller de Programación Competitiva II IIC2553-2022-2
 repo_url: https://github.com/ProgramacionCompetitivaPUC/IIC2553-2022-2
-site_url: https://programacioncompetitivapuc.github.io/IIC2553-2022-2/
+site_url: https://ProgramacionCompetitivaPUC.github.io/IIC2553-2022-2/
 edit_uri: ''
 nav:
   - Home: index.md
