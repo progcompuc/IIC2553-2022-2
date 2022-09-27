@@ -129,7 +129,7 @@ int main() {
     n = s.size();
     preprocess();
     string r = "PABLO";
-    int m = t.size();
+    int m = r.size();
     int l = pol_hash(r);
     for (int i = 0; i + m - 1 < n; i++) {
         if (get_hash(i, i + m - 1) == l) {
