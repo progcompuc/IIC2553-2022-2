@@ -7,11 +7,20 @@ description: Explicación del algoritmo de gRolling Hashing y su implementación
 
 ## Introducción
 
-Rolling Hashing o string hashing es una técnica ocupada para resolver problemas de búsqueda de substring. La idea es _encriptar_ la cadena de caracteres en un número, de tal forma que si dos cadenas son iguales, entonces su encriptación también lo es. Esto nos permite comparar dos cadenas en tiempo constante. De esta manera sólo comparamos el valor del hash, y no cada carácter de la cadena.
+Supongamos que quieres saber si el dígito $0$ esta o no dentro de un numero muy grande. Este es un clásico algoritmo de búsqueda secuencial donde ves dígito por dígito si es igual o no a $0$. Si el largo del numero es de $n$ entonces la complejidad es $\mathcal{O}(n)$. 
+
+Modifiquemos un poco el problema y en vez de saber si un dígito esta en el numero preguntemos si un string esta dentro de otro. Por ejemplo, verificar si `abc` esta dentro de `abracadabra`. Aca al ocupar el mismo algoritmo de búsqueda secuencial la complejidad no sera de $\mathcal{O}(n)$ ya que la comparación de strings no es $\mathcal{O}(1)$ debido a que se tiene que comparar carácter por carácter. Por lo que la complejidad sera de $\mathcal{O}(n \cdot m)$ donde $m$ es el largo del prefijo que estamos buscando. 
+
+Aca es donde entra el algoritmo de **Rolling Hashing**. Este algoritmo nos va a permitir comparar dos strings en $\mathcal{O}(1)$. La intuición por detrás es que vamos a transformar cada substring que queremos comparar en un dígito para que asi hacer uns búsqueda secuencial con números. Que ya sabemos el computador los compara en tiempo constante. 
 
 ## Hashing
 
-Para calcular el hash de una cadena ocupamos _polynomial hashing_. La idea es que cada carácter de la cadena se encripta en un número, y luego se suman todos los números. El problema es que si la cadena es muy larga, el número puede ser muy grande y no cabe en un tipo de dato. Para solucionar esto ocuparemos aritmética modular.
+Para calcular el hash de una cadena ocupamos _polynomial hashing_. La idea es que cada carácter de la cadena se encripta en un número. Y luego anidamos para alguna _base_. 
+
+!!! intuition "Intuición"
+    Pasar de `abc` $\rightarrow$ `123` y `dcbe` $\rightarrow$ `4321`. 
+
+El problema es que si la cadena es muy larga, el número podrir ser muy grande y no caber en un `int`. Para solucionar esto ocuparemos aritmética modular.
 
 Sea $S$ el string que queremos encriptar, y $A$ y $B$ dos primos. Entonces, el hash de $S$ es:
 
