@@ -87,12 +87,11 @@ graph TD
     L --> M((o))
     M --> N[leaf]
     N:::leaf
-    K --> O((l))
-    O --> P((s))
-    P --> Q((o))
-    Q --> R[leaf]
-    R:::leaf
-    K --> S((l))
+    K --> O((s))
+    O --> P((o))
+    P --> Q[leaf]
+    Q:::leaf
+    R --> S((l))
     S --> T[leaf]
     T:::leaf
 
