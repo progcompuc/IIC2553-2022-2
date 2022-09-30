@@ -97,3 +97,20 @@ Septiembre 23, 14 días, [link a **contest**](https://vjudge.net/contest/517129)
 **Puntaje Mínimo Esperado**: ?
 
 **Hints** y **códigos de ejemplo**: _pendiente_
+
+
+
+## Contest 7
+Septiembre 30, 14 días, [link a **contest**](https://vjudge.net/contest/518414)
+
+**Tópicos**: [Grafos: Dinic y Flujo Máximo](../resources/graphs)
+
+**Puntos**:
+
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
+| --------- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+
+**Puntaje Mínimo Esperado**: ?
+
+**Hints** y **códigos de ejemplo**: _pendiente_
