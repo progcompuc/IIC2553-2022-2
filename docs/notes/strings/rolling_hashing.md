@@ -9,7 +9,7 @@ og_title: Qué es rolling hashing más implementación.
 
 Rolling Hashing o string hashing es una técnica ocupada para resolver problemas de búsqueda de substring. La idea es _encriptar_ la cadena de caracteres en un número, de tal forma que si dos cadenas son iguales, entonces su encriptación también lo es. Esto nos permite comparar dos cadenas en tiempo constante. De esta manera sólo comparamos el valor del hash, y no cada caracter de la cadena.
 
-## Hasing
+## Hashing
 
 Para calcular el hash de una cadena ocupamos _polynomial hasing_. La idea es que cada caracter de la cadena se encripta en un número, y luego se suman todos los números. El problema es que si la cadena es muy larga, el número puede ser muy grande y no cabe en un tipo de dato. Para solucionar esto ocuparemos aritmetica modular.
 

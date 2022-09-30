@@ -11,7 +11,7 @@ nav:
     - Cálculo de la Nota Final: about/grading.md
   - Apuntes (nueva sección):
     - Strings:
-      - Rolling Hasing: notes/strings/rolling_hashing.md
+      - Rolling Hashing: notes/strings/rolling_hashing.md
   - Contests: 
     - contests/index.md
     - Contest 1: contests/hints/contest1.md
