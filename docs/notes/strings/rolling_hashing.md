@@ -1,17 +1,17 @@
 ---
 title: Rolling Hashing
-og_title: Qué es rolling hashing más implementación.
+description: Explicación del algoritmo de gRolling Hashing y su implementación en C++.
 ---
 
 # Rolling Hashing
 
 ## Introducción
 
-Rolling Hashing o string hashing es una técnica ocupada para resolver problemas de búsqueda de substring. La idea es _encriptar_ la cadena de caracteres en un número, de tal forma que si dos cadenas son iguales, entonces su encriptación también lo es. Esto nos permite comparar dos cadenas en tiempo constante. De esta manera sólo comparamos el valor del hash, y no cada caracter de la cadena.
+Rolling Hashing o string hashing es una técnica ocupada para resolver problemas de búsqueda de substring. La idea es _encriptar_ la cadena de caracteres en un número, de tal forma que si dos cadenas son iguales, entonces su encriptación también lo es. Esto nos permite comparar dos cadenas en tiempo constante. De esta manera sólo comparamos el valor del hash, y no cada carácter de la cadena.
 
 ## Hashing
 
-Para calcular el hash de una cadena ocupamos _polynomial hasing_. La idea es que cada caracter de la cadena se encripta en un número, y luego se suman todos los números. El problema es que si la cadena es muy larga, el número puede ser muy grande y no cabe en un tipo de dato. Para solucionar esto ocuparemos aritmetica modular.
+Para calcular el hash de una cadena ocupamos _polynomial hashing_. La idea es que cada carácter de la cadena se encripta en un número, y luego se suman todos los números. El problema es que si la cadena es muy larga, el número puede ser muy grande y no cabe en un tipo de dato. Para solucionar esto ocuparemos aritmética modular.
 
 Sea $S$ el string que queremos encriptar, y $A$ y $B$ dos primos. Entonces, el hash de $S$ es:
 
@@ -19,11 +19,11 @@ $$
 \sum_{i=0}^{n-1} S[i] \cdot A^i \mod B
 $$
 
-Cada caracter se multiplica por una potencia de $A$ para minizar la probabilidad de colisiones. El modulo $B$ es para evitar que el número sea muy grande y tengamos problemas de overflow. El valor de cada caracter se puede obtener de la tabla ASCII o de alguna otra tabla que se nos ocurra.
+Cada carácter se multiplica por una potencia de $A$ para minimizar la probabilidad de colisiones. El modulo $B$ es para evitar que el número sea muy grande y tengamos problemas de overflow. El valor de cada carácter se puede obtener de la tabla ASCII o de alguna otra tabla que se nos ocurra.
 
 ### Ejemplo
 
-Supongamos que queremos calcular el hash de la cadena `"PABLO"`. El valor ASCII de cada caracter es:
+Supongamos que queremos calcular el hash de la cadena `"PABLO"`. El valor ASCII de cada carácter es:
 
 <center>
 
@@ -92,7 +92,7 @@ y en el caso de que $i = 0$ se reduce a $h[j]$.
 
 Pueden encontrar la implementación de rolling hashing en el siguiente [link](https://github.com/Wh4rp/Competitive-Programming/blob/main/Notes/Strings/Rolling%20Hashing.h){:target="_blank"}.
 
-La función `preprocess` que calcula los hashes de cada posición del string $S$. Y la función `hash` que calcula el hash de un substring $S[i \dots j]$:
+La función `preprocessor` que calcula los hashes de cada posición del string $S$. Y la función `hash` que calcula el hash de un substring $S[i \dots j]$:
 
 ```cpp  
 const int MAXN = 1e5 + 5;
@@ -103,7 +103,7 @@ int n;
 string s;
 int h[MAXN], p[MAXN];
 
-void preprocess() {
+void preprocessor() {
     p[0] = 1;
     for (int i = 1; i <= n; i++) {
         p[i] = (p[i - 1] * A) % B;
@@ -127,7 +127,7 @@ Supongamos que queremos encontrar el primer substring de $S$ que es igual a `"PA
 int main() {
     cin >> s;
     n = s.size();
-    preprocess();
+    preprocessor();
     string r = "PABLO";
     int m = r.size();
     int l = pol_hash(r);
