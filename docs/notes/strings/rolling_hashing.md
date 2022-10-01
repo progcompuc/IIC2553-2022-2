@@ -52,16 +52,18 @@ $$
 
 En código sería:
 
-```cpp
-int pol_hash(string s) {
-    int A = 31, B = 1e9 + 7;
-    int ans = 0;
-    for(char c : s){
-        ans = (ans * A + c) % B;
+!!! code-cpp " "
+
+    ```cpp
+    int pol_hash(string s) {
+        int A = 31, B = 1e9 + 7;
+        int ans = 0;
+        for(char c : s){
+            ans = (ans * A + c) % B;
+        }
+        return ans;
     }
-    return ans;
-}
-```
+    ```
 
 ## Preprocesamiento
 
@@ -103,52 +105,54 @@ Pueden encontrar la implementación de rolling hashing en el siguiente [link](ht
 
 La función `preprocessor` que calcula los hashes de cada posición del string $S$. Y la función `hash` que calcula el hash de un substring $S[i \dots j]$:
 
-```cpp  
-const int MAXN = 1e5 + 5;
-const int A = 31;
-const int B = 1e9 + 7;
+!!! code-cpp " "
+    ```cpp  
+    const int MAXN = 1e5 + 5;
+    const int A = 31;
+    const int B = 1e9 + 7;
 
-int n;
-string s;
-int h[MAXN], p[MAXN];
+    int n;
+    string s;
+    int h[MAXN], p[MAXN];
 
-void preprocessor() {
-    p[0] = 1;
-    for (int i = 1; i <= n; i++) {
-        p[i] = (p[i - 1] * A) % B;
+    void preprocessor() {
+        p[0] = 1;
+        for (int i = 1; i <= n; i++) {
+            p[i] = (p[i - 1] * A) % B;
+        }
+        h[0] = s[0];
+        for (int i = 1; i < n; i++) {
+            h[i] = (h[i - 1] * A + s[i]) % B;
+        }
     }
-    h[0] = s[0];
-    for (int i = 1; i < n; i++) {
-        h[i] = (h[i - 1] * A + s[i]) % B;
-    }
-}
 
-int get_hash(int i, int j) {
-    return i != 0 ? (h[j]-h[i-1]*p[j-i+1] + B*B) % B : h[j];
-}
-```
+    int get_hash(int i, int j) {
+        return i != 0 ? (h[j]-h[i-1]*p[j-i+1] + B*B) % B : h[j];
+    }
+    ```
 
 ### Uso
 
 Supongamos que queremos encontrar el primer substring de $S$ que es igual a `"PABLO"`. Usando la función `get_hash` podemos calcular el hash de `"PABLO"` y luego comparar con los hashes de cada posición de $S$:
 
-```cpp
-int main() {
-    cin >> s;
-    n = s.size();
-    preprocessor();
-    string r = "PABLO";
-    int m = r.size();
-    int l = pol_hash(r);
-    for (int i = 0; i + m - 1 < n; i++) {
-        if (get_hash(i, i + m - 1) == l) {
-            cout << i << '\n';
-            break;
+!!! code-cpp " "
+    ```cpp
+    int main() {
+        cin >> s;
+        n = s.size();
+        preprocessor();
+        string r = "PABLO";
+        int m = r.size();
+        int l = pol_hash(r);
+        for (int i = 0; i + m - 1 < n; i++) {
+            if (get_hash(i, i + m - 1) == l) {
+                cout << i << '\n';
+                break;
+            }
         }
+        return 0;
     }
-    return 0;
-}
-```
+    ```
 
 ## Recomendaciones
 
