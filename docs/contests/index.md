@@ -88,15 +88,15 @@ Septiembre 23, 14 días, [link a **contest**](https://vjudge.net/contest/517129)
 
 **Tópicos**: [Grafos: SCC, Aristas de Corte y Puntos de Articulación](../resources/graphs)
 
-**Puntos**:
+**Puntos**: 7, 3, 5, 3, 3, 4, 2, 5
 
-| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` |
-| --------- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
+| --------- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  2  |  3  |  3  |  3  |  4  |  5  |  7  |  5  |
 
-**Puntaje Mínimo Esperado**: ?
+**Puntaje Mínimo Esperado**: 5
 
-**Hints** y **códigos de ejemplo**: _pendiente_
+**Hints** y **códigos de ejemplo**: [link](hints/contest6)
 
 
 
