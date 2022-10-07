@@ -41,9 +41,15 @@ Se hace el siguiente proceso:
         AB\colorbox{yellowgreen}{ABABAC}
     $$
 
-Notemos `ABABA` también tenía el prefijo/sufijo `A` pero si hubiéramos saltado a esa posición no habríamos encontrado el patrón en el string. 
+!!! note
+    `ABABA` también tenía el prefijo/sufijo `A` pero si hubiéramos saltado a esa posición no habríamos encontrado el patrón en el string. De todos modos no siempre va a convenir utilizar el prefijo/sufijo más largo.
 
-## Función de fallo
+## Implementación
+
+La implementación de KMP es muy similar a la de fuerza bruta. La diferencia es que vamos a dar saltos en el string cuando hay una comparación parcial fallida. Pero primero debemos calcular los saltos que vamos a dar. 
+
+
+### Función de fallo
 
 Vamos a ocupar la _observación_ y calcularemos el largo del prefijo/sufijo más largo para cada prefijo del patrón. Si no tiene, entonces su largo será de $0$. 
 
@@ -103,7 +109,7 @@ A esto se le llama _función de fallo_ y su implementación en C++ es la siguien
     4. :man_raising_hand: Si podemos extender el prefijo/sufijo del prefijo de largo i - 1 con el carácter j-ésimo, entonces lo extendemos.
     5. :man_raising_hand: Guardamos el prefijo/sufijo más largo del prefijo de largo i.
 
-## Implementación KMP
+### Implementación KMP
 
 Ahora que tenemos la función de fallo podemos implementar el algoritmo KMP. 
 
