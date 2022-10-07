@@ -53,7 +53,7 @@ La implementación de KMP es muy similar a la de fuerza bruta. La diferencia es 
 
 Vamos a ocupar la _observación_ y calcularemos el largo del prefijo/sufijo más largo para cada prefijo del patrón. Si no tiene, entonces su largo será de $0$. 
 
-Sigamos con el mismo ejemplo y asumamos que el patrón es `ABABAC`. Entonces el arreglo de prefijos/sufijos más largos será:
+Sigamos con el mismo ejemplo donde el patrón es `ABABAC`. Su arreglo de prefijos/sufijos más largos $f$ será:
 
 <center>
 
@@ -73,9 +73,9 @@ Donde "" es el string vacío.
 
 Llamaremos $f(i)$ al largo del prefijo/sufijo más largo del prefijo del patrón de largo $i$. 
 
-Notemos que $f(f(i))$ es la segunda mayor coincidencia de prefijo/sufijo más largo. Por ejemplo, si $f(5) = 3$, entonces $f(3) = 1$. Que coincide con que `ABABA` tiene tanto a `ABA` como a `A` como prefijo/sufijo's. Esto se puede iterar hasta llegar a $f(f(\ldots)) = 0$.
+Notemos que $f(f(i))$ es la segunda mejor coincidencia de prefijo/sufijo más largo. Por ejemplo, si $f(5) = 3$, entonces $f(3) = 1$. Que coincide con que `ABABA` tiene tanto a `ABA` como a `A` como prefijo/sufijo's. Esto se puede iterar, y obtener el tercero mejor, cuarto mejor y así, hasta llegar a $f(f(\ldots)) = 0$.
 
-Esta observación nos sirve para calcular $f(i)$ sabiendo todos los $f(j)$ con $j < i$. El prefijo/sufijo más largo para el prefijo de largo $i$ es el prefijo/sufijo más largo para el prefijo de largo $i - 1$ que se pueda extender con el carácter $i$-ésimo. Por lo que hay que comprobar con todos los prefijo/sufijo's del prefijo de largo $i - 1$. Si no existe entonces el prefijo/sufijo más largo es el string vacío. 
+Esta observación nos sirve para calcular $f(i)$ sabiendo todos los $f(j)$ con $j < i$. $f(i)$ va a ser igual al largo del prefijo/sufijo más largo del prefijo de largo $i - 1$ que se pueda extender con el carácter $i$-ésimo, o sea que siga siendo prefijo/sufijo del prefijo $i$. Por lo que hay que comprobar con todos los prefijo/sufijo's del prefijo de largo $i - 1$. Acá ocupamos la observación iterando $f(i-1)$ sobre si misma. 
 
 #### Código
 
