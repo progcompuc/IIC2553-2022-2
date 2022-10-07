@@ -77,6 +77,8 @@ Notemos que $f(f(i))$ es la segunda mayor coincidencia de prefijo/sufijo más la
 
 Esta observación nos sirve para calcular $f(i)$ sabiendo todos los $f(j)$ con $j < i$. El prefijo/sufijo más largo para el prefijo de largo $i$ es el prefijo/sufijo más largo para el prefijo de largo $i - 1$ que se pueda extender con el carácter $i$-ésimo. Por lo que hay que comprobar con todos los prefijo/sufijo's del prefijo de largo $i - 1$. Si no existe entonces el prefijo/sufijo más largo es el string vacío. 
 
+#### Código
+
 A esto se le llama _función de fallo_ y su implementación en C++ es la siguiente:
 
 !!! code-cpp " "
@@ -114,6 +116,10 @@ A esto se le llama _función de fallo_ y su implementación en C++ es la siguien
 Ahora que tenemos la función de fallo podemos implementar el algoritmo KMP. 
 
 Como ya se mencionó en un inicio, la idea va a ser que cada que una comparación parcial falle, vamos a saltar a la posición donde inicia el prefijo/sufijo más largo del prefijo que ya fue comparado. Y continuamos con el siguiente carácter. Si este siguiente carácter no coincide, intentamos con el segundo mejor prefijo/sufijo. Y así sucesivamente hasta llegar a que no hayan más prefijos/sufijos o que alguno calce, y continuamos con la comparación parcial normal.
+
+#### Código
+
+El código de KMP en C++ es el siguiente:
 
 !!! code-cpp " "
 
