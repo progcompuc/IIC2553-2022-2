@@ -73,7 +73,7 @@ En código sería:
 
 Recordemos que queremos ocupar rolling hashing para resolver problemas de búsqueda de un string en otro más grande. En cuyo caso no nos conviene estar calculando el hash de cada substring a comparar en cada consulta. En vez de eso, ocuparemos un arreglo de hashes, donde cada posición $i$ del arreglo contiene el hash de la cadena desde la posición $i$ hasta el final. 
 
-Supongamos que $h$ es dicho arreglo y que $i < j$. Entonces
+Supongamos que $h$ es dicho arreglo y que $i < j$. Entonces:
 
 $$
 \begin{aligned}
@@ -82,7 +82,7 @@ h[j] = \sum_{k=j}^{n-1} S[k] \cdot A^{k-j} \mod B
 \end{aligned}
 $$
 
-Si intenta resta $h[i]$ a $h[j]$ se obtiene:
+Si intentamos restar $h[i]$ a $h[j]$ se obtiene:
 
 $$
 \begin{aligned}
