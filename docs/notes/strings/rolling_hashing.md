@@ -1,6 +1,6 @@
 ---
 title: Rolling Hashing
-description: Explicación del algoritmo de gRolling Hashing y su implementación en C++.
+description: Explicación del algoritmo de Rolling Hashing y su implementación en C++.
 ---
 
 # Rolling Hashing
