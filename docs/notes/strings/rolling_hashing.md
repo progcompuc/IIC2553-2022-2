@@ -9,9 +9,13 @@ description: Explicación del algoritmo de gRolling Hashing y su implementación
 
 Supongamos que quieres saber si el dígito $0$ esta o no dentro de un numero muy grande. Este es un clásico algoritmo de búsqueda secuencial donde ves dígito por dígito si es igual o no a $0$. Si el largo del numero es de $n$ entonces la complejidad es $\mathcal{O}(n)$. 
 
-Modifiquemos un poco el problema y en vez de saber si un dígito esta en el numero preguntemos si un string esta dentro de otro. Por ejemplo, verificar si `abc` esta dentro de `abracadabra`. Aca al ocupar el mismo algoritmo de búsqueda secuencial la complejidad no sera de $\mathcal{O}(n)$ ya que la comparación de strings no es $\mathcal{O}(1)$ debido a que se tiene que comparar carácter por carácter. Por lo que la complejidad sera de $\mathcal{O}(n \cdot m)$ donde $m$ es el largo del prefijo que estamos buscando. 
+Modifiquemos un poco el problema y en vez de saber si un dígito está en el numero preguntemos si un string está dentro de otro. Por ejemplo, verificar si `abc` está en `abracadabra`. Al ocupar el mismo algoritmo de búsqueda secuencial la complejidad no será de $\mathcal{O}(n)$ ya que la comparación de strings se hace carácter por carácter. De hecho su complejidad es de $\mathcal{O}(n \cdot m)$ donde $m$ es el largo del string que estamos buscando. 
 
-Aca es donde entra el algoritmo de **Rolling Hashing**. Este algoritmo nos va a permitir comparar dos strings en $\mathcal{O}(1)$. La intuición por detrás es que vamos a transformar cada substring que queremos comparar en un dígito para que asi hacer uns búsqueda secuencial con números. Que ya sabemos el computador los compara en tiempo constante. 
+
+Acá es donde entra el algoritmo de **Rolling Hashing**. Este algoritmo nos va a permitir comparar dos strings en $\mathcal{O}(1)$. La intuición por detrás es que vamos a transformar cada substring que queremos comparar en un _dígito_ para que asi hacer uns búsqueda secuencial con números. Los cuales son comparados en $\mathcal{O}(1)$.
+
+!!! info
+    Un hash es una función que sirve para almacenar y recuperar datos de una manera eficiente.
 
 ## Hashing
 
@@ -20,7 +24,7 @@ Para calcular el hash de una cadena ocupamos _polynomial hashing_. La idea es qu
 !!! intuition "Intuición"
     Pasar de `abc` $\rightarrow$ `123` y `dcbe` $\rightarrow$ `4321`. 
 
-El problema es que si la cadena es muy larga, el número podrir ser muy grande y no caber en un `int`. Para solucionar esto ocuparemos aritmética modular.
+El problema es que si la cadena es muy larga, el número podría ser muy grande y no caber en un `int` (_overflow_). Para solucionar esto ocuparemos aritmética modular.
 
 Sea $S$ el string que queremos encriptar, y $A$ y $B$ dos primos. Entonces, el hash de $S$ es:
 
@@ -28,7 +32,7 @@ $$
 \sum_{i=0}^{n-1} S[i] \cdot A^i \mod B
 $$
 
-Cada carácter se multiplica por una potencia de $A$ para minimizar la probabilidad de colisiones. El modulo $B$ es para evitar que el número sea muy grande y tengamos problemas de overflow. El valor de cada carácter se puede obtener de la tabla ASCII o de alguna otra tabla que se nos ocurra.
+Cada carácter se multiplica por una potencia de $A$ para minimizar la probabilidad de colisiones. El módulo $B$ es para evitar que el número sea muy grande y tengamos problemas de overflow. El valor de cada carácter ($S[i]$) se puede obtener de la tabla ASCII o de alguna otra tabla que se nos ocurra.
 
 ### Ejemplo
 
@@ -67,14 +71,42 @@ En código sería:
 
 ## Preprocesamiento
 
-Recordemos que queremos ocupar rolling hashing para resolver problemas de búsqueda de substring. En cuyo caso no nos conviene estar calculando el hash de cada substring a comparar en cada consulta. En vez de eso, ocuparemos un arreglo de hashes, donde cada posición $i$ del arreglo contiene el hash de la cadena desde la posición $i$ hasta el final. De esta manera, si queremos comparar dos substrings, sólo tenemos que manipular los hashes de las posiciones $i$ y $j$.
+Recordemos que queremos ocupar rolling hashing para resolver problemas de búsqueda de un string en otro más grande. En cuyo caso no nos conviene estar calculando el hash de cada substring a comparar en cada consulta. En vez de eso, ocuparemos un arreglo de hashes, donde cada posición $i$ del arreglo contiene el hash de la cadena desde la posición $i$ hasta el final. 
 
-Llamando $S$ al string que queremos preprocesar, entonces el arreglo $h$ con los hashes que comienzan en cada posición estaría definido por:
+Supongamos que $h$ es dicho arreglo y que $i < j$. Entonces
+
+$$
+\begin{aligned}
+h[i] = \sum_{k=i}^{n-1} S[k] \cdot A^{k-i} \mod B \\ 
+h[j] = \sum_{k=j}^{n-1} S[k] \cdot A^{k-j} \mod B
+\end{aligned}
+$$
+
+Si intenta resta $h[i]$ a $h[j]$ se obtiene:
+
+$$
+\begin{aligned}
+h[i] - h[j] &= \sum_{k=i}^{n-1} S[k] \cdot A^{k-i} - \sum_{k=j}^{n-1} S[k] \cdot A^{k-j} \mod B \\
+&= \left ( \sum_{k=i}^{j-1} S[k] \cdot A^{k-i} + \sum_{k=j}^{n-1} S[k] \cdot A^{k-i} \right ) - \sum_{k=j}^{n-1} S[k] \cdot A^{k-j} \mod B
+\end{aligned}
+$$
+
+Para cancelar las dos sumatorias de la derecha hace falta multiplicar $h[j]$ por $A^{j-i}$. Ahora si tendremos que:
+
+$$
+\begin{aligned}
+h[i] - h[j] \cdot A^{j-i} &= \sum_{k=i}^{j-1} S[k] \cdot A^{k-i} \mod B
+\end{aligned}
+$$
+
+Por lo que $h[i] - h[j]$ es el hash de $S[i \dots j]$. 
+
+Ahora, veamos cómo calcular $h[i]$ para cada $i$. Para ello podemos aprovecharnos d ela siguiente recursión:
 
 $$
 \begin{aligned}
 h[0] &= S[0] \\ 
-h[i] &= S[i - 1] + S[0] \cdot A \\
+h[i] &= S[i] + S[i - 1] \cdot A \\
 \end{aligned}
 $$
 
@@ -87,7 +119,7 @@ p[i] &= p[i - 1] \cdot A \mod B \\
 \end{aligned}
 $$
 
-Así podemos calcular el hash de un substring $S[i \dots j]$ como:
+Así, el hash de un substring $S[i \dots j]$ es:
 
 $$
 \begin{aligned}
