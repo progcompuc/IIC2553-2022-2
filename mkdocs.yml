@@ -72,9 +72,9 @@ theme:
   name: material
   language: es
   custom_dir: 'theme'
-  icon:
-    admonition:
-      info: fontawesome/brands/python
+  # icon:
+  #   admonition:
+  #     info: fontawesome/brands/python
   features:
     - navigation.indexes
     - content.code.annotate
