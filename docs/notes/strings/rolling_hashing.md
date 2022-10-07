@@ -99,7 +99,7 @@ h[i] - h[j] \cdot A^{j-i} &= \sum_{k=i}^{j-1} S[k] \cdot A^{k-i} \mod B
 \end{aligned}
 $$
 
-Por lo que $h[i] - h[j]$ es el hash de $S[i \dots j]$. 
+Por lo que $h[i] - h[j] \cdot A^{j-i}$ es el hash de $S[i \dots j]$. 
 
 Ahora, veamos cómo calcular $h[i]$ para cada $i$. Para ello podemos aprovecharnos d ela siguiente recursión:
 
