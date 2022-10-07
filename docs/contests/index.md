@@ -113,4 +113,20 @@ Septiembre 30, 14 días, [link a **contest**](https://vjudge.net/contest/518414)
 
 **Puntaje Mínimo Esperado**: ?
 
+
+## Contest 8
+Octubre 07, 14 días, [link a **contest**](https://vjudge.net/contest/519669)
+
+**Tópicos**: [Strings: Rolling Hashing, Trie](../resources/strings)
+
+**Puntos**:
+
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` |
+| --------- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+
+**Puntaje Mínimo Esperado**: ?
+
+
+
 **Hints** y **códigos de ejemplo**: _pendiente_
