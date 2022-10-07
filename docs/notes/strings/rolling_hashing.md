@@ -133,9 +133,9 @@ y en el caso de que $i = 0$ se reduce a $h[j]$.
 
 ### Código
 
-Pueden encontrar la implementación de rolling hashing en el siguiente [link](https://github.com/Wh4rp/Competitive-Programming/blob/main/Notes/Strings/Rolling%20Hashing.h){:target="_blank"}.
+Pueden encontrar la implementación de rolling hashing en el siguiente [link](https://github.com/Wh4rp/Competitive-Programming/blob/main/Notes/Strings/Rolling%20Hashing.h){:target="_blank"}. Esta implementación es con dos $B$, pero es básicamente la misma que se muestra a continuación. 
 
-La función `preprocessor` que calcula los hashes de cada posición del string $S$. Y la función `hash` que calcula el hash de un substring $S[i \dots j]$:
+La función `preprocessor` que calcula los hashes de cada posición del string $S$. Y la función `get_hash` que calcula el hash de un substring $S[i \dots j]$:
 
 !!! code-cpp " "
     ```cpp  
@@ -177,7 +177,7 @@ Supongamos que queremos encontrar el primer substring de $S$ que es igual a `"PA
         int m = r.size();
         int l = pol_hash(r);
         for (int i = 0; i + m - 1 < n; i++) {
-            if (get_hash(i, i + m - 1) == l) {
+            if (get_hash(i, i + m) == l) {
                 cout << i << '\n';
                 break;
             }
