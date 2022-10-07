@@ -157,4 +157,4 @@ El código de KMP en C++ es el siguiente:
 
 ## Material consultado
 
-* [Introduction to String Searching Algorithms - topcoder](https://www.topcoder.com/thrive/articles/Introduction%20to%20String%20Searching%20Algorithms){:target="_blank"}
+* [Introduction to String Searching Algorithms — topcoder](https://www.topcoder.com/thrive/articles/Introduction%20to%20String%20Searching%20Algorithms){:target="_blank"}

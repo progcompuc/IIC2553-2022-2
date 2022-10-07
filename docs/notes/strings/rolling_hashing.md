@@ -192,5 +192,5 @@ Supongamos que queremos encontrar el primer substring de $S$ que es igual a `"PA
 
 ## Material consultado
 
-- [Competitive Programmer’s Handbook - String Hashing](https://usaco.guide/CPH.pdf#page=255){:target="_blank"}
-- [ProgompCL - Rolling Hashing](https://progcomp.cl/rollinghashing){:target="_blank"}
+- [Competitive Programmer’s Handbook — String Hashing](https://usaco.guide/CPH.pdf#page=255){:target="_blank"}
+- [ProgompCL — Rolling Hashing](https://progcomp.cl/rollinghashing){:target="_blank"}
