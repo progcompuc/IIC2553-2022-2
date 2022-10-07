@@ -164,7 +164,7 @@ Para implementar este algoritmo necesitamos una estructura de datos que nos perm
                 }
                 if (!found) return false;
             }
-            return true;
+            return cur->leaf;
         }
     };
     ```
@@ -172,7 +172,7 @@ Para implementar este algoritmo necesitamos una estructura de datos que nos perm
     1. La struct `Node` es una estructura que guarda un carácter, un booleano que indica si es una hoja y un vector de punteros a nodos hijos.
     2. El constructor de la clase `Trie` inicializa el nodo raíz con el carácter nulo.
     3. El método `insert` recibe un string y lo añade al árbol. Se recorre el string carácter por carácter y se busca si el nodo actual tiene un hijo con el carácter actual. Si no existe, se crea un nuevo nodo con el carácter actual y se añade como hijo del nodo actual. Luego se actualiza el nodo actual al nodo recién creado. Al final se marca el último nodo como hoja.
-    4. El método `find` recibe un string y busca si está en el árbol. Se recorre el string carácter por carácter y se busca si el nodo actual tiene un hijo con el carácter actual. Si no existe, se retorna `false`. Cuando sale del ciclo, se retorna `true` ya que existe un camino que coincide con el string.
+    4. El método `find` recibe un string y busca si está en el árbol. Se recorre el string carácter por carácter y se busca si el nodo actual tiene un hijo con el carácter actual. Si no existe, se retorna `false`. Cuando sale del ciclo, se retorna `true` siempre y cuando el última carácter era una hoja. 
 
 ## Material consultado
 
