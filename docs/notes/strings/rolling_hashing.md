@@ -61,11 +61,11 @@ En código sería:
     ```cpp
     int pol_hash(string s) {
         int A = 31, B = 1e9 + 7;
-        int ans = 0;
-        for(char c : s){
-            ans = (ans * A + c) % B;
+        int n = s.size(), h = 0;
+        for (int i = n - 1; i >= 0; i--) {
+            h = (h * A + s[i]) % B;
         }
-        return ans;
+        return h;
     }
     ```
 
@@ -153,13 +153,13 @@ La función `preprocessor` que calcula los hashes de cada posición del string $
             p[i] = (p[i - 1] * A) % B;
         }
         h[0] = s[0];
-        for (int i = 1; i < n; i++) {
-            h[i] = (h[i - 1] * A + s[i]) % B;
+        for (int i = n - 1; i >= 0; i--) {
+            h[i] = (h[i + 1] * A + s[i]) % B;
         }
     }
 
     int get_hash(int i, int j) {
-        return i != 0 ? (h[j]-h[i-1]*p[j-i+1] + B*B) % B : h[j];
+        return h[i] - h[j] * p[j - i] + B * B) % B;
     }
     ```
 
