@@ -13,6 +13,7 @@ nav:
     - Strings:
       - Rolling Hashing: notes/strings/rolling_hashing.md
       - Trie String: notes/strings/trie_string.md
+      - KMP: notes/strings/kmp.md
   - Contests: 
     - contests/index.md
     - Contest 1: contests/hints/contest1.md
@@ -76,6 +77,7 @@ theme:
       info: fontawesome/brands/python
   features:
     - navigation.indexes
+    - content.code.annotate
   palette:
 
     # Palette toggle for automatic mode
