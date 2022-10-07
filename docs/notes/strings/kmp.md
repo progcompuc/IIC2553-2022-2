@@ -20,25 +20,25 @@ Se hace el siguiente proceso:
 1. Se compara hasta `ABABA`, la cual es una comparación parcial correcta.
 
     $$
-        \colorbox{aqua}{ABABA} BAC
+        \colorbox{yellowgreen}{ABABA} BAC
     $$
 
 2. Falla en la comparación del carácter `C` con el carácter `B`.
 
     $$
-        \colorbox{aqua}{ABABA} \colorbox{red}{B} AC
+        \colorbox{yellowgreen}{ABABA} \colorbox{red}{B} AC
     $$
 
 3. Como el prefijo `ABABA` tiene un sufijo `ABA` y un prefijo `ABA` que son iguales, podemos saltar a la posición donde inicia el sufijo y asumir que el prefijo ya fue comparado correctamente.
 
     $$
-        AB\colorbox{aqua}{ABA}BAC
+        AB\colorbox{yellowgreen}{ABA}BAC
     $$
 
 4. Continuamos comparando hasta que se encuentra una comparación total correcta.
 
     $$
-        AB\colorbox{aqua}{ABABAC}
+        AB\colorbox{yellowgreen}{ABABAC}
     $$
 
 Notemos `ABABA` también tenía el prefijo/sufijo `A` pero si hubiéramos saltado a esa posición no habríamos encontrado el patrón en el string. 
