@@ -116,6 +116,8 @@ classDef leaf fill:#f96;
 
 ## Implementación
 
+Pueden encontrar la implementación de trie string en el siguiente [link](https://github.com/Wh4rp/Competitive-Programming/blob/main/Notes/Strings/Trie%20String.h). Con un ejemplo de uso. 
+
 Para implementar este algoritmo necesitamos una estructura de datos que nos permita guardar el árbol. Ocuparemos una clase `Trie` que tendrá un nodo raíz, un método `insert` para añadir strings al árbol y un método `find` para buscar strings en el árbol.
 
 !!! code-cpp " "
