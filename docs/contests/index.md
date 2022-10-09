@@ -109,7 +109,7 @@ Septiembre 30, 14 días, [link a **contest**](https://vjudge.net/contest/518414)
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+| Puntaje   |  4  |  4  |  5  |  4  |  3  |  5  |  5  |  6  |
 
 **Puntaje Mínimo Esperado**: ?
 
