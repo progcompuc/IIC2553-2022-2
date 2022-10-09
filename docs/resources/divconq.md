@@ -12,4 +12,4 @@ title: "Divide and Conquer"
   - [(Youtube) 2.7.2. Merge Sort Algorithm](https://youtu.be/mB5HXBb_HY8)
   - [(Youtube) 2.8.1 QuickSort Algorithm](https://youtu.be/7h1s2SojIRw)
   - [(Youtube) Closest pair of points](https://youtu.be/6UBDkbVhJck)
-  - [(Youtube) Finding the Closest Pair of Points on the Plane: Divide and Conquer](https://youtu.be/xi-WF07rAQw)     
+  - [(Youtube) Finding the Closest Pair of Points on the Plane: Divide and Conquer](https://youtu.be/xi-WF07rAQw)

@@ -28,6 +28,7 @@ Así, $E$ se usa para reducir la deuda $D$ de la siguiente manera:
 - $X' = X + (1-X) \cdot \frac{(D-D')}{D}$
 
 Así, se obtiene una nota preliminar
+
 - $\operatorname{Nota}_{V1} = (1 + 6 \cdot X') \cdot 0.75 + (1 + 6 \cdot A) \cdot 0.25$
 
 Sin embargo, luego se bajará la escala del curso, es decir, si ningún alumno alcanzó el $7$, el alumno con mayor nota quedará con $7$ (siempre y cuando la escala baje "poco" - i.e. habrá un límite para bajar la escala con el fin de prevenir "hacks" al sistema).

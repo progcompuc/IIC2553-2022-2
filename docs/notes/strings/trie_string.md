@@ -10,6 +10,7 @@ description: Explicación del algoritmo de Trie String y su implementación en C
 Trie string es una forma de guardar un conjunto de strings. La idea es almacenar los strings en un árbol, donde cada nodo es un carácter. De forma que si seguimos cada camino desde la raíz hasta alguna de sus hoja podamos reconstruir un string del conjunto original.
 
 ## Creación del árbol con un ejemplo
+
 La mejor manera de entender este algoritmo es con un ejemplo. Así que veamos cómo hacer con los strings `tree`, `trie`, `algo`, `assoc`, `all` y `also`.
 
 Empezamos con el árbol vacío solo con la raíz.
@@ -46,10 +47,10 @@ classDef leaf fill:#f96;
 !!! note
     Pintamos de naranja los nodos finales (hojas) para indicar que el string termina ahí (asi podemos distinguir strings que son prefijos de otros). Esto se verá en la implementación.
 
-Veamos el siguiente string, `trie`. 
+Veamos el siguiente string, `trie`.
 
-1. Revisamos si el nodo `root` tiene un hijo cuyo carácter es igual a `t`. 
-2. ¡Existe! se revisa si el nodo `t` tiene un hijo cuyo carácter es igual a `r`. 
+1. Revisamos si el nodo `root` tiene un hijo cuyo carácter es igual a `t`.
+2. ¡Existe! se revisa si el nodo `t` tiene un hijo cuyo carácter es igual a `r`.
 3. ¡Existe! se revisa si el nodo `r` tiene un hijo cuyo carácter es igual a `i`.
 4. No existe :( añadimos el string restante `ie` como un camino debajo del nodo `r`.
 
@@ -112,16 +113,16 @@ classDef leaf fill:#f96;
 </center>
 
 !!! note
-    Comprobar si un string está o no en el árbol es básicamente el mismo proceso que para añadirlo. Salvo que cuando no coincida un carácter en el camino, se termina la búsqueda. 
+    Comprobar si un string está o no en el árbol es básicamente el mismo proceso que para añadirlo. Salvo que cuando no coincida un carácter en el camino, se termina la búsqueda.
 
 ## Implementación
 
-Pueden encontrar la implementación de trie string en el siguiente [link](https://github.com/Wh4rp/Competitive-Programming/blob/main/Notes/Strings/Trie%20String.h). Con un ejemplo de uso. 
+Pueden encontrar la implementación de trie string en el siguiente [link](https://github.com/Wh4rp/Competitive-Programming/blob/main/Notes/Strings/Trie%20String.h). Con un ejemplo de uso.
 
 Para implementar este algoritmo necesitamos una estructura de datos que nos permita guardar el árbol. Ocuparemos una clase `Trie` que tendrá un nodo raíz, un método `insert` para añadir strings al árbol y un método `find` para buscar strings en el árbol.
 
 !!! code-cpp " "
-    ``` cpp
+    ```cpp
     class Trie {
         struct Node {   // (1)!
             char c;

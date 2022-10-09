@@ -3,14 +3,11 @@ title: Rolling Hashing
 description: Explicación del algoritmo de Rolling Hashing y su implementación en C++.
 ---
 
-# Rolling Hashing
-
 ## Introducción
 
-Supongamos que quieres saber si el dígito $0$ esta o no dentro de un numero muy grande. Este es un clásico algoritmo de búsqueda secuencial donde ves dígito por dígito si es igual o no a $0$. Si el largo del numero es de $n$ entonces la complejidad es $\mathcal{O}(n)$. 
+Supongamos que quieres saber si el dígito $0$ esta o no dentro de un numero muy grande. Este es un clásico algoritmo de búsqueda secuencial donde ves dígito por dígito si es igual o no a $0$. Si el largo del numero es de $n$ entonces la complejidad es $\mathcal{O}(n)$.
 
-Modifiquemos un poco el problema y en vez de saber si un dígito está en el numero preguntemos si un string está dentro de otro. Por ejemplo, verificar si `abc` está en `abracadabra`. Al ocupar el mismo algoritmo de búsqueda secuencial la complejidad no será de $\mathcal{O}(n)$ ya que la comparación de strings se hace carácter por carácter. De hecho su complejidad es de $\mathcal{O}(n \cdot m)$ donde $m$ es el largo del string que estamos buscando. 
-
+Modifiquemos un poco el problema y en vez de saber si un dígito está en el numero preguntemos si un string está dentro de otro. Por ejemplo, verificar si `abc` está en `abracadabra`. Al ocupar el mismo algoritmo de búsqueda secuencial la complejidad no será de $\mathcal{O}(n)$ ya que la comparación de strings se hace carácter por carácter. De hecho su complejidad es de $\mathcal{O}(n \cdot m)$ donde $m$ es el largo del string que estamos buscando.
 
 Acá es donde entra el algoritmo de **Rolling Hashing**. Este algoritmo nos va a permitir comparar dos strings en $\mathcal{O}(1)$. La intuición por detrás es que vamos a transformar cada substring que queremos comparar en un _dígito_ para que asi hacer uns búsqueda secuencial con números. Los cuales son comparados en $\mathcal{O}(1)$.
 
@@ -19,10 +16,10 @@ Acá es donde entra el algoritmo de **Rolling Hashing**. Este algoritmo nos va a
 
 ## Hashing
 
-Para calcular el hash de una cadena ocupamos _polynomial hashing_. La idea es que cada carácter de la cadena se encripta en un número. Y luego anidamos para alguna _base_. 
+Para calcular el hash de una cadena ocupamos _polynomial hashing_. La idea es que cada carácter de la cadena se encripta en un número. Y luego anidamos para alguna _base_.
 
 !!! intuition "Intuición"
-    Pasar de `abc` $\rightarrow$ `123` y `dcbe` $\rightarrow$ `4321`. 
+    Pasar de `abc` $\rightarrow$ `123` y `dcbe` $\rightarrow$ `4321`.
 
 El problema es que si la cadena es muy larga, el número podría ser muy grande y no caber en un `int` (_overflow_). Para solucionar esto ocuparemos aritmética modular.
 
@@ -71,13 +68,13 @@ En código sería:
 
 ## Preprocesamiento
 
-Recordemos que queremos ocupar rolling hashing para resolver problemas de búsqueda de un string en otro más grande. En cuyo caso no nos conviene estar calculando el hash de cada substring a comparar en cada consulta. En vez de eso, ocuparemos un arreglo de hashes, donde cada posición $i$ del arreglo contiene el hash de la cadena desde la posición $i$ hasta el final. 
+Recordemos que queremos ocupar rolling hashing para resolver problemas de búsqueda de un string en otro más grande. En cuyo caso no nos conviene estar calculando el hash de cada substring a comparar en cada consulta. En vez de eso, ocuparemos un arreglo de hashes, donde cada posición $i$ del arreglo contiene el hash de la cadena desde la posición $i$ hasta el final.
 
 Supongamos que $h$ es dicho arreglo y que $i < j$. Entonces:
 
 $$
 \begin{aligned}
-h[i] = \sum_{k=i}^{n-1} S[k] \cdot A^{k-i} \mod B \\ 
+h[i] = \sum_{k=i}^{n-1} S[k] \cdot A^{k-i} \mod B \\
 h[j] = \sum_{k=j}^{n-1} S[k] \cdot A^{k-j} \mod B
 \end{aligned}
 $$
@@ -105,7 +102,7 @@ Ahora, veamos cómo calcular $h[i]$ para cada $i$. Para ello podemos aprovecharn
 
 $$
 \begin{aligned}
-h[0] &= S[0] \\ 
+h[0] &= S[0] \\
 h[i] &= S[i] + S[i - 1] \cdot A \\
 \end{aligned}
 $$
@@ -133,7 +130,7 @@ y en el caso de que $i = 0$ se reduce a $h[j]$.
 
 ### Código
 
-Pueden encontrar la implementación de rolling hashing en el siguiente [link](https://github.com/Wh4rp/Competitive-Programming/blob/main/Notes/Strings/Rolling%20Hashing.h){:target="_blank"}. Esta implementación es con dos $B$, pero es básicamente la misma que se muestra a continuación. 
+Pueden encontrar la implementación de rolling hashing en el siguiente [link](https://github.com/Wh4rp/Competitive-Programming/blob/main/Notes/Strings/Rolling%20Hashing.h){:target="_blank"}. Esta implementación es con dos $B$, pero es básicamente la misma que se muestra a continuación.
 
 La función `preprocessor` que calcula los hashes de cada posición del string $S$. Y la función `get_hash` que calcula el hash de un substring $S[i \dots j]$:
 
@@ -188,7 +185,7 @@ Supongamos que queremos encontrar el primer substring de $S$ que es igual a `"PA
 
 ## Recomendaciones
 
-- Los jueces pueden tener casos de prueba que haga que se caigan las soluciones con constantes conocidas (a.k.a. $10^9 + 7$). En ese caso, se recomienda ocupar números primos aleatorios, pero que estén en el rango de $10^9$. 
+- Los jueces pueden tener casos de prueba que haga que se caigan las soluciones con constantes conocidas (a.k.a. $10^9 + 7$). En ese caso, se recomienda ocupar números primos aleatorios, pero que estén en el rango de $10^9$.
 
 ## Material consultado
 

@@ -46,12 +46,11 @@ Se hace el siguiente proceso:
 
 ## Implementación
 
-La implementación de KMP es muy similar a la de fuerza bruta. La diferencia es que vamos a dar saltos en el string cuando hay una comparación parcial fallida. Pero primero debemos calcular los saltos que vamos a dar. 
-
+La implementación de KMP es muy similar a la de fuerza bruta. La diferencia es que vamos a dar saltos en el string cuando hay una comparación parcial fallida. Pero primero debemos calcular los saltos que vamos a dar.
 
 ### Función de fallo
 
-Vamos a ocupar la _observación_ y calcularemos el largo del prefijo/sufijo más largo para cada prefijo del patrón. Si no tiene, entonces su largo será de $0$. 
+Vamos a ocupar la _observación_ y calcularemos el largo del prefijo/sufijo más largo para cada prefijo del patrón. Si no tiene, entonces su largo será de $0$.
 
 Sigamos con el mismo ejemplo donde el patrón es `ABABAC`. Su arreglo de prefijos/sufijos más largos $f$ será:
 
@@ -71,11 +70,11 @@ Sigamos con el mismo ejemplo donde el patrón es `ABABAC`. Su arreglo de prefijo
 
 Donde "" es el string vacío.
 
-Llamaremos $f(i)$ al largo del prefijo/sufijo más largo del prefijo del patrón de largo $i$. 
+Llamaremos $f(i)$ al largo del prefijo/sufijo más largo del prefijo del patrón de largo $i$.
 
 Notemos que $f(f(i))$ es la segunda mejor coincidencia de prefijo/sufijo más largo. Por ejemplo, si $f(5) = 3$, entonces $f(3) = 1$. Que coincide con que `ABABA` tiene tanto a `ABA` como a `A` como prefijo/sufijo's. Esto se puede iterar, y obtener el tercero mejor, cuarto mejor y así, hasta llegar a $f(f(\ldots)) = 0$.
 
-Esta observación nos sirve para calcular $f(i)$ sabiendo todos los $f(j)$ con $j < i$. $f(i)$ va a ser igual al largo del prefijo/sufijo más largo del prefijo de largo $i - 1$ que se pueda extender con el carácter $i$-ésimo, o sea que siga siendo prefijo/sufijo del prefijo $i$. Por lo que hay que comprobar con todos los prefijo/sufijo's del prefijo de largo $i - 1$. Acá ocupamos la observación iterando $f(i-1)$ sobre si misma. 
+Esta observación nos sirve para calcular $f(i)$ sabiendo todos los $f(j)$ con $j < i$. $f(i)$ va a ser igual al largo del prefijo/sufijo más largo del prefijo de largo $i - 1$ que se pueda extender con el carácter $i$-ésimo, o sea que siga siendo prefijo/sufijo del prefijo $i$. Por lo que hay que comprobar con todos los prefijo/sufijo's del prefijo de largo $i - 1$. Acá ocupamos la observación iterando $f(i-1)$ sobre si misma.
 
 #### Código
 
@@ -113,7 +112,7 @@ A esto se le llama _función de fallo_ y su implementación en C++ es la siguien
 
 ### Implementación KMP
 
-Ahora que tenemos la función de fallo podemos implementar el algoritmo KMP. 
+Ahora que tenemos la función de fallo podemos implementar el algoritmo KMP.
 
 Como ya se mencionó en un inicio, la idea va a ser que cada que una comparación parcial falle, vamos a saltar a la posición donde inicia el prefijo/sufijo más largo del prefijo que ya fue comparado. Y continuamos con el siguiente carácter. Si este siguiente carácter no coincide, intentamos con el segundo mejor prefijo/sufijo. Y así sucesivamente hasta llegar a que no hayan más prefijos/sufijos o que alguno calce, y continuamos con la comparación parcial normal.
 
@@ -154,7 +153,6 @@ El código de KMP en C++ es el siguiente:
     4. :man_raising_hand: Si j es mayor a 0, significa que estamos buscar el prefijo/sufijo más largo del prefijo de largo j que coincida con la expansión del carácter i-ésimo del texto. Por lo que vamos por el siguiente candidato, f(j). 
     5. :man_raising_hand: Si no, entonces avanzamos i. Este es el caso de la búsqueda normal.
 
-
 ## Material consultado
 
-* [Introduction to String Searching Algorithms — topcoder](https://www.topcoder.com/thrive/articles/Introduction%20to%20String%20Searching%20Algorithms){:target="_blank"}
+- [Introduction to String Searching Algorithms — topcoder](https://www.topcoder.com/thrive/articles/Introduction%20to%20String%20Searching%20Algorithms){:target="_blank"}

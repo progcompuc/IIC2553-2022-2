@@ -39,7 +39,7 @@ title: Recursos
   - [Apuntes ICPC de Robinson Castro et al (C++)](https://docs.google.com/document/d/1pan53PU9_PIrPPVyNrbfXIAU-B6YnIaSBcB9lP9j0jE/edit)
   - [Apuntes ICPC de Ignacio Hermosilla (C++)](https://github.com/ignaciohermosillacornejo/apuntes_icpc)
   - [C++ Cheat Sheet for ACM ICPC](https://github.com/ntuorangejuice/cheat-sheet)
-  - [Stanford University ICPC Team Notebook](https://cs.stanford.edu/group/acm/SLPC/notebook.pdf)    
+  - [Stanford University ICPC Team Notebook](https://cs.stanford.edu/group/acm/SLPC/notebook.pdf)
   - [Repo de Apuntes del team Caloventor en Dos (C++)](https://github.com/mvpossum/eldiego)
   - [Repo de Apuntes de Pablo Messina (C++)](https://github.com/PabloMessina/Competitive-Programming-Material)
 - Otras páginas con links a muchos recursos y material de estudio:
