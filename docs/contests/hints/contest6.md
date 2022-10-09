@@ -21,18 +21,18 @@ title: contest 6 - hints y códigos de ejemplo
 </details>
 <details> 
   <summary>Solución + código</summary>
-  Basta saber si existe un camino entre S y T que use sólo aristas de corte, para esto podemos usar Union Find uniendo dos nodos si hay una arista de corte entre ellos. Luego la respuesta es si los nodos estan unidos en el union find o no.
+  Basta saber si existe un camino entre S y T que use sólo aristas de corte, para esto podemos usar Union Find uniendo dos nodos si hay una arista de corte entre ellos. Luego la respuesta es si los nodos están unidos en el union find o no.
   <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/URI/HedgeMazes.cpp">Código de ejemplo</a>
 </details>
 
 ### C - Checkposts
 <details> 
   <summary>Hint</summary>
-  Si es posible ir a un nodo y volver, entonces ambos deben pertenecer a la misma componente fuertmenete conexa.
+  Si es posible ir a un nodo y volver, entonces ambos deben pertenecer a la misma componente fuertemente conexa.
 </details>
 <details>
   <summary>Solución + código</summary>
-  Basta con encontrar las componentes fuertemente conexas y calcular lo pedido usando las inesecciones de meno costo en cada una. El costo final será la suma de los menores costo y las formas de hacerlo será la multiplicación de cuantas intersecciones tenían ese menor costo en cada componente.
+  Basta con encontrar las componentes fuertemente conexas y calcular lo pedido usando las inesecciones de menos costo en cada una. El costo final será la suma de los menores costo y las formas de hacerlo será la multiplicación de cuantas intersecciones tenían ese menor costo en cada componente.
   <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Codeforces/Checkposts.cpp">Código de ejemplo</a>
 </details>
 
@@ -69,7 +69,7 @@ title: contest 6 - hints y códigos de ejemplo
 </details>
 <details>
   <summary>Solución + código</summary>
-   Usando los hints podemos ver que podemos aprovecharnos de la naturaleza del agloritmo de tarjan y buscar las componentes en el grafo inverso, de esta forma la primera que encontremos es la única candidata a contener a las personas peligrosas (pues es la más profunda del grafo inverso y por lo tanto la menos del grafo original). una vez encontrada corremos un dfs de conteo en el grafo normal y dejamos de buscar más componentes. si se contó que la componente llegaba a todo el grafo, devolvemos a sus miembros como respuesta.
+   Usando los hints podemos ver que podemos aprovecharnos de la naturaleza del algoritmo de tarjan y buscar las componentes en el grafo inverso, de esta forma la primera que encontremos es la única candidata a contener a las personas peligrosas (pues es la más profunda del grafo inverso y por lo tanto la menos del grafo original). una vez encontrada corremos un dfs de conteo en el grafo normal y dejamos de buscar más componentes. si se contó que la componente llegaba a todo el grafo, devolvemos a sus miembros como respuesta.
   <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Timus/Jobbery.cpp">Código de ejemplo</a>
 </details>
 
