@@ -138,9 +138,9 @@ Octubre 14, 14 días, [link a **contest**](https://vjudge.net/contest/520873)
 
 **Puntos**:
 
-| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` |
-| --------- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
+| --------- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
 
 **Puntaje Mínimo Esperado**: ?
 
