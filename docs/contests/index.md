@@ -128,4 +128,21 @@ Octubre 07, 14 días, [link a **contest**](https://vjudge.net/contest/519669)
 
 **Puntaje Mínimo Esperado**: ?
 
+
+
+## Contest 9
+
+Octubre 14, 14 días, [link a **contest**](https://vjudge.net/contest/520873)
+
+**Tópicos**: [Strings: KMP, suffix array](../resources/strings)
+
+**Puntos**:
+
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` |
+| --------- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+
+**Puntaje Mínimo Esperado**: ?
+
+
 **Hints** y **códigos de ejemplo**: _pendiente_
