@@ -38,9 +38,9 @@ title: "Strings"
 - [cp-algorithms: KMP](https://cp-algorithms.com/string/prefix-function.html)
 - [código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Strings/KMP.cpp)
 - Shortest Repeating Cycle
-  - <http://www.geeksforgeeks.org/find-given-string-can-represented-substring-iterating-substring-n-times/>
-  - <http://stackoverflow.com/questions/6021274/finding-shortest-repeating-cycle-in-word>
-  - [código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Strings/shortest_repeating_cycle.cpp)
+    - <http://www.geeksforgeeks.org/find-given-string-can-represented-substring-iterating-substring-n-times/>
+    - <http://stackoverflow.com/questions/6021274/finding-shortest-repeating-cycle-in-word>
+    - [código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Strings/shortest_repeating_cycle.cpp)
 
 ## Trie
 
