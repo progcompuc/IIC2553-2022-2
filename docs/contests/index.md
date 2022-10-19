@@ -100,7 +100,6 @@ Septiembre 23, 14 días, [link a **contest**](https://vjudge.net/contest/517129)
 
 **Hints** y **códigos de ejemplo**: [link](hints/contest6)
 
-
 ## Contest 7
 
 Septiembre 30, 14 días, [link a **contest**](https://vjudge.net/contest/518414)
@@ -117,25 +116,21 @@ Septiembre 30, 14 días, [link a **contest**](https://vjudge.net/contest/518414)
 
 **Hints** y **códigos de ejemplo**: [link](hints/contest7)
 
-
-
 ## Contest 8
 
 Octubre 07, 14 días, [link a **contest**](https://vjudge.net/contest/519669)
 
 **Tópicos**: [Strings: Rolling Hashing, Trie](../resources/strings)
 
-**Puntos**:
+**Puntos**:  8, 4, 5, 3, 5, 3, 4, 4
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` |
 | --------- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+| Puntaje   |  4  |  3  |  5  |  3  |  4  |  5  |  4  |
 
 **Puntaje Mínimo Esperado**: ?
 
 **Hints** y **códigos de ejemplo**: _pendiente_
-
-
 
 ## Contest 9
 
