@@ -112,9 +112,10 @@ Septiembre 30, 14 días, [link a **contest**](https://vjudge.net/contest/518414)
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Puntaje   |  4  |  4  |  5  |  4  |  3  |  5  |  5  |  6  |
 
-**Puntaje Mínimo Esperado**: ?
+**Puntaje Mínimo Esperado**: 5
 
 **Hints** y **códigos de ejemplo**: [link](hints/contest7)
+
 
 ## Contest 8
 
@@ -122,21 +123,40 @@ Octubre 07, 14 días, [link a **contest**](https://vjudge.net/contest/519669)
 
 **Tópicos**: [Strings: Rolling Hashing, Trie](../resources/strings)
 
-**Puntos**:  8, 4, 5, 3, 5, 3, 4, 4
+**Puntos**:
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` |
 | --------- | --- | --- | --- | --- | --- | --- | --- |
 | Puntaje   |  4  |  3  |  5  |  3  |  4  |  5  |  4  |
 
-**Puntaje Mínimo Esperado**: ?
+**Puntaje Mínimo Esperado**: 5
 
 **Hints** y **códigos de ejemplo**: _pendiente_
+
 
 ## Contest 9
 
 Octubre 14, 14 días, [link a **contest**](https://vjudge.net/contest/520873)
 
 **Tópicos**: [Strings: KMP, suffix array](../resources/strings)
+
+**Puntos**:
+
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
+| --------- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+
+**Puntaje Mínimo Esperado**: ?
+
+**Hints** y **códigos de ejemplo**: _pendiente_
+
+
+
+## Contest 10
+
+Octubre 21, 16 días, [link a **contest**](https://vjudge.net/contest/522309)
+
+**Tópicos**: [Geometría: Producto Punto, Producto Cruz](../resources/geometry)
 
 **Puntos**:
 
