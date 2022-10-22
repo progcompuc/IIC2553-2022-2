@@ -131,7 +131,7 @@ Octubre 07, 14 días, [link a **contest**](https://vjudge.net/contest/519669)
 
 **Puntaje Mínimo Esperado**: 5
 
-**Hints** y **códigos de ejemplo**: _pendiente_
+**Hints** y **códigos de ejemplo**: [link](hints/contest8)
 
 
 ## Contest 9
