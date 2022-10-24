@@ -116,7 +116,6 @@ Septiembre 30, 14 días, [link a **contest**](https://vjudge.net/contest/518414)
 
 **Hints** y **códigos de ejemplo**: [link](hints/contest7)
 
-
 ## Contest 8
 
 Octubre 07, 14 días, [link a **contest**](https://vjudge.net/contest/519669)
@@ -133,7 +132,6 @@ Octubre 07, 14 días, [link a **contest**](https://vjudge.net/contest/519669)
 
 **Hints** y **códigos de ejemplo**: [link](hints/contest8)
 
-
 ## Contest 9
 
 Octubre 14, 14 días, [link a **contest**](https://vjudge.net/contest/520873)
@@ -144,13 +142,11 @@ Octubre 14, 14 días, [link a **contest**](https://vjudge.net/contest/520873)
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+| Puntaje   |  2  |  4  |  6  |  4  |  7  |  4  |  3  |  10 |
 
-**Puntaje Mínimo Esperado**: ?
+**Puntaje Mínimo Esperado**: 5
 
-**Hints** y **códigos de ejemplo**: _pendiente_
-
-
+**Hints** y **códigos de ejemplo**: [link](hints/contest9)
 
 ## Contest 10
 
