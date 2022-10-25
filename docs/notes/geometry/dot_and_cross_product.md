@@ -25,19 +25,23 @@ $$
 
 ### Implementación
 
-Usando la vista en [base_implementation](./base_implementation).
+Usando la vista en [base implementation](./base_implementation).
 
 !!! code-cpp " "
     ```cpp
-    T dot(pt v, pt w) { return v.x*w.x + v.y*w.y; }
+    T dot(pt v, pt w) { return v.x*w.x + v.y*w.y; } // (1)!
     ```
+
+    1. :warning: Definir esto afuera de la struct `pt`.
 
 Además también podemos saber si dos vectores son perpendiculares o no:
 
 !!! code-cpp " "
     ```cpp
-    bool is_perp(pt v, pt w) { return dot(v, w) == 0; }
+    bool is_perp(pt v, pt w) { return dot(v, w) == 0; } // (1)!
     ```
+
+    1. :warning: Definir esto afuera de la struct `pt`.
 
 ## Producto cruz
 
@@ -57,19 +61,23 @@ $$
 
 ### Implementación
 
-Usando la vista en [base_implementation](./base_implementation).
+Usando la vista en [base implementation](./base_implementation).
 
 !!! code-cpp " "
     ```cpp
-    T cross(pt v, pt w) { return v.x*w.y - v.y*w.x; }
+    T cross(pt v, pt w) { return v.x*w.y - v.y*w.x; } // (1)!
     ```
+
+    1. :warning: Definir esto afuera de la struct `pt`.
 
 Además también podemos saber si dos vectores son colineales o no:
 
 !!! code-cpp " "
     ```cpp
-    bool is_colinear(pt v, pt w) { return cross(v, w) == 0; }
+    bool is_colinear(pt v, pt w) { return cross(v, w) == 0; } // (1)!
     ```
+
+    1. :warning: Definir esto afuera de la struct `pt`.
 
 ## Material consultado
 
