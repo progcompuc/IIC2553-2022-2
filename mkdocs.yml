@@ -14,6 +14,9 @@ nav:
       - Rolling Hashing: notes/strings/rolling_hashing.md
       - Trie String: notes/strings/trie_string.md
       - KMP: notes/strings/kmp.md
+    - Geometría:
+      - Implementación base: notes/geometry/base_implementation.md
+      - Producto punto y producto cruz: notes/geometry/dot_and_cross_product.md
   - Contests: 
     - contests/index.md
     - Contest 1: contests/hints/contest1.md
