@@ -9,24 +9,25 @@ title: "Geometría"
 
 - <https://vlecomte.github.io/cp-geo.pdf> (buenísimo y muy completo)
 
-## Producto Punto y Producto Cruz
+## Producto Punto
+  - [Youtube: Dot products and duality | Chapter 9, Essence of linear algebra](https://www.youtube.com/watch?v=LyGKycYT2v0)
+  - [CodeForces: Geometry: 2D points and lines [Tutorial]](https://codeforces.com/blog/entry/48122) (saltarse a la parte dot product)
+  - [Youtube: Dot Product & Angle Between Vectors](https://www.youtube.com/watch?v=p8BZTFNSKIw)
+  - [Youtube: Cross Product and Dot Product: Visual explanation](https://www.youtube.com/watch?v=h0NJK4mEIJU)
 
-- [youtube: Cross Product and Dot Product: Visual explanation](https://www.youtube.com/watch?v=h0NJK4mEIJU)
-- Producto Cruz:
+## Producto Cruz
+  - [Youtube: Cross products - Essence of linear algebra, Chapter 10](https://www.youtube.com/watch?v=eu6i7WJeinw)](https://www.youtube.com/watch?v=eu6i7WJeinw)
   - [Math is fun: Vector Cross Product](https://www.mathsisfun.com/algebra/vectors-cross-product.html)
-  - [youtube: Cross products - Essence of linear algebra, Chapter 10](https://www.youtube.com/watch?v=eu6i7WJeinw)
-  - [stackoverlfow: Calculating a 2D Vector's Cross Product](https://stackoverflow.com/questions/243945/calculating-a-2d-vectors-cross-product)
-  - [codeforces: Geometry: 2D points and lines [Tutorial]](https://codeforces.com/blog/entry/48122) (saltarse a la parte cross product)
-- Producto Punto:
-  - [codeforces: Geometry: 2D points and lines [Tutorial]](https://codeforces.com/blog/entry/48122) (saltarse a la parte dot product)
-  - [youtube: Dot Product & Angle Between Vectors](https://www.youtube.com/watch?v=p8BZTFNSKIw)
+  - [StackOverlfow: Calculating a 2D Vector's Cross Product](https://stackoverflow.com/questions/243945/calculating-a-2d-vectors-cross-product)
+  - [CodeForces: Geometry: 2D points and lines [Tutorial]](https://codeforces.com/blog/entry/48122)
+  - [Youtube: Cross Product and Dot Product: Visual explanation](https://www.youtube.com/watch?v=h0NJK4mEIJU)
 
 ## Apuntes varios de Geometría 2D
 
 - [apuntes de Benja](https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Material/Geometry/2D.cpp)
 - [apuntes de Pablo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Geometry/2D.cpp)
 - Video Repaso de Geometría (muy bueno): [youtube: Geometría Computacional [ICPCCL 2016]](https://youtu.be/nk5ejrBWORw?list=PL-c_98SOXhxaXMMfnemh2ihniZsj57L8-)
-- <https://cp-algorithms.com> (ir a la sección "Geometry")
+- [CP-Algorithms: Geometry](https://cp-algorithms.com/geometry/basic-geometry.html)
 
 ## Apuntes varios de Geometría 3D
 
