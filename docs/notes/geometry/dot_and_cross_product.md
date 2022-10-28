@@ -25,7 +25,7 @@ $$
 
 ### Implementación
 
-Usando la vista en [base implementation](./base_implementation).
+Usando la vista en [base implementation](../base_implementation).
 
 !!! code-cpp " "
     ```cpp
