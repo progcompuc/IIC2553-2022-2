@@ -148,6 +148,7 @@ Octubre 14, 14 días, [link a **contest**](https://vjudge.net/contest/520873)
 
 **Hints** y **códigos de ejemplo**: [link](hints/contest9)
 
+
 ## Contest 10
 
 Octubre 21, 16 días, [link a **contest**](https://vjudge.net/contest/522309)
@@ -163,3 +164,22 @@ Octubre 21, 16 días, [link a **contest**](https://vjudge.net/contest/522309)
 **Puntaje Mínimo Esperado**: ?
 
 **Hints** y **códigos de ejemplo**: _pendiente_
+
+
+## Contest 11
+
+Octubre 28, 16 días, [link a **contest**](https://vjudge.net/contest/523663)
+
+**Tópicos**: [Geometría: Sweep line](../resources/geometry)
+
+**Puntos**:
+
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
+| --------- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+
+**Puntaje Mínimo Esperado**: ?
+
+**Hints** y **códigos de ejemplo**: _pendiente_
+
+
