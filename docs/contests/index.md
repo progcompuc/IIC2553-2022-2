@@ -148,23 +148,34 @@ Octubre 14, 14 días, [link a **contest**](https://vjudge.net/contest/520873)
 
 **Hints** y **códigos de ejemplo**: [link](hints/contest9)
 
-
 ## Contest 10
 
 Octubre 21, 16 días, [link a **contest**](https://vjudge.net/contest/522309)
 
 **Tópicos**: [Geometría: Producto Punto, Producto Cruz](../resources/geometry)
 
-**Puntos**:
+**Puntos**: 3, 7, 6, 5, 2, 4, 4, 4
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+| Puntaje   |  3  |  7  |  6  |  5  |  2  |  4  |  4  |  4  |
 
-**Puntaje Mínimo Esperado**: ?
+A -> D
+B -> A
+C -> H
+D -> G
+E -> B
+F -> C
+G -> E
+H -> F
 
-**Hints** y **códigos de ejemplo**: _pendiente_
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
+| --------- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  7  |  2  |  4  |  3  |  4  |  4  |  5  |  6  |
 
+**Puntaje Mínimo Esperado**: 5
+
+**Hints** y **códigos de ejemplo**: [link](hints/contest10)
 
 ## Contest 11
 
@@ -181,5 +192,3 @@ Octubre 28, 16 días, [link a **contest**](https://vjudge.net/contest/523663)
 **Puntaje Mínimo Esperado**: ?
 
 **Hints** y **códigos de ejemplo**: _pendiente_
-
-
