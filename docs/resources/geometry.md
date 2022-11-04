@@ -75,14 +75,14 @@ title: "Geometría"
 - Aplicación a polígonos - área de un polígono simple:
   - <http://math.blogoverflow.com/2014/06/04/greens-theorem-and-area-of-polygons/>
   - <http://stackoverflow.com/questions/451426/how-do-i-calculate-the-area-of-a-2d-polygon>
-  - [código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Geometry/PolygonAlgorithms.cpp) (ctrl+f "area")
+  - [código de ejemplo](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Geometry/2D.cpp) (ctrl+f "area")
 
 ## Sweep Line y Radial Sweep Line
 
 - [codeforces: How to sweep like a Sir](http://codeforces.com/blog/entry/20377)
 - [wikipedia: Sweep line algorithm](https://en.wikipedia.org/wiki/Sweep_line_algorithm)
 - [topcoder: line sweep algorithms](https://www.topcoder.com/community/data-science/data-science-tutorials/line-sweep-algorithms/)  
-  
+
 ## Dualidad Línea - Punto
 
 - Buenas slides explicando dualidad: <https://algo.kaust.edu.sa/Documents/cs372l13.pdf>
