@@ -177,11 +177,30 @@ H -> F
 
 **Hints** y **códigos de ejemplo**: [link](hints/contest10)
 
+
+
 ## Contest 11
 
 Octubre 28, 16 días, [link a **contest**](https://vjudge.net/contest/523663)
 
 **Tópicos**: [Geometría: Sweep line](../resources/geometry)
+
+**Puntos**:
+
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
+| --------- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+
+**Puntaje Mínimo Esperado**: ?
+
+**Hints** y **códigos de ejemplo**: _pendiente_
+
+
+## Contest 12
+
+Noviembre 04, 16 días, [link a **contest**](https://vjudge.net/contest/527599)
+
+**Tópicos**: [Geometría: Convex Hull, Teorema de Green y más](../resources/geometry)
 
 **Puntos**:
 
