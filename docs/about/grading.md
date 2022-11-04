@@ -43,4 +43,4 @@ Finalmente, la nota final está dada por:
 
 - $\operatorname{Nota}_{V3} = \operatorname{Nota}_{V2} + B$
 
-Todo lo anterior se encuentra formalizado en el spreadsheet de notas y asistencia: [link](https://docs.google.com/spreadsheets/d/1RoKoTvP-SEaD9Ggh2z5NfvFF1Dxu0w_nGjd3F92xW00/edit?usp=sharing)
+Todo lo anterior se encuentra formalizado en el spreadsheet de notas y asistencia: [link](https://docs.google.com/spreadsheets/d/1aQw5LfJJjrb4xYWpaZi9x6e6Sv3BpKT0TN-stCyU3_c/)
