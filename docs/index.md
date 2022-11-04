@@ -26,4 +26,4 @@ Matías Fernández (<matias.fernandez@uc.cl>)
 
 ### Spreadsheet de notas y asistencia
 
-[Ver spreadsheet :material-google-spreadsheet:](https://docs.google.com/spreadsheets/d/1RoKoTvP-SEaD9Ggh2z5NfvFF1Dxu0w_nGjd3F92xW00/edit?usp=sharing){ .md-button .md-button--primary }
+[Ver spreadsheet :material-google-spreadsheet:](https://docs.google.com/spreadsheets/d/1aQw5LfJJjrb4xYWpaZi9x6e6Sv3BpKT0TN-stCyU3_c/){ .md-button .md-button--primary }
