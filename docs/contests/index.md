@@ -90,7 +90,7 @@ Septiembre 23, 14 días, [link a **contest**](https://vjudge.net/contest/517129)
 
 **Tópicos**: [Grafos: SCC, Aristas de Corte y Puntos de Articulación](../resources/graphs)
 
-**Puntos**: 7, 3, 5, 3, 3, 4, 2, 5
+**Puntos**:
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
