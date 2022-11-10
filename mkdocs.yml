@@ -17,6 +17,8 @@ nav:
     - Geometría:
       - Implementación base: notes/geometry/base_implementation.md
       - Producto punto y producto cruz: notes/geometry/dot_and_cross_product.md
+    - Math:
+      - Aritmética modular: notes/math/modular_arithmetic.md
   - Contests: 
     - contests/index.md
     - Contest 1: contests/hints/contest1.md
@@ -110,3 +112,4 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/img.css
