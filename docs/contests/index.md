@@ -180,6 +180,7 @@ Octubre 28, 16 días, [link a **contest**](https://vjudge.net/contest/523663)
 
 **Hints** y **códigos de ejemplo**: [link](hints/contest11)
 
+
 ## Contest 12
 
 Noviembre 04, 16 días, [link a **contest**](https://vjudge.net/contest/527599)
@@ -193,5 +194,23 @@ Noviembre 04, 16 días, [link a **contest**](https://vjudge.net/contest/527599)
 | Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
 
 **Puntaje Mínimo Esperado**: ?
+
+
+
+## Contest 13
+
+Noviembre 04, 16 días, [link a **contest**](https://vjudge.net/contest/529143)
+
+**Tópicos**: [Mate (GCD, Números Primos, Aritmética Modular)](../resources/math)
+
+**Puntos**:
+
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
+| --------- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+
+**Puntaje Mínimo Esperado**: ?
+
+
 
 **Hints** y **códigos de ejemplo**: _pendiente_
