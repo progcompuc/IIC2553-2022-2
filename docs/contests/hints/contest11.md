@@ -2,6 +2,22 @@
 title: contest 11 - hints y códigos de ejemplo
 ---
 
+### A - The Skyline Problem
+
+<details>
+  <summary>Hint 1</summary>
+  Cuando se hace un problema con el tópico de Sweep Line se tiene que encontrar cuál es el segmento y en qué dirección _barrerá_ el plano, cuándo es que topa con un _evento_ y qué sucede en cada evento. ¿Cuáles son los eventos en este problema? ¿Qué implica que comience un nuevo edificio o termine otro? y, ¿En qué importa si es más o menos algo que los demás?
+</details>
+<details>
+  <summary>Hint 2</summary>
+  Los eventos son cuando comienza y cuando termina un edificio. Lo que nos interesa es para cada evento, saber si cambió la altura máxima (que es lo que nos interesa imprimir) y si no queda otro evento en la misma posición que pueda cambiar la altura máxima. Piense en qué estructura(s) pueden sernos de ayuda para modelar el problema.
+</details>
+<details>
+  <summary>Solución + código</summary>
+  Guardamos los eventos y los ordenamos según su posición de menor a mayor. Luego procesamos en un bucle todos los eventos. En cada iteración procesamos todos los de la misma posición y vemos si al final de este _batch_ cambió o no la altura máxima.
+  <a href="https://github.com/Wh4rp/Competitive-Programming/blob/main/Problems/UVA/The%20Skyline%20Problem.cpp">Código de ejemplo</a>
+</details>
+
 ### C - Dazzling Stars
 
 <details>
