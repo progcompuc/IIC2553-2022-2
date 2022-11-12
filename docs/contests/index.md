@@ -180,7 +180,6 @@ Octubre 28, 16 días, [link a **contest**](https://vjudge.net/contest/523663)
 
 **Hints** y **códigos de ejemplo**: [link](hints/contest11)
 
-
 ## Contest 12
 
 Noviembre 04, 16 días, [link a **contest**](https://vjudge.net/contest/527599)
@@ -191,11 +190,9 @@ Noviembre 04, 16 días, [link a **contest**](https://vjudge.net/contest/527599)
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+| Puntaje   |  3  |  4  |  5  |  4  |  4  |  4  |  4  |  5  |
 
-**Puntaje Mínimo Esperado**: ?
-
-
+**Puntaje Mínimo Esperado**: 5
 
 ## Contest 13
 
@@ -210,7 +207,5 @@ Noviembre 11, 16 días, [link a **contest**](https://vjudge.net/contest/529143)
 | Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
 
 **Puntaje Mínimo Esperado**: ?
-
-
 
 **Hints** y **códigos de ejemplo**: _pendiente_
