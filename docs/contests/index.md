@@ -199,7 +199,7 @@ Noviembre 04, 16 días, [link a **contest**](https://vjudge.net/contest/527599)
 
 ## Contest 13
 
-Noviembre 04, 16 días, [link a **contest**](https://vjudge.net/contest/529143)
+Noviembre 11, 16 días, [link a **contest**](https://vjudge.net/contest/529143)
 
 **Tópicos**: [Mate (GCD, Números Primos, Aritmética Modular)](../resources/math)
 
