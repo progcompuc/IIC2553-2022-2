@@ -35,7 +35,7 @@ title: contest 11 - hints y códigos de ejemplo
 <details>
   <summary>Solución + código</summary>
   Básicamente aplicamos los hints y el problema sale. Intenten programarlo sin ver códigos, pero si necesitan ver un código de ejemplo, acá les dejamos uno:
-  <a href="[https://github.com/Wh4rp/Competitive-Programming/blob/main/Problems/UVA/The%20Skyline%20Problem.cpp](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/UVA/13009_FenceTheVegetablesFail.cpp)">Código de ejemplo</a>. Por favor no hacer copy-paste, deben programar su propia solución.
+  <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/UVA/13009_FenceTheVegetablesFail.cpp">Código de ejemplo</a>. Por favor no hacer copy-paste, deben programar su propia solución.
 </details>
 
 ### C - Dazzling Stars
