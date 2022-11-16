@@ -22,15 +22,15 @@ title: contest 11 - hints y códigos de ejemplo
 
 <details>
   <summary>Hint 1</summary>
-  Podemos hacer un sweep line con una línea imaginaria vertical, que barre el plano de izquierda a derecha, generando dos tipos de evento: evento planta y evento segmento vertical. Notar que los segmentos horizontales se puede ignorar. Durante el sweep line, nos interesa tener un registro de qué intervalos del eje Y están dentro de la cerca y qué intervalos están afuera. Cuando procesemos un evento planta, queremos saber si dicha planta está dentro o fuera de la cerca, aprovechando la información antes mencionada. ¿Cómo podemos hacer esto?
+  Podemos hacer un sweep line con una línea imaginaria vertical, que barre el plano de izquierda a derecha, generando dos tipos de evento: evento planta y evento segmento vertical. Notar que los segmentos horizontales se pueden ignorar. Durante el sweep line, nos interesa mantener un registro de qué intervalos del eje Y están dentro de la cerca y qué intervalos están fuera. Cuando procesemos un evento planta, queremos saber si dicha planta está dentro o fuera de la cerca, aprovechando la información antes mencionada. ¿Cómo podemos hacer esto?
 </details>
 <details>
   <summary>Hint 2</summary>
-  Podemos usar estructura de datos que nos permita hacer updates por rango para indicar que un intervalo del eje Y está dentro o fuera de la cerca. Por ejemplo, se puede usar un segmentree lazy para hacer updates por rango. Otra opción es usar la técnica de "difference array" (sumar 1 al principio y -1 después del final) pero de manera dinámica, lo cual se puede hacer con un segmen tree normal o con un fenwick tree. El único inconveniente es que los rangos numéricos pueden ser muy grandes ...
+  Podemos usar estructura de datos que nos permita hacer updates por rango de manera eficiente, para indicar que un intervalo del eje Y está dentro o fuera de la cerca. Por ejemplo, se puede usar un segmentree lazy para hacer updates por rango. Otra opción es usar la técnica de "difference array" (sumar 1 al principio y -1 después del final) pero de manera dinámica, lo cual se puede hacer con un segmentree normal o con un fenwick tree. El único inconveniente es que los rangos numéricos de input pueden ser muy grandes (hasta 10^9) ...
 </details>
 <details>
   <summary>Hint 3</summary>
-  Para no tener problemas con el rango en que se mueve los valores en el eye Y, podemos hacer "domain compression", es decir, mapear los valores originales a valores en un rango compacto pero manteniendo el orden relativo.
+  Para no tener problemas con el rango en que se mueven los valores en el eye Y, podemos hacer "domain compression", es decir, mapear los valores originales a valores en un rango compacto pero manteniendo el orden relativo.
 </details>
 <details>
   <summary>Solución + código</summary>
