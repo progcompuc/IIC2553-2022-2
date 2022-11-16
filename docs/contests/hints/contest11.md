@@ -18,6 +18,26 @@ title: contest 11 - hints y códigos de ejemplo
   <a href="https://github.com/Wh4rp/Competitive-Programming/blob/main/Problems/UVA/The%20Skyline%20Problem.cpp">Código de ejemplo</a>
 </details>
 
+### B - Fence the vegetables fail
+
+<details>
+  <summary>Hint 1</summary>
+  Podemos hacer un sweep line con una línea imaginaria vertical, que barre el plano de izquierda a derecha, generando dos tipos de evento: evento planta y evento segmento vertical. Notar que los segmentos horizontales se puede ignorar. Durante el sweep line, nos interesa tener un registro de qué intervalos del eje Y están dentro de la cerca y qué intervalos están afuera. Cuando procesemos un evento planta, queremos saber si dicha planta está dentro o fuera de la cerca, aprovechando la información antes mencionada. ¿Cómo podemos hacer esto?
+</details>
+<details>
+  <summary>Hint 2</summary>
+  Podemos usar estructura de datos que nos permita hacer updates por rango para indicar que un intervalo del eje Y está dentro o fuera de la cerca. Por ejemplo, se puede usar un segmentree lazy para hacer updates por rango. Otra opción es usar la técnica de "difference array" (sumar 1 al principio y -1 después del final) pero de manera dinámica, lo cual se puede hacer con un segmen tree normal o con un fenwick tree. El único inconveniente es que los rangos numéricos pueden ser muy grandes ...
+</details>
+<details>
+  <summary>Hint 3</summary>
+  Para no tener problemas con el rango en que se mueve los valores en el eye Y, podemos hacer "domain compression", es decir, mapear los valores originales a valores en un rango compacto pero manteniendo el orden relativo.
+</details>
+<details>
+  <summary>Solución + código</summary>
+  Básicamente aplicamos los hints y el problema sale. Intenten programarlo sin ver códigos, pero si necesitan ver un código de ejemplo, acá les dejamos uno:
+  <a href="[https://github.com/Wh4rp/Competitive-Programming/blob/main/Problems/UVA/The%20Skyline%20Problem.cpp](https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/UVA/13009_FenceTheVegetablesFail.cpp)">Código de ejemplo</a>. Por favor no hacer copy-paste, deben programar su propia solución.
+</details>
+
 ### C - Dazzling Stars
 
 <details>
