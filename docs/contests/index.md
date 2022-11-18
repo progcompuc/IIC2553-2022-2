@@ -158,7 +158,7 @@ Octubre 21, 16 días, [link a **contest**](https://vjudge.net/contest/522309)
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  7  |  2  |  4  |  3  |  4  |  4  |  5  |  6  |
+| Puntaje   |  7  |  2  |  3  |  3  |  4  |  4  |  5  |  6  |
 
 **Puntaje Mínimo Esperado**: 5
 
