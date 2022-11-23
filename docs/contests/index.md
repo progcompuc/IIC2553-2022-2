@@ -194,7 +194,6 @@ Noviembre 04, 16 días, [link a **contest**](https://vjudge.net/contest/527599)
 
 **Puntaje Mínimo Esperado**: 5
 
-
 ## Contest 13
 
 Noviembre 11, 16 días, [link a **contest**](https://vjudge.net/contest/529143)
@@ -205,13 +204,11 @@ Noviembre 11, 16 días, [link a **contest**](https://vjudge.net/contest/529143)
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+| Puntaje   |  4  |  3  |  5  |  3  |  5  |  5  |  6  |  5  |
 
-**Puntaje Mínimo Esperado**: ?
+**Puntaje Mínimo Esperado**: 5
 
 **Hints** y **códigos de ejemplo**: _pendiente_
-
-
 
 ## Contest 14
 
