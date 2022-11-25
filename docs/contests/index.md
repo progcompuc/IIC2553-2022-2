@@ -204,7 +204,7 @@ Noviembre 11, 16 días, [link a **contest**](https://vjudge.net/contest/529143)
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  4  |  3  |  5  |  3  |  5  |  5  |  6  |  5  |
+| Puntaje   |  4  |  3  |  2  |  3  |  5  |  5  |  6  |  5  |
 
 **Puntaje Mínimo Esperado**: 5
 
