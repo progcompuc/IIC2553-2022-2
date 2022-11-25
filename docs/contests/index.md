@@ -194,6 +194,10 @@ Noviembre 04, 16 días, [link a **contest**](https://vjudge.net/contest/527599)
 
 **Puntaje Mínimo Esperado**: 5
 
+**Hints** y **códigos de ejemplo**: [link](hints/contest12)
+
+
+
 ## Contest 13
 
 Noviembre 11, 16 días, [link a **contest**](https://vjudge.net/contest/529143)
@@ -208,13 +212,31 @@ Noviembre 11, 16 días, [link a **contest**](https://vjudge.net/contest/529143)
 
 **Puntaje Mínimo Esperado**: 5
 
-**Hints** y **códigos de ejemplo**: _pendiente_
+**Hints** y **códigos de ejemplo**: [link](hints/contest13)
+
 
 ## Contest 14
 
 Noviembre 18, 16 días, [link a **contest**](https://vjudge.net/contest/530562)
 
 **Tópicos**: [Mate (GCD extendido, CRT y más)](../resources/math)
+
+**Puntos**:
+
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
+| --------- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+
+**Puntaje Mínimo Esperado**: ?
+
+**Hints** y **códigos de ejemplo**: _pendiente_
+
+
+## Contest 15
+
+Noviembre 25, 16 días, [link a **contest**](https://vjudge.net/contest/531827)
+
+**Tópicos**: Problemas fáciles de implementación (contest fácil, para que suban la nota).
 
 **Puntos**:
 
