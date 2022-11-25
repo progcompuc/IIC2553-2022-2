@@ -225,3 +225,20 @@ Noviembre 18, 16 días, [link a **contest**](https://vjudge.net/contest/530562)
 **Puntaje Mínimo Esperado**: ?
 
 **Hints** y **códigos de ejemplo**: _pendiente_
+
+
+## Contest 15
+
+Noviembre 25, 16 días, [link a **contest**](https://vjudge.net/contest/531827)
+
+**Tópicos**: Problemas fáciles de implementación (contest fácil, para que suban la nota).
+
+**Puntos**:
+
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
+| --------- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+
+**Puntaje Mínimo Esperado**: ?
+
+**Hints** y **códigos de ejemplo**: _pendiente_
