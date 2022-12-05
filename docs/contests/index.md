@@ -242,8 +242,8 @@ Noviembre 25, 16 días, [link a **contest**](https://vjudge.net/contest/531827)
 
 | Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
 | --------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+| Puntaje   |  2  |  3  |  4  |  2  |  2  |  4  |  3  |  3  |
 
-**Puntaje Mínimo Esperado**: ?
+**Puntaje Mínimo Esperado**: 5
 
 **Hints** y **códigos de ejemplo**: _pendiente_
