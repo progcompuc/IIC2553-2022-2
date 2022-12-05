@@ -223,11 +223,11 @@ Noviembre 18, 16 días, [link a **contest**](https://vjudge.net/contest/530562)
 
 **Puntos**:
 
-| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` |
-| --------- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Puntaje   |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |  ?  |
+| Problema  | `A` | `B` | `C` | `D` | `E` | `F` | `G` | `H` | `I` |
+| --------- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Puntaje   |  4  |  5  |  3  |  4  |  4  |  3  |  3  |  4  |  4  |
 
-**Puntaje Mínimo Esperado**: ?
+**Puntaje Mínimo Esperado**: 5
 
 **Hints** y **códigos de ejemplo**: _pendiente_
 
