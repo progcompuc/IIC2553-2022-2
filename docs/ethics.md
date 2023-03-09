@@ -31,3 +31,5 @@ Si llegamos a descubrir una copia, el  **castigo consistirá en lo siguiente**:
 1) Primera copia: nota_final $= \max(\min(\operatorname{Nota}_{V3}, 7) - 3, 1)$
 
 2) Segunda copia: nota_final $= 1 +$ causal de eliminación
+
+3) Tercera copia: exilio
