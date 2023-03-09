@@ -1,0 +1,1530 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ProgramacionCompetitivaPUC.github.io/IIC2553-2022-2/contests/hints/contest5/">
+      
+      
+        <link rel="prev" href="../contest4/">
+      
+      
+        <link rel="next" href="../contest6/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
+    
+    
+      
+        <title>contest 5 - hints y códigos de ejemplo - Taller de Programación Competitiva II IIC2553-2022-2</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.402914a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/img.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    
+        <meta property="og:title" content="contest 5 - hints y códigos de ejemplo" />
+        <meta name="twitter:title" content="contest 5 - hints y códigos de ejemplo">
+    
+
+    
+        <meta property="og:type" content="website" />
+    
+
+    
+
+    <meta property="og:url" content="https://ProgramacionCompetitivaPUC.github.io/IIC2553-2022-2/contests/hints/contest5/" />
+
+    <meta property="og:image" content="https://media.discordapp.net/attachments/742852420375150615/1024117248044052550/Taller_de_Programacion_Competitiva.png" />
+    <meta property="og:image:type" content="image/png" />
+
+    <meta name="twitter:site" content="@twitter_handle">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="https://media.discordapp.net/attachments/742852420375150615/1024117248044052550/Taller_de_Programacion_Competitiva.png"">
+
+    
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#contest-5-hints-y-codigos-de-ejemplo" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="Taller de Programación Competitiva II IIC2553-2022-2" class="md-header__button md-logo" aria-label="Taller de Programación Competitiva II IIC2553-2022-2" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Taller de Programación Competitiva II IIC2553-2022-2
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              contest 5 - hints y códigos de ejemplo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2022-2" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Taller de Programación Competitiva II IIC2553-2022-2" class="md-nav__button md-logo" aria-label="Taller de Programación Competitiva II IIC2553-2022-2" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Taller de Programación Competitiva II IIC2553-2022-2
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2022-2" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Información del Curso
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Información del Curso
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/introduction/" class="md-nav__link">
+        Introducción
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/how_course_works/" class="md-nav__link">
+        Cómo funciona el curso
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/syllabus/" class="md-nav__link">
+        Temario
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/grading/" class="md-nav__link">
+        Cálculo de la Nota Final
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Apuntes (nueva sección)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Apuntes (nueva sección)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          Strings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Strings
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notes/strings/rolling_hashing/" class="md-nav__link">
+        Rolling Hashing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notes/strings/trie_string/" class="md-nav__link">
+        Trie String
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notes/strings/kmp/" class="md-nav__link">
+        KMP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Geometría
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Geometría
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notes/geometry/base_implementation/" class="md-nav__link">
+        Implementación base
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notes/geometry/dot_and_cross_product/" class="md-nav__link">
+        Producto punto y producto cruz
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          Math
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notes/math/modular_arithmetic/" class="md-nav__link">
+        Aritmética modular
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">Contests</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Contests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest1/" class="md-nav__link">
+        Contest 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest2/" class="md-nav__link">
+        Contest 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest3/" class="md-nav__link">
+        Contest 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest4/" class="md-nav__link">
+        Contest 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Contest 5
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Contest 5
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-lowest-common-ancestor" class="md-nav__link">
+    A - Lowest Common Ancestor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-minimum-spanning-tree" class="md-nav__link">
+    B - Minimum Spanning Tree
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-edges-in-mst" class="md-nav__link">
+    C - Edges in MST
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-tree-2" class="md-nav__link">
+    D - Tree 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-minimum-spanning-tree-for-each-edge" class="md-nav__link">
+    E - Minimum spanning tree for each edge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f-roads-in-hackerland" class="md-nav__link">
+    F - Roads in HackerLand
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#g-transportation-system" class="md-nav__link">
+    G - Transportation system
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#h-bmw" class="md-nav__link">
+    H - BMW
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest6/" class="md-nav__link">
+        Contest 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest7/" class="md-nav__link">
+        Contest 7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest8/" class="md-nav__link">
+        Contest 8
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest9/" class="md-nav__link">
+        Contest 9
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest10/" class="md-nav__link">
+        Contest 10
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest11/" class="md-nav__link">
+        Contest 11
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../resources/">Recursos</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Recursos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../resources/cpp/">C++</a>
+          
+            <label for="__nav_5_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          C++
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/cpp/cpp_osx/" class="md-nav__link">
+        Compiladores de C++ para OSX
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/backtracking/" class="md-nav__link">
+        Backtracking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/search/" class="md-nav__link">
+        (Bi|Ter)nary Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/data_structures/" class="md-nav__link">
+        Data Structures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/dp/" class="md-nav__link">
+        Dynamic Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/greedy/" class="md-nav__link">
+        Greedy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/divconq/" class="md-nav__link">
+        Divide and Conquer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/graphs/" class="md-nav__link">
+        Graphs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/strings/" class="md-nav__link">
+        Strings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/math/" class="md-nav__link">
+        Mathematics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/geometry/" class="md-nav__link">
+        Geometry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sqrtdecomp/" class="md-nav__link">
+        Square Root Decomposition
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../help/" class="md-nav__link">
+        Necesitas ayuda? Lee esto
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tips/" class="md-nav__link">
+        Tips para novat@s
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ethics/" class="md-nav__link">
+        Ética e Integridad Académica
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-lowest-common-ancestor" class="md-nav__link">
+    A - Lowest Common Ancestor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-minimum-spanning-tree" class="md-nav__link">
+    B - Minimum Spanning Tree
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-edges-in-mst" class="md-nav__link">
+    C - Edges in MST
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-tree-2" class="md-nav__link">
+    D - Tree 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-minimum-spanning-tree-for-each-edge" class="md-nav__link">
+    E - Minimum spanning tree for each edge
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f-roads-in-hackerland" class="md-nav__link">
+    F - Roads in HackerLand
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#g-transportation-system" class="md-nav__link">
+    G - Transportation system
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#h-bmw" class="md-nav__link">
+    H - BMW
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="contest-5-hints-y-codigos-de-ejemplo">Contest 5 - hints y códigos de ejemplo</h1>
+<h3 id="a-lowest-common-ancestor">A - Lowest Common Ancestor</h3>
+<details>
+  <summary>Hint</summary>
+  Problema de implementación directa de LCA.
+</details>
+<details>
+  <summary>Solución + código</summary>
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/SPOJ/LowestCommonAncestor.cpp">Código de ejemplo</a>
+</details>
+
+<h3 id="b-minimum-spanning-tree">B - Minimum Spanning Tree</h3>
+<details>
+  <summary>Hint</summary>
+  Problema de implementación directa de MST.
+</details>
+<details>
+  <summary>Solución + código</summary>
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/SPOJ/MST.cpp">Código de ejemplo</a>
+</details>
+
+<h3 id="c-edges-in-mst">C - Edges in MST</h3>
+<details>
+  <summary>Hint</summary>
+  En el algoritmo de kruskal para obtener el MST de un grafo, se procesan las aristas en orden de pesos y viendo la conectividad se llega siempre a la solución. La única parte en que podría haber más de una solución para un MST es si hay más de una arista con el mismo peso (y por tanto el procesamiento en kruskal es arbitrario en orden). Piensen en una forma de procesar las aristas con mismo peso simultáneamente para ver si cada una puede ser parte de una solución.
+</details>
+<details>
+  <summary>Solución + código</summary>
+  Basta con usar el hint y simular el algoritmo de kruskal pero procesando todas las aristas del mismo peso simultáneamente. Si hay más de una aceptada del peso entonces es al menos en un MST (at least one), para estar en todos los MST posibles se debe cumplir además que sin usarla el grafo queda desconexo necesarimente, para eso basta encontrar las aristas de corte en cada paso. Si no es aceptada es none.
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Codeforces/EdgesInMST.cpp">Código de ejemplo</a>
+</details>
+
+<h3 id="d-tree-2">D - Tree 2</h3>
+<details>
+  <summary>Hint 1</summary>
+  Si supieramos cual es el nodo más lejano a nosotros, bastaría con ver si la distancia entre yo y el es mayor o igual a k, de serlo devolvemos el k-ésimo nodo en el camino y si no no existe nodo que cumpla lo pedido. Lamentablemente no podemos sacar distancias entre todos los nodos en tiempo, piensen en una forma de poder saber uno a mayor distancia rápidamente.
+</details>
+<details>
+  <summary>Hint 2</summary>
+  Podemos obtener 2 nodos que esten lo más lejos posible uno del otro en el árbol. Basta con hacer 2 dfs ambos encontrando nodos más lejanos, el primero de un nodo cualquiera y el segundo del nodo encontrado más lejos en el primero (así encontramos el 2o). Estos dos nodos serán extremos de un diámetro de un árbol y es más, podemos demostrar que para cualquier nodo (u) en el árbol, se cumple que uno de los 2 nodos encontrados es lo más lejano a u posible. Usando esto y el hint 1 estamos casi listos. Sólo falta poder obtener distancia entre nodos y el k-ésimo en un camino rápidamente.
+</details>
+<details>
+  <summary>Solución + código</summary>
+  Para hacer lo último del hint 2 basta usar LCA, la distancia entre u y v es simplemente las profundidades de ambos nodos sumadas menos la profundidad del lca entre ellos. Para obtener el k-ésimo nodo por otro lado basta hacer binary lifting usando la información de la sparse table de ancestros en el LCA. La complejidad final de este algoritmo es O(N) por los dfs iniciales más O(Q log N) por las queries usando LCA.
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Timus/Tree2.cpp">Código de ejemplo</a>
+</details>
+
+<h3 id="e-minimum-spanning-tree-for-each-edge">E - Minimum spanning tree for each edge</h3>
+<details>
+  <summary>Hint</summary>
+  Se puede demostrar que dado un MST, para obtener el MST de un grafo forzando la aparición de una arista (e), siempre existirá una arista (f) en el MST original tal que el óptimo forzando e, es dado por MST - {f} + {e}. Luego basta encontrar el valor de esta arista f para cada arista a forzar.
+</details>
+<details>
+  <summary>Solución + código</summary>
+  Primero encontramos un MST original y luego para cada arista (u, v) tendremos: Si estaba ya en el MST no hacemos cambies y retornamos el valor del MST original. Si no está en el MST original basta con encontrar el valor de la mayor arista en el camino entre u y v en el MST original, el valor del MST forzado será el el valor original más el de la arista forzada menos el de la encontrada en el camino. Para encontrar la mayor arista en un camino del MST basta con aplicar binary lifting en un LCA.
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Codeforces/MinimumSpanningTreeForEachEdge.cpp">Código de ejemplo</a>
+</details>
+
+<h3 id="f-roads-in-hackerland">F - Roads in HackerLand</h3>
+<details>
+  <summary>Hint 1</summary>
+  Notemos que en vez de considerar el grafo completo, basta considerar el MST obtenido al usar los C_i como pesos (en vez de 2^{C_i}). Esto pues si obtenemos el MST ordenando agregando desde las aristas de menor peso, entonces cualquier arista que no esté en el MST será subóptima, pues si no fue agregada al MST, por la construcción de Kruskal debe existir un camino entre los nodos que une con sólo costos estrictamente menores. Y como en potencias de 2 distintas se cumple que la suma de potencias menores a k siempre es menor que 2^k, cualquiera de estos caminos será óptimo frente a pasar por la arista que no está en el MST.
+</details>
+<details>
+<summary>Hint 2</summary>
+  Usando el MST del grafo, para obtener la solución tenemos que saber la suma de todas las distancias de pares de nodos en binario. Notemos que podemos obtener las veces que cada arista en el MST será usada usando un par de dfs. Primero usamos un dfs que precalcule los tamaños de cada subárbol y el segundo dfs ocupará esos valores para calcular cuantas veces se usa cada arista en el valor pedido (las veces que se usa una arista entre u y v es el tamaño del subárbol de v (S_v) multiplicado por su complemento N - S_v).
+</details>
+<details>
+  <summary>Solución + código</summary>
+  Teniendo los valores del Hint 2 sólo queda obtener el número binario, como cada arista tiene un valor de potencia de 2 distinto, si guardamos los valores mencionados anteriormente en un arreglo indexado por las potencias C_i, podemos convertir este arreglo en la respuesta binaria acumulando hacia arriba la división por dos del valor de cada celda (dejando registrado el resto). El arreglo resultante será precisamente el número binario pedido.
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/HackerRank/RoadsInHackerLand.cpp">Código de ejemplo</a>
+</details>
+
+<h3 id="g-transportation-system">G - Transportation system</h3>
+<details>
+  <summary>Hint</summary>
+  Para encontrar la cantidad de estados basta encontrar la cantidad de componentes conexas en el grafo implícito que sólo contiene aristas entre ciudades a distancia menor a r. Buscar componentes conexas se puede hacer fácilmente con un DFS que marque visitados. Piensen en una forma de buscar el resto con lo visto en clases.
+</details>
+<details>
+  <summary>Solución + código</summary>
+  Para encontrar la menor extensión de caminos basta aplicar MST sobre el grafo implícito donde todos son unidos con todos, la única diferencia es que en vez de acumular las distancias en una variable global, debemos acumular por separado aquellos costos de caminos y trenes.
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/UVA/TransportationSystem.cpp">Código de ejemplo</a>
+</details>
+
+<h3 id="h-bmw">H - BMW</h3>
+<details>
+  <summary>Hint 1</summary>
+  Notemos que el camino que buscamos es aquel donde el peso de la arista de menor peso sea máximo. Es decir, el camino con aristas de mayor peso (no necesariamente la suma será mayor, sino que el mínimo es mayor).
+</details>
+<details>
+  <summary>Hint 2</summary>
+  Se puede demostrar que todas las aristas del camino que buscamos estarán presentes en el Maximum Spanning Tree del grafo dado. Para encontrar el Maximum Spaning Tree basta ocupar el mismo algoritmo visto para el mínimo pero ordenando las arístas de mayor a menor peso.
+</details>
+<details>
+  <summary>Solución + código</summary>
+  La solución consiste en implementar un dfs que busque el camino con mayor mínimo, este dfs sólo funciona en tiempo lineal si el grafo sobre el que trabaja es un árbol sin ciclos, por eso trabajamos sobre el Maximum Spanning Tree según el hint 2.
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/SPOJ/BMW.cpp">Código de ejemplo</a>
+</details>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.indexes", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.b78d2936.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

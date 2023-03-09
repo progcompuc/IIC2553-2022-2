@@ -1,0 +1,1546 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ProgramacionCompetitivaPUC.github.io/IIC2553-2022-2/contests/hints/contest9/">
+      
+      
+        <link rel="prev" href="../contest8/">
+      
+      
+        <link rel="next" href="../contest10/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.1">
+    
+    
+      
+        <title>contest 9 - hints y códigos de ejemplo - Taller de Programación Competitiva II IIC2553-2022-2</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.402914a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/img.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    
+        <meta property="og:title" content="contest 9 - hints y códigos de ejemplo" />
+        <meta name="twitter:title" content="contest 9 - hints y códigos de ejemplo">
+    
+
+    
+        <meta property="og:type" content="website" />
+    
+
+    
+
+    <meta property="og:url" content="https://ProgramacionCompetitivaPUC.github.io/IIC2553-2022-2/contests/hints/contest9/" />
+
+    <meta property="og:image" content="https://media.discordapp.net/attachments/742852420375150615/1024117248044052550/Taller_de_Programacion_Competitiva.png" />
+    <meta property="og:image:type" content="image/png" />
+
+    <meta name="twitter:site" content="@twitter_handle">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="https://media.discordapp.net/attachments/742852420375150615/1024117248044052550/Taller_de_Programacion_Competitiva.png"">
+
+    
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#contest-9-hints-y-codigos-de-ejemplo" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="Taller de Programación Competitiva II IIC2553-2022-2" class="md-header__button md-logo" aria-label="Taller de Programación Competitiva II IIC2553-2022-2" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Taller de Programación Competitiva II IIC2553-2022-2
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              contest 9 - hints y códigos de ejemplo
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2022-2" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Taller de Programación Competitiva II IIC2553-2022-2" class="md-nav__button md-logo" aria-label="Taller de Programación Competitiva II IIC2553-2022-2" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Taller de Programación Competitiva II IIC2553-2022-2
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ProgramacionCompetitivaPUC/IIC2553-2022-2" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Información del Curso
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Información del Curso
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/introduction/" class="md-nav__link">
+        Introducción
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/how_course_works/" class="md-nav__link">
+        Cómo funciona el curso
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/syllabus/" class="md-nav__link">
+        Temario
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/grading/" class="md-nav__link">
+        Cálculo de la Nota Final
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Apuntes (nueva sección)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Apuntes (nueva sección)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          Strings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Strings
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notes/strings/rolling_hashing/" class="md-nav__link">
+        Rolling Hashing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notes/strings/trie_string/" class="md-nav__link">
+        Trie String
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notes/strings/kmp/" class="md-nav__link">
+        KMP
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Geometría
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Geometría
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notes/geometry/base_implementation/" class="md-nav__link">
+        Implementación base
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notes/geometry/dot_and_cross_product/" class="md-nav__link">
+        Producto punto y producto cruz
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          Math
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notes/math/modular_arithmetic/" class="md-nav__link">
+        Aritmética modular
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../">Contests</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Contests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest1/" class="md-nav__link">
+        Contest 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest2/" class="md-nav__link">
+        Contest 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest3/" class="md-nav__link">
+        Contest 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest4/" class="md-nav__link">
+        Contest 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest5/" class="md-nav__link">
+        Contest 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest6/" class="md-nav__link">
+        Contest 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest7/" class="md-nav__link">
+        Contest 7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest8/" class="md-nav__link">
+        Contest 8
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Contest 9
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Contest 9
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-string-tale" class="md-nav__link">
+    A - String Tale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-gluing-pictures" class="md-nav__link">
+    B - Gluing Pictures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-prefixes-and-suffixes" class="md-nav__link">
+    C - Prefixes and Suffixes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-string-similarity" class="md-nav__link">
+    D - String Similarity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-marblecoin" class="md-nav__link">
+    E - Marblecoin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f-lucky-common-subsequence" class="md-nav__link">
+    F - Lucky Common Subsequence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#g-match-catch" class="md-nav__link">
+    G - Match &amp; Catch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#h-file-retrieval" class="md-nav__link">
+    H - File Retrieval
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest10/" class="md-nav__link">
+        Contest 10
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contest11/" class="md-nav__link">
+        Contest 11
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../resources/">Recursos</a>
+          
+            <label for="__nav_5">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Recursos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../../resources/cpp/">C++</a>
+          
+            <label for="__nav_5_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          C++
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/cpp/cpp_osx/" class="md-nav__link">
+        Compiladores de C++ para OSX
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/backtracking/" class="md-nav__link">
+        Backtracking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/search/" class="md-nav__link">
+        (Bi|Ter)nary Search
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/data_structures/" class="md-nav__link">
+        Data Structures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/dp/" class="md-nav__link">
+        Dynamic Programming
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/greedy/" class="md-nav__link">
+        Greedy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/divconq/" class="md-nav__link">
+        Divide and Conquer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/graphs/" class="md-nav__link">
+        Graphs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/strings/" class="md-nav__link">
+        Strings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/math/" class="md-nav__link">
+        Mathematics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/geometry/" class="md-nav__link">
+        Geometry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources/sqrtdecomp/" class="md-nav__link">
+        Square Root Decomposition
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../help/" class="md-nav__link">
+        Necesitas ayuda? Lee esto
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tips/" class="md-nav__link">
+        Tips para novat@s
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ethics/" class="md-nav__link">
+        Ética e Integridad Académica
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-string-tale" class="md-nav__link">
+    A - String Tale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#b-gluing-pictures" class="md-nav__link">
+    B - Gluing Pictures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#c-prefixes-and-suffixes" class="md-nav__link">
+    C - Prefixes and Suffixes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#d-string-similarity" class="md-nav__link">
+    D - String Similarity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#e-marblecoin" class="md-nav__link">
+    E - Marblecoin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#f-lucky-common-subsequence" class="md-nav__link">
+    F - Lucky Common Subsequence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#g-match-catch" class="md-nav__link">
+    G - Match &amp; Catch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#h-file-retrieval" class="md-nav__link">
+    H - File Retrieval
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="contest-9-hints-y-codigos-de-ejemplo">Contest 9 - Hints y códigos de ejemplo</h1>
+<h3 id="a-string-tale">A - String Tale</h3>
+<details>
+  <summary>Hint</summary>
+  Hay una solución trivial con KMP.
+</details>
+<details>
+  <summary>Solución + código</summary>
+  Concatena el primer string dos veces, busca la primera aparición del segundo string en el primer string usando KMP. Luego calcular el shift es trivial. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/acm.timus.ru/1423_StringTale.cpp">Código de ejemplo</a>
+</details>
+
+<h3 id="b-gluing-pictures">B - Gluing Pictures</h3>
+<details>
+  <summary>Hint 1</summary>
+  Noten que basta usar un approach greedy donde vamos completando la palabra buscado usar substrings lo más grandes posibles del string grande. Esto siempre será óptimo, sólo queda saber cómo buscar el mayor substring que podemos tomar de forma eficiente.
+</details>
+<details>
+  <summary>Hint 2</summary>
+  Podemos buscar lo descrito en el hint 1 letra por letra. Dado que hayamos precalculado el suffix array del string original, en este tendremos ordenados los sufijos. Todo substring debe ser el prefijo de un sufijo, luego basta buscar el sufijo que tenga un prefijo común más grande. Piensen cómo hacerlo letra por letra usando búsqueda binaria.
+</details>
+<details>
+  <summary>Solución + código</summary>
+  Podemos buscar letra por letra con búsqueda binaria, inicialmente l = 0, r = N y tenemos todos los sufijos, hacemos búsqueda binaria por una letra y podemos reducir el rango a l', r' donde todos los sufijos en [l', r') comparten la primera letra con el string buscado, luego acotamos este nuevo rango según la segunda letra y así sucesivamente. En el momento donde no podamos encontrar una letra habremos encontrado el substring más largo posible, agregamos uno a la respuesta y empezamos de nuevo del rango [0, N) con la letra que quedamos.
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Matcomgrader/GluingPictures.cpp">Código de ejemplo</a>
+</details>
+
+<h3 id="c-prefixes-and-suffixes">C - Prefixes and Suffixes</h3>
+<details>
+  <summary>Hint 1</summary>
+  En este problema sirve usar suffix array y el arreglo LCP (longest common prefix). En particular, piensa en un prefijo que también es sufijo y además aparece varias veces más como substring. Los respectivos sufijos aparecen todos juntitos en el suffix array. Además, si miramos los valores del arreglo LCP se pueden ver como las columnas de un histograma, notaremos que el largo del substring corresponde a la altura de la columna más baja en el rango, y que las columnas a las izquierda y a la derecha del rango son altura estrictamente menor.
+</details>
+<details>
+  <summary>Hint 2</summary>
+  Del hint 1, podemos inferir una estrategia: vemos al arreglo LCP como histograma y buscamos rangos de columnas donde una columan en particular es la altura mínima (el largo del substring), todas las demás son >= a ese rango, y las columnas antes y después del rango son de altura menor estricta. Luego bastaría verificar que entre los sufijos del rango se encuentren el sufijo 0 (prefijo) y un sufijo de largo igual a la columna más baja del rango.
+</details>
+<details>
+  <summary>Solución + código</summary>
+  Generamos un suffix array + LCP a partir del string de input. Luego encontramos los rangos maximales de columnas en el arreglo LCP que se mencionó en los hints. Para ello, la idea es fijar la columna i-ésima como la más baja, y luego encontrar los extremos L[i] y R[i] del correspondiente rango de columnas. Este se puede hacer en O(N) con dos pasadas lineales + un stack (descubrir/googlear como resolver linealmente este problema: <https://www.spoj.com/problems/HISTOGRA>). Luego, necesitamos saber el primer y último sufijo en cada rango. Esto se puede hacer en O(1) usando dos sparse tables para obtener el mínimo y máximo por rango. Luego basta verificar si el mínimo es 0 y el máximo + LCP[i] es N. Para evitar duplicados, recolectamos los pares en un set de pares (que de paso nos ordena los pares gratis), y además agregamos el par que siempre va: (N, 1). Finalmente, imprimimos los pares. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/Codeforces/432D_PrefixesAndSuffixes.cpp">Código de ejemplo</a>
+</details>
+
+<h3 id="d-string-similarity">D - String Similarity</h3>
+<details>
+  <summary>Hint</summary>
+  Noten que si calulamos el suffix array con arreglo lcp del string original ya se tiene calculado el tamaño de los longuest common preffix de sufijos continuos en el suffix array. Piensen en cómo ocupar esto para obtener la respuesta.
+</details>
+<details>
+  <summary>Solución + código</summary>
+  Podemos buscar el lugar donde está el string completo en el suffix array (buscar la posición del 0). Luego la respuesta será la suma de acumular mínimos hacia derecha e izquierda del arreglo lcp, esto pues el largo común de un segmento continuo del suffix array corresponde al mínimo de los lcp del rango.
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/HackerRank/StringSimilarity.cpp">Código de ejemplo</a>
+</details>
+
+<h3 id="e-marblecoin">E - Marblecoin</h3>
+<details>
+  <summary>Hint 1</summary>
+  Notar que el impuesto a pagar se puede pensar como un número en base 365. Por lo tanto, nos conviene que los dígitos más significativos sean lo más chicos posibles. Esto implica que nos conviene escoger el tope de stack más chico. ¿Pero qué pasa si hay empate?
+</details>
+<details>
+  <summary>Hint 2</summary>
+  Si hay empates, entonces nos convendría desempatar escogiendo el tope de stack que deja debajo suyo el número más chico. Si hay empate de nuevo, el que debajo el número más chico, y así sucesivamente. ¿Qué pasa si 2 stacks empatan en todo pero uno se acaba antes que el otro (en otras palabras, qué pasa si un stack es prefijo de otro)?
+</details>
+<details>
+  <summary>Hint 3</summary>
+  Si un stack es prefijo de otro, nos conviene priorizar el stack más largo, ya que ese stack a largo plazo nos da más opciones para escoger (en ningún caso es peor escoger el más largo, o da lo mismo o nos conviene).
+</details>
+<details>
+  <summary>Hint 4</summary>
+  Piensa en alguna estructura de datos para hacer comparaciones lexicográficas eficientes entre stacks.
+</details>
+<details>
+  <summary>Solución + código</summary>
+  Concatenamos todos los stacks en un puro string, poniendo como caracter separador y al final el 301 (o cualquier otro valor que sea mayor estricto a todos los caracteres). Luego construimos un suffix array sobre dicho string. De esta manera, el arreglo rank del suffix array nos permite comparar en O(1) los sufijos de dos stacks desempatando de la forma en que nos interesa segúns los hints (notar que el 301 es clave para priorizar stacks más largos). Luego, el problema se reducen simular el proceso de ir sacando topes de stacks, lo cual podemos hacerlo con una priority_queue donde priorizamos los topes de stacks con rank más bajos, y al sacar un tope de stack metemos el tope que queda debajo. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/LiveArchive/8200_Marblecoin.cpp">Código de ejemplo</a>
+</details>
+
+<h3 id="f-lucky-common-subsequence">F - Lucky Common Subsequence</h3>
+<details>
+  <summary>Hint</summary>
+  Noten que si no existiera el virus, el problema de encontrar la mayor subsecuencia común se puede resolver usando un dp cuadrático con estados i, j, correspondientes a las posiciones que estamos revisando de cada string, luego la recursión es en (i, j) considerar dp(i + 1, j), dp(i, j + 1) y si S1[i] == S[j] considerar 1 + dp(i + 1, j + 1) (retornando el máximo). La respuesta es dp(0, 0). Piensen en cómo adaptar esta recursión para detectar cuando se complete un virus y evitarlo.
+</details>
+<details>
+  <summary>Solución + código</summary>
+  Podemos usar un approach como KMP, en este algoritmo se recorre un string linealmente y se puede detectar cuando aparece otro string dentro, podemos usar este mismo método para detectar si con las letras que se han usado (cuando se pasó a (i + 1, j + 1) en la recursión) se arma el virus. Basta agregar un estado extra al dp que haga referencia al índice del arreglo lps actual.
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Codeforces/LuckyCommonSubsequence.cpp">Código de ejemplo</a>
+</details>
+
+<h3 id="g-match-catch">G - Match &amp; Catch</h3>
+<details>
+  <summary>Hint</summary>  
+  Piensen en cómo se puede responder lo pedido usando el precálculo de un suffix array y lcp. Noten que todo substring es un prefijo de un sufijo, y para que sea único en el string original basta con que sea de largo mayor al lcp anterior y posterior (pues no habrá otro prefijo de sufijo igual de ese largo).
+</details>
+<details>
+  <summary>Solución + código</summary>
+  Podemos usar el hint 1 pero precalculando sobre el string S1#S2, así podemos filtrar los substrings comunes y unicos de ambos mirando el lcp, de forma que serán continuos en el suffix array pero los lcp inmediatamente posterior y anterior serán menores. Es decir, si estamos en la posición i del suffix array, donde sa[i] es parte de S1 y sa[i + 1] es parte de S2. luego el menor substring común asociado a esa posición debe ser de largo menor o igual a lcp[i], pero sólo será unico en ambos strings si lcp[i] >= largo > max(lcp[i - 1], lcp[i + 1]). Luego si es posible tomamos largo = max(lcp[i - 1], lcp[i + 1]) + 1, y nos quedamos con el menor de estos largos.
+  <a href="https://github.com/BenjaminRubio/CompetitiveProgramming/blob/master/Problems/Codeforces/MatchAndCatch.cpp">Código de ejemplo</a>
+</details>
+
+<h3 id="h-file-retrieval">H - File Retrieval</h3>
+<details>
+  <summary>Hint 1</summary>
+  <p>Supongamos que tenemos varios archivos y tipeamos una query Q = "blabla", y nos aparece una lista de todos los matches de "blabla" en todos los archivos en la forma de pares (File ID, Match Index). Todos esos matches son posiciones donde "blabla" es un substring de un archivo, o en otras palabras, "blabla" es prefijo de un sufijo de algún archivo. Ahora, supongamos que juntamos todos los sufijos de todos los archivos, los metemos a una lista y los ordenamos lexicográficamente: ¿Cómo se ven los matches ahora?</p>
+  <p>**SPOILER: todos los sufijos donde "blabla" es prefijo aparecen juntos en la lista (un segmento contiguo de la lista) </p>
+</details>
+<details>
+  <summary>Hint 2</summary>
+  Concatenemos todos los archivos en un string largo usando caracteres separadores especiales, y construyamos un <strong>Suffix Array</strong> sobre el string. Construyamos el arreglo <strong>LCP (longest common prefix)</strong> también. Ahora volvamos al ejemplo de la query "blabla". El rango contiguo donde "blabla" hace match es un intervalo maximal de sufijos consecutivos donde todos tienen como prefijo "blabla". Supongamos que este intervalo es [L, R]. Esto implica que LCP[i] >= len("blabla") para i = L, L+1, ..., R-1, y además LCP[L-1] < len("blabla") y LCP[R] < len("blabla"). Notar que el intervalo [L,R] generado por la query Q = "blabla" es equivalente al intervalo generado por query Q' = ("blabla" + algun_extra) que se obtiene alargando Q por la derecha tal que len(Q') = min { LCP[i] para i = L, ..., R-1 }. Si visualizamos el arreglo LCP como un histograma, Q hace match con un rectángulo horizontalmente maximal, y Q' es básicamente aumentar la altura de dicho rectángulo hasta chocar con la columna más chica del histograma.
+</details>
+<details>
+  <summary>Hint 3</summary>
+  <p>El resumen del Hint 2 es que toda query tiene una query equivalente que corresponde a un rectángulo maximal en el "histograma" del arreglo LCP (un rectángulo que no podemos hacer más alto ni más ancho sin salirnos del histograma). Por lo tanto, todos los "searchable subsets" son los archivos distintos que aparecen en el rango de algún rectángulo maximal del arreglo LCP.</p>
+  <p>** Hay un caso borde: lo dicho anteriormente es verdad de las querys que hacen match en 2 o más sufijos, ¿pero qué pasa con las queries que hacen match con exactamente un solo sufijo?</p>
+</details>
+<details>
+  <summary>Solución + código</summary>
+  En breve: concatenamos todos los files en un puro string. Construimos un suffix array y el arreglo LCP. Vemos el arreglo LCP como histograma y encontramos rectángulos maximales usando un approach de stacks similar al que se usa para resolver <a href="https://www.spoj.com/problems/HISTOGRA/">este problema</a>: basícamente por cada columna i-ésima suponemos que es el techo de un rectángulo maximal, y encontramos los extremos L[i] y R[i] donde comienza y termina el rectángulo. Para obtener los archivos distintos que aparecen en ese rango, podemos usar bitmasks y un sparse table para computar el OR en el rango en O(1), aprovechando el hecho de que son a lo más 60 archivos lo que nos cabe en un long long int (64 bits). Para las queries que hacen match con un solo sufijo, iteramos por todos los sufijos y vemos si LCP[i-1] < len(sufijo[i]) y LCP[i] < len(sufijo[i]). Todos los searchable subsets que encontremos los metemos a un set y finalmente retornamos el tamaño. <a href="https://github.com/PabloMessina/Competitive-Programming-Material/blob/master/Solved%20problems/LiveArchive/5794_FileRetrieval.cpp">Código de ejemplo</a>
+</details>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.indexes", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.b78d2936.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
